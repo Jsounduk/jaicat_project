@@ -1,0 +1,57 @@
+0_dzBfVzmoSfyyR-c9.jpg
+0_GTgne40Gv4ryd1qZ.jpg
+0_zxjamgcHxll0nj6g (1).jpg
+0_zxjamgcHxll0nj6g.webp
+command
+computer_vision
+config
+conversation
+conversation_management.py
+data
+database
+dir.bat
+dirlist.txt
+Documentation
+enrollment_json
+enrollment_pictures
+face_happy.png
+features
+filename.txt
+Ideas.txt
+import nltk.py
+layingdown.jpeg
+lib
+machine_learning
+main copy 10.py
+main copy 11.py
+main copy 12.py
+main copy 13.py
+main copy 14.py
+main copy 15.py
+main copy 16.py
+main copy 2.py
+main copy 3.py.txt
+main copy 4.py.txt
+main copy 5.py.txt
+main copy 6.py
+main copy 7.py
+main copy 8.py
+main copy 9.py
+main copy(4).py.txt
+main copy.py.txt
+main copy1.py.txt
+main.py
+main.py - Copy (2).txt
+main.py - Copy (3).txt
+main.py - Copy.txt
+models
+network
+SearchNow.py
+security
+services
+temp.png
+TESTING OPENAI
+Tests
+ui
+Untitled-1.py
+utils

@@ -1,0 +1,321 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project
+
+11/08/2024  16:13    <DIR>          .
+28/09/2024  12:47    <DIR>          ..
+06/08/2024  16:41            23,066 0_dzBfVzmoSfyyR-c9.jpg
+06/08/2024  16:41            25,198 0_GTgne40Gv4ryd1qZ.jpg
+06/08/2024  16:41            35,580 0_zxjamgcHxll0nj6g (1).jpg
+06/08/2024  16:40            35,580 0_zxjamgcHxll0nj6g.webp
+04/08/2024  15:21    <DIR>          command
+07/08/2024  12:39    <DIR>          computer_vision
+06/08/2024  18:18    <DIR>          config
+11/08/2024  18:45    <DIR>          conversation
+04/08/2024  21:47               851 conversation_management.py
+06/08/2024  18:13    <DIR>          data
+10/08/2024  12:53    <DIR>          database
+07/08/2024  13:13                22 dir.bat
+28/09/2024  13:19                 0 dirlist.txt
+07/08/2024  13:03    <DIR>          Documentation
+10/08/2024  10:30    <DIR>          enrollment_json
+10/08/2024  10:30    <DIR>          enrollment_pictures
+23/07/2024  23:33         1,926,637 face_happy.png
+11/08/2024  14:45    <DIR>          features
+07/08/2024  13:20               879 filename.txt
+07/08/2024  14:55               149 file_handling.py
+07/08/2024  14:53               272 image_processing.py
+04/08/2024  17:49            54,712 layingdown.jpeg
+07/08/2024  12:37    <DIR>          lib
+10/08/2024  11:04    <DIR>          machine_learning
+28/09/2024  11:42            14,768 main.py
+07/08/2024  15:19    <DIR>          models
+06/08/2024  18:15    <DIR>          network
+06/08/2024  18:16    <DIR>          security
+28/09/2024  09:56    <DIR>          services
+11/09/2024  15:34           423,838 temp.png
+03/08/2024  18:08    <DIR>          TESTING OPENAI
+07/08/2024  13:02    <DIR>          Tests
+10/08/2024  13:48    <DIR>          ui
+10/08/2024  12:43    <DIR>          utils
+07/08/2024  15:04    <DIR>          __pycache__
+              14 File(s)      2,541,552 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\command
+
+04/08/2024  15:21    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+03/08/2024  16:55                 0 Commands.py
+03/08/2024  23:23               588 Commands.txt
+               2 File(s)            588 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision
+
+07/08/2024  12:39    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+07/08/2024  12:39                 0 car_model.py
+07/08/2024  12:38                 0 contact_recognition.py
+07/08/2024  12:39                 0 home_surveillance.py
+10/08/2024  12:56             2,521 opencv_utils.py
+10/08/2024  12:20             2,579 people_recognition.py
+               5 File(s)          5,100 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\config
+
+06/08/2024  18:18    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+06/08/2024  18:18                 0 api_keys.py
+07/08/2024  15:10               254 config.json
+               2 File(s)            254 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\conversation
+
+11/08/2024  18:45    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+11/08/2024  18:42             6,873 dialogue_manager copy.py
+11/08/2024  18:53             8,654 dialogue_manager.py
+28/09/2024  10:04             2,028 nlg.py
+10/08/2024  11:13             2,512 nlu.py
+11/08/2024  18:54    <DIR>          __pycache__
+               4 File(s)         20,067 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\conversation\__pycache__
+
+11/08/2024  18:54    <DIR>          .
+11/08/2024  18:45    <DIR>          ..
+11/08/2024  18:54             6,744 dialogue_manager.cpython-312.pyc
+10/08/2024  14:06             2,951 nlg.cpython-312.pyc
+10/08/2024  14:06             4,082 nlu.cpython-312.pyc
+               3 File(s)         13,777 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\data
+
+06/08/2024  18:13    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+06/08/2024  18:13                 0 calendar_data.csv
+06/08/2024  18:12                 0 weather_data.csv
+               2 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\database
+
+10/08/2024  12:53    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+07/08/2024  12:51                 0 conversation.py
+10/08/2024  12:46               814 enginnering_mod.py
+10/08/2024  13:05             1,199 knowledge_base.py
+11/08/2024  15:44             1,569 knowledge_graph
+10/08/2024  12:45               806 motorbikes.py
+10/08/2024  13:05                 0 mysql_utils.py
+10/08/2024  12:13             1,300 Nas.py
+10/08/2024  12:25               509 web_scraping
+               8 File(s)          6,197 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\Documentation
+
+07/08/2024  13:03    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+07/08/2024  13:02                 0 documentation.py
+07/08/2024  13:03                 0 README.md
+               2 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\enrollment_json
+
+10/08/2024  10:30    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+09/08/2024  15:49               193 Jay.json
+10/08/2024  10:30               117 Samantha.json
+               2 File(s)            310 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\enrollment_pictures
+
+10/08/2024  10:30    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+03/08/2024  14:56           399,702 Jay.png
+10/08/2024  10:29           395,876 Samantha.png
+               2 File(s)        795,578 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\features
+
+11/08/2024  14:45    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+09/08/2024  18:43             2,117 code_generation.py
+09/08/2024  19:49             3,056 dialogue_manager.py
+09/08/2024  19:19             5,140 nlp copy.py
+09/08/2024  20:23             2,199 nlp.py
+04/08/2024  00:45             1,470 nlu.py
+07/08/2024  14:51               307 SentimentAnalysis.py
+07/08/2024  14:57               307 sentiment_analysis.py
+07/08/2024  14:51               285 text_classification.py
+09/08/2024  20:37    <DIR>          __pycache__
+               8 File(s)         14,881 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\features\__pycache__
+
+09/08/2024  20:37    <DIR>          .
+11/08/2024  14:45    <DIR>          ..
+09/08/2024  20:36             2,849 code_generation.cpython-312.pyc
+09/08/2024  20:36             3,957 nlp.cpython-312.pyc
+09/08/2024  20:37             2,327 nlu.cpython-312.pyc
+07/08/2024  15:00               667 sentiment_analysis.cpython-312.pyc
+07/08/2024  15:00               653 text_classification.cpython-312.pyc
+               5 File(s)         10,453 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib
+
+07/08/2024  12:37    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+07/08/2024  12:36    <DIR>          nlg
+07/08/2024  12:40    <DIR>          nlp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlg
+
+07/08/2024  12:36    <DIR>          .
+07/08/2024  12:37    <DIR>          ..
+07/08/2024  12:36                 0 Social_media_post.py
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlp
+
+07/08/2024  12:40    <DIR>          .
+07/08/2024  12:37    <DIR>          ..
+07/08/2024  12:39                 0 crime.py
+07/08/2024  12:38                 0 engineering.py
+07/08/2024  12:40                 0 fitness.py
+07/08/2024  12:39                 0 medical.py
+07/08/2024  12:38                 0 motorbike_engine.py
+06/08/2024  18:21                 0 nltk_utils.py
+07/08/2024  12:35                 0 politics.py
+11/08/2024  15:06            12,557 sexual_content.py
+06/08/2024  18:22                 0 spacy_utils.py
+07/08/2024  12:40                 0 translation.py
+              10 File(s)         12,557 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\machine_learning
+
+10/08/2024  11:04    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+10/08/2024  11:10             2,419 Machine_Learning
+09/08/2024  21:24               805 sklearn_utils.py
+06/08/2024  18:11                 0 tensorflow_utils.py
+               3 File(s)          3,224 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\models
+
+07/08/2024  15:19    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+06/08/2024  18:19                 0 calendar_model.pkl
+04/08/2024  20:12             1,062 code_generation_model copy.py
+04/08/2024  20:12             1,062 code_generation_model.py
+06/08/2024  18:20                 0 intent_model.pkl
+04/08/2024  20:12               839 nlp_model.py
+04/08/2024  19:44               942 text_classification_model.py
+06/08/2024  18:19                 0 weather_model.pkl
+04/08/2024  21:57    <DIR>          __pycache__
+               7 File(s)          3,905 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\models\__pycache__
+
+04/08/2024  21:57    <DIR>          .
+07/08/2024  15:19    <DIR>          ..
+04/08/2024  21:19             2,085 code_generation_model.cpython-312.pyc
+04/08/2024  21:19             1,833 nlp_model.cpython-312.pyc
+04/08/2024  21:57             1,773 text_classification_model.cpython-312.pyc
+               3 File(s)          5,691 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\network
+
+06/08/2024  18:15    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+06/08/2024  18:15                 0 socket_utils.py
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\security
+
+06/08/2024  18:16    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+06/08/2024  18:16                 0 encryption_utils.py
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services
+
+28/09/2024  09:56    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+10/08/2024  12:58             6,463 calendar_api.py
+10/08/2024  12:42             1,687 contol bluetooth
+10/08/2024  12:38             1,630 education.py
+10/08/2024  12:44             2,262 Engineering.py
+10/08/2024  12:28               319 epub_parsing.py
+07/08/2024  12:32                 0 file_analysis.py
+07/08/2024  12:40                 0 finance.py
+07/08/2024  12:51                 0 food.py
+09/08/2024  21:22               340 google_calendar_api.py
+07/08/2024  12:50                 0 health.py
+10/08/2024  12:30               533 image_analyze
+07/08/2024  12:31                 0 ip_cam.py
+07/08/2024  12:40                 0 job_search.py
+10/08/2024  12:37             1,884 mental_health
+10/08/2024  12:28               575 pdf_parsing.py
+07/08/2024  12:32                 0 phone_cam.py
+10/08/2024  12:49             6,550 Politics
+07/08/2024  12:33                 0 project_management.py
+10/08/2024  12:41            11,227 sexual_content
+07/08/2024  12:50                 0 smart_home.py
+10/08/2024  12:06             3,635 Social_media_monitor.py
+28/09/2024  12:46               857 spotify_integration.py
+07/08/2024  12:31                 0 swann_cctv.py
+07/08/2024  12:51                 0 travel_recommendations.py
+07/08/2024  12:31                 0 usb_cam.py
+10/08/2024  11:01               287 weather_api.py
+10/08/2024  13:06             3,817 youtube_analysis.py
+              27 File(s)         42,066 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\TESTING OPENAI
+
+03/08/2024  18:08    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+03/08/2024  18:08               401 openai test.py
+               1 File(s)            401 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\Tests
+
+07/08/2024  13:02    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+07/08/2024  13:01                 0 test_dialogue_manager.py
+07/08/2024  13:01                 0 test_nlg.py
+07/08/2024  13:01                 0 test_nlu.py
+07/08/2024  13:01                 0 test_services.py
+07/08/2024  13:02                 0 test_utilities.py
+               5 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\ui
+
+10/08/2024  13:48    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+10/08/2024  13:49               548 JaicatUI.py
+06/08/2024  18:22                 0 pyqt_utils.py
+               2 File(s)            548 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\utils
+
+10/08/2024  12:43    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+03/08/2024  13:07                 0 file_handling.py
+04/08/2024  00:54             2,196 image_processing.py
+10/08/2024  12:22             1,341 moving_image.py
+10/08/2024  12:00             1,397 sync_relationships.py
+04/08/2024  00:57             2,584 text_processing.py
+10/08/2024  12:43               738 UK_law
+               6 File(s)          8,256 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\__pycache__
+
+07/08/2024  15:04    <DIR>          .
+11/08/2024  16:13    <DIR>          ..
+07/08/2024  15:04               507 image_processing.cpython-312.pyc
+               1 File(s)            507 bytes
+
+     Total Files Listed:
+             127 File(s)      3,485,912 bytes
+              80 Dir(s)   2,243,014,656 bytes free

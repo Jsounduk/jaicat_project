@@ -1,0 +1,10 @@
+{
+    "name": "Jay",
+    "admin": true,
+    "accessible_features": [
+        "text_analysis",
+        "sentiment_analysis",
+        "code_generation",
+        "light_control"
+    ]
+}

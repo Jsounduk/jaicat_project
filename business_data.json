@@ -1,0 +1,11 @@
+{
+    "projects": [],
+    "finances": {
+        "income": 0,
+        "expenses": 0
+    },
+    "meetings": [],
+    "performance": {
+        "metrics": []
+    }
+}
