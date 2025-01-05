@@ -108,7 +108,7 @@ class Jaicat:
 
 
         # Initialize services
-        self.assistant = CommandProcessor()
+        self.assistant = CommandProcessor(self)
         self.assistant.add_command("hello", lambda: print("Hello, how can I help you today?"))
 
         self.car_model_service = UKCarModel(

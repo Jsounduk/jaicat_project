@@ -1,0 +1,468 @@
+# command/Commands.py
+
+from services.job_search import JobSearchService
+from services.email_service import EmailService
+from services.finance import FinanceService
+from services.weather_service import WeatherService
+from services.spotify_integration import SpotifyIntegration
+from services.travel_recommendations import TravelRecommendations
+from services.youtube_analysis import YouTubeAnalysis
+from services.food import FoodService
+from services.file_analysis import FileAnalysisService
+from services.project_management import ProjectManagement
+from services.file_analysis import FileAnalysisService
+
+class CommandProcessor:
+    def __init__(self):
+        # Initialize all services
+        self.job_search_service = JobSearchService()
+        self.finance_service = FinanceService()
+        self.weather_service = WeatherService()
+        self.spotify_integration = SpotifyIntegration()
+        self.travel_recommendations = TravelRecommendations()
+        self.youtube_analysis = YouTubeAnalysis()
+        self.food_service = FoodService()
+        self.file_analysis_service = FileAnalysisService()
+        self.project_management_service = ProjectManagement()
+        encryption_key = "_03bMuxUjM14dGnXhew-67dV_hJwL8GUjqKWFKRUAr8="
+        self.email_service = EmailService(encryption_key=encryption_key)
+        self.commands = {}
+
+        
+        
+
+    def process_job_search(self, command):
+        query = command.replace("find jobs", "").strip()
+        jobs = self.job_search_service.search_jobs(query)
+        if jobs:
+            response = f"Top job listings: {', '.join(jobs)}"
+        else:
+            response = "No jobs found."
+        print(response)
+
+    def process_send_email(self, command):
+        email_details = command.replace("send email", "").strip()
+        response = self.email_service.send_email(email_details)
+        print(response)
+
+    def process_finance(self, command):
+        query = command.replace("check finance", "").strip()
+        finance_info = self.finance_service.get_financial_info(query)
+        print(finance_info)
+
+    def process_weather(self, command):
+        location = command.replace("get weather", "").strip()
+        weather_info = self.weather_service.get_weather(location)
+        print(weather_info)
+
+    def process_play_music(self, command):
+        song_name = command.replace("play music", "").strip()
+        response = self.spotify_integration.play_song(song_name)
+        print(response)
+
+    def process_travel_recommendations(self, command):
+        query = command.replace("travel recommendations", "").strip()
+        recommendations = self.travel_recommendations.get_recommendations(query)
+        print(recommendations)
+
+    def process_youtube_analysis(self, command):
+        video_url = command.replace("analyze youtube", "").strip()
+        analysis_results = self.youtube_analysis.analyze_video(video_url)
+        print(analysis_results)
+
+    def process_food_recommendations(self, command):
+        query = command.replace("food recommendations", "").strip()
+        recommendations = self.food_service.get_food_recommendations(query)
+        print(recommendations)
+    
+    
+    def handle_food_query(self, intent, entities):
+        """Process food-related queries."""
+        if "barcode" in entities:
+            barcode = entities.get("barcode")
+            nutrition_data = self.food_service.get_nutrition_by_barcode(barcode)
+        elif "product_name" in entities:
+            product_name = entities.get("product_name")
+            nutrition_data = self.food_service.get_nutrition_by_name(product_name)
+        else:
+            return "Please specify a product name or barcode."
+
+        self.display_nutrition_info(nutrition_data)
+
+    def handle_food_query(self, intent, entities):
+        if intent == "food_query":
+            if "scan_barcode" in entities:
+                self.scan_barcode_and_get_nutrition()
+            elif "analyze_nutrients" in entities:
+                nutrition_data = self.food_service.get_nutrition_by_name(entities["product_name"])
+                if "error" not in nutrition_data:
+                    self.display_macronutrient_percentages(nutrition_data)
+                else:
+                    self.display_response(f"Error: {nutrition_data['error']}")
+
+
+
+    def process_file_analysis(self, command):
+        file_path = command.replace("analyze file", "").strip()
+        analysis_results = self.file_analysis_service.analyze_file(file_path)
+        print(analysis_results)
+
+    def process_project_management(self, command):
+        project_details = command.replace("project management", "").strip()
+        response = self.project_management_service.manage_project(project_details)
+        print(response)
+    def process_command(self, command):
+        command = command.lower()
+        intent = self.nlu_system.extract_intent(command)
+        entities = self.nlu_system.extract_entities(command)
+
+        if intent == "play_music":
+            song_name = entities.get('song_name')
+            if song_name:
+                self.play_song(song_name)
+            else:
+                self.speak("Please provide the name of the song.")
+
+        elif intent == "check_calendar":
+            self.display_calendar_events()
+
+        elif intent == "check_weather":
+            location = entities.get('location', 'New York')  # Default to New York if no location provided
+            self.check_weather(location)
+
+        elif intent == "check_stock_price":
+            stock_name = entities.get('stock_name')
+            if stock_name:
+                self.check_stock_price(stock_name)
+            else:
+                self.speak("Please provide the name of the stock.")
+
+        elif intent == "find_jobs":
+            job_title = entities.get('job_title')
+            if job_title:
+                jobs = self.job_search_service.search_jobs(job_title)
+                if jobs:
+                    self.speak(f"Top job listings: {', '.join(jobs)}")
+                else:
+                    self.speak("No jobs found.")
+            else:
+                self.speak("Please provide the job title you are looking for.")
+        elif intent == "get_news":
+            category = entities.get('category', 'general')
+        headlines = self.news_service.get_news(category=category)
+        if headlines:
+            self.speak(f"Here are the top headlines: {', '.join(headlines)}")
+        else:
+            self.speak("No news available at the moment.")
+        if intent == "control_device":
+            device_id = entities.get('device_id')
+        action = entities.get('action')
+        if device_id and action:
+            response = self.home_automation_service.control_device(device_id, action)
+            self.speak(response)
+        else:
+            self.speak("Please specify the device and action.")
+        if intent == "check_stock_price":
+            stock_symbol = entities.get('stock_symbol')
+        if stock_symbol:
+            price = self.finance_service.get_stock_price(stock_symbol)
+            self.speak(f"The current price of {stock_symbol} is {price}")
+        else:
+            self.speak("Please provide a stock symbol.")
+
+        if intent == "send_email":
+            recipient = entities.get('recipient')
+            subject = entities.get('subject', 'No Subject')
+            body = entities.get('body', 'No Content')
+        if recipient:
+            response = self.email_service.send_email(recipient, subject, body)
+            self.speak(response)
+        else:
+            self.speak("Please provide the recipient's email address.")
+        
+        if intent == "analyze_youtube":
+                video_url = self.nlu_system.extract_entities(command)['video_url']
+                self.analyze_youtube_video(video_url)
+        if intent == "get_travel_recommendations":
+            category = self.nlu_system.extract_entities(command).get('category', '')
+            recommendations = self.travel_recommendations_service.get_recommendations(category)
+            response = f"Travel recommendations: {', '.join(recommendations)}"
+            self.speak(response)
+        if intent == "capture_image":
+            self.usb_cam_service.start_camera()
+            self.usb_cam_service.capture_image("captured_image.png")  # Specify filename as needed
+            self.usb_cam_service.release_camera()
+            response = "Image captured successfully."
+            self.speak(response)
+        if intent == "create_project":
+            project_name = self.nlu_system.extract_entities(command).get('project_name', 'Default Project')
+            response = self.project_management_service.create_project(project_name)
+            self.speak(response)
+
+        elif intent == "add_task":
+            project_name = self.nlu_system.extract_entities(command).get('project_name', 'Default Project')
+            task = self.nlu_system.extract_entities(command).get('task', 'New Task')
+            response = self.project_management_service.add_task(project_name, task)
+            self.speak(response)
+
+        elif intent == "list_projects":
+            response = self.project_management_service.list_projects()
+            self.speak(response)
+
+        elif intent == "complete_project":
+            project_name = self.nlu_system.extract_entities(command).get('project_name', 'Default Project')
+            response = self.project_management_service.complete_project(project_name)
+            self.speak(response)
+
+        if intent == "capture_image":
+            response = self.phone_camera_service.capture_image()
+            self.speak(response)
+        if intent == "get_camera_status":
+            status = self.swann_cctv_service.get_camera_status()
+            self.speak(f"Camera status: {status}")
+        
+        elif intent == "capture_snapshot":
+            camera_id = self.nlu_system.extract_entities(command)['camera_id']
+            snapshot_response = self.swann_cctv_service.capture_snapshot(camera_id)
+            self.speak(snapshot_response)
+        
+        elif intent == "start_recording":
+            camera_id = self.nlu_system.extract_entities(command)['camera_id']
+            success = self.swann_cctv_service.start_recording(camera_id)
+            response = "Recording started." if success else "Failed to start recording."
+            self.speak(response)
+
+        elif intent == "stop_recording":
+            camera_id = self.nlu_system.extract_entities(command)['camera_id']
+            success = self.swann_cctv_service.stop_recording(camera_id)
+            response = "Recording stopped." if success else "Failed to stop recording."
+            self.speak(response)
+
+        if intent == "capture_snapshot":
+            snapshot_response = self.ip_camera_service.capture_snapshot()
+            self.speak(snapshot_response)
+        
+        elif intent == "start_recording":
+            success_response = self.ip_camera_service.start_recording()
+            self.speak(success_response)
+
+        elif intent == "stop_recording":
+            stop_response = self.ip_camera_service.stop_recording()
+            self.speak(stop_response)
+
+        if intent == "get_nutrition":
+            food_item = self.nlu_system.extract_entities(command)['food_item']
+            nutrition_info = self.food_service.get_nutrition_facts(food_item)
+            self.speak(nutrition_info)
+        
+        elif intent == "find_recipes":
+            query = self.nlu_system.extract_entities(command)['ingredient']
+            recipes = self.food_service.find_recipes(query)
+            self.speak(recipes)
+
+        elif intent == "get_recipe_instructions":
+            recipe_id = self.nlu_system.extract_entities(command)['recipe_id']
+            instructions = self.food_service.get_recipe_instructions(recipe_id)
+            self.speak(instructions)
+        
+        if intent == "analyze_file":
+            file_path = self.nlu_system.extract_entities(command)['file_path']
+            analysis_result = self.file_analysis_service.file_analysis(file_path)
+            self.speak(analysis_result)
+
+        if "translate" in command:
+            text_to_translate = command.replace("translate", "").strip()
+            translated_text = self.translation_service.translate_text(text_to_translate, dest_language='fr')  # Translate to French
+            response = f"Translated text: {translated_text}"
+            self.speak(response)
+        
+        if "analyze text" in command:
+            text_to_analyze = command.replace("analyze text", "").strip()
+            analysis_result = self.spacy_utils.analyze_text(text_to_analyze)
+            response = f"Tokens: {analysis_result['tokens']}, Entities: {analysis_result['entities']}, POS Tags: {analysis_result['pos_tags']}"
+            self.speak(response)
+        
+        if "analyze medical text" in command:
+            text_to_analyze = command.replace("analyze medical text", "").strip()
+            analysis_result = self.medical_nlp.analyze_medical_text(text_to_analyze)
+            response = f"Entities: {analysis_result['entities']}, Symptoms Classification: {analysis_result['symptom_classification']}"
+            self.speak(response)
+
+        if "analyze fitness data" in command:
+            # Mock data for demonstration; you can replace this with actual data
+            fitness_data = {'steps': 10000, 'calories_burned': 500, 'workout_duration': 30}
+            analysis_result = self.fitness_nlp.analyze_fitness_data(fitness_data)
+            self.speak(analysis_result)
+
+        elif "recommend workout" in command:
+            fitness_level = command.replace("recommend workout", "").strip()
+            recommendation = self.fitness_nlp.recommend_workout(fitness_level)
+            self.speak(recommendation)
+
+        elif "set fitness goal" in command:
+            goal = command.replace("set fitness goal", "").strip()
+            confirmation = self.fitness_nlp.set_fitness_goal(goal)
+            self.speak(confirmation)
+
+        if "calculate force" in command:
+            params = self.extract_params(command)  # Define this method to extract mass and acceleration
+            force = self.engineering_nlp.calculate_force(params['mass'], params['acceleration'])
+            self.speak(f"The calculated force is {force} Newtons.")
+
+        elif "calculate work" in command:
+            params = self.extract_params(command)  # Define this method to extract force and distance
+            work = self.engineering_nlp.calculate_work(params['force'], params['distance'])
+            self.speak(f"The calculated work is {work} Joules.")
+
+        elif "calculate energy" in command:
+            params = self.extract_params(command)  # Define this method to extract mass and height
+            energy = self.engineering_nlp.calculate_energy(params['mass'], params['height'])
+            self.speak(f"The calculated potential energy is {energy} Joules.")
+        
+        elif "structural analysis" in command:
+            params = self.extract_params(command)  # Define this method to extract load, length, width, height
+            stress = self.engineering_nlp.structural_analysis(params['load'], params['length'], params['width'], params['height'])
+            self.speak(f"The bending stress is {stress} Pascals.")
+        if "analyze crime" in command:
+            crime_type = self.extract_crime_type(command)  # Define this method to extract the crime type
+            count = self.crime_analyzer.analyze_crime_type(crime_type)
+            self.speak(f"There are {count} occurrences of {crime_type}.")
+
+        elif "top crimes" in command:
+            top_crimes = self.crime_analyzer.get_top_crime_types()
+            self.speak(f"The top crimes are: {', '.join(top_crimes.index)} with counts: {', '.join(map(str, top_crimes.values))}.")
+
+        if "generate post" in command:
+            context = {
+                "link": "https://example.com",
+                "event": "our launch event",
+                "product_name": "Awesome Product",
+                "offer": "50% off this week only",
+                "date": "October 5"
+            }
+            post = self.social_media_post_generator.generate_post(context)
+            formatted_post = self.social_media_post_generator.format_post(post)
+            self.speak(f"Here is your social media post: {formatted_post}")
+        
+        if "start surveillance" in command.lower():
+            self.surveillance_system.start_surveillance()
+
+        if "start contact recognition" in command.lower():
+            self.contact_recognition_system.start_recognition()
+        
+        if "start car detection" in command.lower():
+            self.car_model_system.start_detection()
+
+        if "discover bluetooth devices" in command.lower():
+                devices = self.bluetooth_service.discover_devices()
+                if devices:
+                    response = f"Found {len(devices)} devices: {devices}"
+                else:
+                    response = "No Bluetooth devices found."
+                self.speak(response)
+        
+        if "nutrition facts" in command:
+            food_item = command.replace("nutrition facts for", "").strip()
+            nutrition_info = self.health_service.get_nutrition_facts(food_item)
+            response = f"Nutritional info for {food_item}: {nutrition_info}"
+            self.speak(response)
+
+        elif "healthy" in command:
+            food_item = command.replace("is", "").replace("healthy", "").strip()
+            is_healthy = self.health_service.is_healthy(food_item)
+            response = f"{food_item} is {'healthy' if is_healthy else 'not healthy'}."
+            self.speak(response)
+
+        elif "recipes" in command:
+            ingredient = command.replace("give me recipes with", "").strip()
+            recipes = self.health_service.get_recipes(ingredient)
+            response = f"Recipes with {ingredient}: {recipes}"
+            self.speak(response)
+        
+        if intent == "add_project":
+                project_name = entities.get('project_name', 'Unnamed Project')
+                deadline = entities.get('deadline', 'No deadline provided')
+                description = entities.get('description', 'No description provided')
+                response = self.business_management_service.add_project(project_name, description, deadline)
+                self.speak(response)
+            
+        elif intent == "track_finances":
+                income = entities.get('income', 0)
+                expense = entities.get('expense', 0)
+                response = self.business_management_service.track_finances(income=income, expense=expense)
+                self.speak(response)
+            
+        elif intent == "schedule_meeting":
+                title = entities.get('meeting_title', 'No title provided')
+                time = entities.get('time', 'No time provided')
+                participants = entities.get('participants', [])
+                response = self.business_management_service.add_meeting(title, time, participants)
+                self.speak(response)
+            
+        elif intent == "add_performance_metric":
+                metric_name = entities.get('metric_name', 'Unnamed Metric')
+                value = entities.get('value', 0)
+                response = self.business_management_service.add_performance_metric(metric_name, value)
+                self.speak(response)
+
+        elif intent == "get_business_summary":
+                summary = self.business_management_service.get_summary()
+                summary_str = f"Projects: {summary['projects']}\n" \
+                            f"Finances: Income - {summary['finances']['income']}, Expenses - {summary['finances']['expenses']}\n" \
+                            f"Meetings: {summary['meetings']}\n" \
+                            f"Performance Metrics: {summary['performance_metrics']}"
+                self.speak(summary_str)
+        
+        if "add car registration" in command:
+            new_car_reg = self.get_voice_input("Please provide the new car registration plate:")
+            self.update_user_data("car_reg", new_car_reg)
+            self.speak(f"Added new car registration {new_car_reg} to your profile.")
+
+        elif "add motorbike registration" in command:
+            new_motorbike_reg = self.get_voice_input("Please provide the new motorbike registration plate:")
+            self.update_user_data("motorbike_reg", new_motorbike_reg)
+            self.speak(f"Added new motorbike registration {new_motorbike_reg} to your profile.")
+        if "add vehicle" in command:
+            self.assistant.enroll_vehicle()
+        
+        elif "vehicle details" in command:
+            reg_plate = self.extract_registration(command)
+            vehicle_info = self.assistant.vehicle_lookup_service.lookup_vehicle(reg_plate)
+            self.assistant.ui.speak(f"Vehicle details: {vehicle_info}")
+
+        elif "detected vehicle" in command:
+            detected_vehicle = self.assistant.surveillance_system.detect_vehicle()
+            self.assistant.recognize_vehicle_plate(detected_vehicle)
+
+        if "find jobs" in command:
+            self.process_job_search(command)
+        elif "send email" in command:
+            self.process_send_email(command)
+        elif "check finance" in command:
+            self.process_finance(command)
+        elif "get weather" in command:
+            self.process_weather(command)
+        elif "play music" in command:
+            self.process_play_music(command)
+        elif "travel recommendations" in command:
+            self.process_travel_recommendations(command)
+        elif "analyze youtube" in command:
+            self.process_youtube_analysis(command)
+        elif "food recommendations" in command:
+            self.process_food_recommendations(command)
+        elif "analyze file" in command:
+            self.process_file_analysis(command)
+        elif "project management" in command:
+            self.process_project_management(command)
+        else:
+            print("Command not recognized. Please try again.")
+
+if __name__ == "__main__":
+    command_processor = CommandProcessor()
+    while True:
+        user_command = input("Enter your command: ")
+        command_processor.process_command(user_command)
+
+class EmailService:
+    def __init__(self, encryption_key):
+        self.encryption_key = encryption_key
