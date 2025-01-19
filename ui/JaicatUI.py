@@ -1,5 +1,8 @@
 import tkinter as tk
+import os
 from tkinter import ttk, messagebox, simpledialog
+from PIL import Image, ImageTk
+from services.email_service import EmailService
 import json
 
 class JaicatUI:
@@ -105,7 +108,7 @@ if __name__ == "__main__":
     # Mock assistant object with email_service
     class MockAssistant:
         def __init__(self):
-            from email_service import EmailService
+            
             self.email_service = EmailService(encryption_key="your_encryption_key")
             self.logged_in_user = "example_user"
 

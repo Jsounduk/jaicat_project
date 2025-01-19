@@ -4,7 +4,7 @@ import cv2
 import json
 
 class FoodService:
-    def __init__(self, api_url="https://world.openfoodfacts.org/api/v0/product/"):
+    def __init__(self, api_url="https://openfoodfacts-api.herokuapp.com/"):
         self.api_url = api_url
 
     def get_nutrition_by_barcode(self, barcode):
