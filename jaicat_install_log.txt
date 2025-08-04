@@ -1,0 +1,61 @@
+Removing conflicting packages... 
+WARNING: Skipping httpx as it is not installed.
+WARNING: Skipping jsonschema as it is not installed.
+WARNING: Skipping protobuf as it is not installed.
+WARNING: Skipping psutil as it is not installed.
+WARNING: Skipping h11 as it is not installed.
+WARNING: Skipping httpcore as it is not installed.
+Installing from compatible requirements... 
+Requirement already satisfied: Pillow in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 2)) (10.4.0)
+Requirement already satisfied: PyPDF2 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 3)) (3.0.1)
+Requirement already satisfied: opencv-python in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 4)) (4.10.0.84)
+Requirement already satisfied: ebooklib in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 5)) (0.18)
+Requirement already satisfied: face-recognition in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 6)) (1.3.0)
+Collecting googletrans==3.1.0a0 (from -r jaicat_compatible_requirements.txt (line 7))
+  Using cached googletrans-3.1.0a0.tar.gz (19 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: gTTS in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 8)) (2.5.3)
+Requirement already satisfied: instapy==0.6.16 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 9)) (0.6.16)
+Requirement already satisfied: msal in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 10)) (1.31.0)
+Requirement already satisfied: nltk in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 11)) (3.8.1)
+Requirement already satisfied: onnxruntime in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 12)) (1.22.1)
+Collecting openai (from -r jaicat_compatible_requirements.txt (line 13))
+  Using cached openai-1.98.0-py3-none-any.whl.metadata (29 kB)
+Requirement already satisfied: pygame in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 14)) (2.6.1)
+Requirement already satisfied: pyttsx3 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 15)) (2.90)
+Requirement already satisfied: pyudev in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 16)) (0.24.3)
+Requirement already satisfied: scikit-learn in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 17)) (1.5.1)
+Requirement already satisfied: SpeechRecognition in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 18)) (3.10.4)
+Requirement already satisfied: spotipy in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 19)) (2.24.0)
+Requirement already satisfied: tensorflow in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 20)) (2.17.0)
+Requirement already satisfied: torch in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 21)) (2.3.1)
+Requirement already satisfied: transformers in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 22)) (4.43.1)
+Requirement already satisfied: tweepy in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 23)) (4.16.0)
+Requirement already satisfied: wikipedia in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 24)) (1.4.0)
+Requirement already satisfied: epub in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from -r jaicat_compatible_requirements.txt (line 25)) (0.5.2)
+Collecting httpx==0.13.3 (from -r jaicat_compatible_requirements.txt (line 66))
+  Using cached httpx-0.13.3-py3-none-any.whl.metadata (25 kB)
+Collecting jsonschema==4.18.0 (from -r jaicat_compatible_requirements.txt (line 67))
+  Using cached jsonschema-4.18.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: certifi>=2018.10.15 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (2024.7.4)
+Requirement already satisfied: chardet<4,>=3.0.4 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (3.0.4)
+Requirement already satisfied: clarifai>=2.4.1 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (11.6.4)
+Requirement already satisfied: configparser<4,>=3.5.0 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (3.8.1)
+Requirement already satisfied: EasyProcess>=0.2.3 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (1.1)
+Requirement already satisfied: emoji>=0.5.1 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (2.14.1)
+Requirement already satisfied: future>=0.17.1 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (1.0.0)
+Requirement already satisfied: grpcio>=1.16.1 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (1.65.1)
+Requirement already satisfied: idna<3,>=2.7 in c:\users\josh_\appdata\local\programs\python\python312\lib\site-packages (from instapy==0.6.16->-r jaicat_compatible_requirements.txt (line 9)) (2.10)
+INFO: pip is looking at multiple versions of instapy to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install instapy==0.6.16 and jsonschema==4.18.0 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested jsonschema==4.18.0
+    instapy 0.6.16 depends on jsonschema<3 and >=2.6.0
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip to attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts

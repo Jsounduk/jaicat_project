@@ -1,0 +1,34 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\features
+
+31/07/2025  18:23    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12             2,117 code_generation.py
+10/10/2024  22:12             3,056 dialogue_manager.py
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:23                 0 dirlist.txt
+10/10/2024  22:12             5,140 nlp copy.py
+22/07/2025  18:11             2,281 nlp.py
+10/10/2024  22:12             1,470 nlu.py
+10/10/2024  22:12               307 SentimentAnalysis.py
+10/10/2024  22:12               307 sentiment_analysis.py
+10/10/2024  22:12               285 text_classification.py
+22/07/2025  18:11    <DIR>          __pycache__
+              10 File(s)         14,985 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\features\__pycache__
+
+22/07/2025  18:11    <DIR>          .
+31/07/2025  18:23    <DIR>          ..
+10/10/2024  22:12             2,849 code_generation.cpython-312.pyc
+22/07/2025  18:11             3,585 nlp.cpython-312.pyc
+03/01/2025  23:55             2,327 nlu.cpython-312.pyc
+10/10/2024  22:12               667 sentiment_analysis.cpython-312.pyc
+10/10/2024  22:12               653 text_classification.cpython-312.pyc
+               5 File(s)         10,081 bytes
+
+     Total Files Listed:
+              15 File(s)         25,066 bytes
+               5 Dir(s)  12,525,924,352 bytes free

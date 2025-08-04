@@ -1,0 +1,27 @@
+# ✅ Fixed requirements for JAICAT (InstaPy conflict resolved)
+Pillow
+PyPDF2
+opencv-python
+ebooklib
+face-recognition
+googletrans==3.1.0a0
+gTTS
+instapy==0.6.16
+msal
+nltk
+onnxruntime
+openai
+pygame
+pyttsx3
+pyudev
+scikit-learn
+SpeechRecognition
+spotipy
+tensorflow
+torch
+transformers
+tweepy
+wikipedia
+epub
+httpx==0.13.3
+jsonschema==2.6.0

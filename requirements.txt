@@ -1,0 +1,66 @@
+# 🧠 JAICAT requirements.txt – Auto-generated
+
+Pillow
+PyPDF2
+# argparse – ❓ unknown, check manually
+# asyncio – ❓ unknown, check manually
+# azure – ❓ unknown, check manually
+# bleak – ❓ unknown, check manually
+# bs4 – ❓ unknown, check manually
+# cryptography – ❓ unknown, check manually
+# csv – ❓ unknown, check manually
+opencv-python
+# datetime – ❓ unknown, check manually
+# email – ❓ unknown, check manually
+ebooklib
+face-recognition
+# geocoder – ❓ unknown, check manually
+# google – ❓ unknown, check manually
+# google_auth_oauthlib – ❓ unknown, check manually
+# googleapiclient – ❓ unknown, check manually
+googletrans==4.0.0rc1
+gTTS
+# importlib – ❓ unknown, check manually
+instapy
+# json – ❓ unknown, check manually
+# math – ❓ unknown, check manually
+msal
+# mysql – ❓ unknown, check manually
+nltk
+# numpy – ❓ unknown, check manually
+onnxruntime
+openai
+# os – ❓ unknown, check manually
+# pandas – ❓ unknown, check manually
+# pickle – ❓ unknown, check manually
+# platform – ❓ unknown, check manually
+# psutil – ❓ unknown, check manually
+# pyautogui – ❓ unknown, check manually
+pygame
+# pytesseract – ❓ unknown, check manually
+pyttsx3
+pyudev
+# random – ❓ unknown, check manually
+# re – ❓ unknown, check manually
+# requests – ❓ unknown, check manually
+scikit-learn
+# smbclient – ❓ unknown, check manually
+# smtplib – ❓ unknown, check manually
+# socket – ❓ unknown, check manually
+# spacy – ❓ unknown, check manually
+SpeechRecognition
+spotipy
+# sqlite3 – ❓ unknown, check manually
+# subprocess – ❓ unknown, check manually
+tensorflow
+# textwrap – ❓ unknown, check manually
+# time – ❓ unknown, check manually
+# tkinter – ❓ unknown, check manually
+torch
+transformers
+tweepy
+# unittest – ❓ unknown, check manually
+# webbrowser – ❓ unknown, check manually
+wikipedia
+# youtube_dl – ❓ unknown, check manually
+# youtube_transcript_api – ❓ unknown, check manually

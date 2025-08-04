@@ -1,0 +1,67 @@
+# ✅ CORE DEPENDENCIES
+Pillow
+PyPDF2
+opencv-python
+ebooklib
+face-recognition
+googletrans==3.1.0a0  # Downgraded to avoid httpx conflict
+gTTS
+instapy==0.6.16
+msal
+nltk
+onnxruntime
+openai
+pygame
+pyttsx3
+pyudev
+scikit-learn
+SpeechRecognition
+spotipy
+tensorflow
+torch
+transformers
+tweepy
+wikipedia
+epub
+
+# ⚙️ SYSTEM/UTILITY PACKAGES (standard or built-in, verify manually)
+# argparse
+# asyncio
+# csv
+# datetime
+# email
+# geocoder
+# google_auth_oauthlib
+# googleapiclient
+# importlib
+# json
+# math
+# mysql
+# numpy
+# os
+# pandas
+# pickle
+# platform
+# psutil (managed via instapy)
+# pyautogui
+# pytesseract
+# random
+# re
+# requests
+# smbclient (No PyPI version—requires system package or SMB alternative)
+# smtplib
+# socket
+# spacy
+# sqlite3
+# subprocess
+# textwrap
+# time
+# tkinter
+# unittest
+# webbrowser
+# youtube_dl
+# youtube_transcript_api
+
+# 📦 PATCHED DEPENDENCIES
+httpx==0.13.3  # For googletrans 3.1.0a0
+jsonschema==4.18.0  # Compatible version for jsf

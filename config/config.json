@@ -1,0 +1,10 @@
+{
+    "models": {
+        "code_generation": "default_code_gen_model",
+        "text_classification": "default_text_class_model",
+        "sentiment_analysis": "default_sentiment_model"
+    },
+    "settings": {
+        "language": "en"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Jay",
+    "admin": true,
+    "accessible_features": [
+        "text_analysis",
+        "sentiment_analysis",
+        "code_generation",
+        "light_control"
+    ],
+    "email": "G1P8o@example.com",
+    "password": "password",
+    "api_keys":{"VXy1cHjASsehJvfOVB5mf38pthgg71ix": {
+        "key": "VXy1cHjASsehJvfOVB5 mf38pthgg71ix",
+        "permissions": ["text_analysis", "sentiment_analysis", "code_generation", "light_control"], 
+        "email": "G1P8o@example.com",
+        "password": "password"
+    }},
+    "preferences": {
+        "language": "en",
+        "theme": "dark",
+        "notifications": true,
+        "privacy_mode": false
+    },
+    "settings": {
+        "language": "en",
+        "theme": "dark",
+        "notifications": true,
+        "privacy_mode": false
+    }
+}     

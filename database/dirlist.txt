@@ -1,0 +1,22 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\database
+
+31/07/2025  18:26    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12             1,930 conversation.py
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:26                 0 dirlist.txt
+10/10/2024  22:12               814 enginnering_mod.py
+10/10/2024  22:12             1,199 knowledge_base.py
+10/10/2024  22:12             3,509 knowledge_graph.py
+10/10/2024  22:12               806 motorbikes.py
+10/10/2024  22:12             2,002 mysql_utils.py
+10/10/2024  22:12             1,300 Nas.py
+10/10/2024  22:12               880 web_scraping.py
+              10 File(s)         12,462 bytes
+
+     Total Files Listed:
+              10 File(s)         12,462 bytes
+               2 Dir(s)  12,528,775,168 bytes free

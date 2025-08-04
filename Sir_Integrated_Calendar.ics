@@ -1,0 +1,122 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SirIntegratedCalendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:8badf21b-e07e-4d19-b9df-620f8bb84726@sir-integrated
+SUMMARY:Medication Reminder
+DTSTART;TZID=Europe/London:20250727T054500
+DTEND;TZID=Europe/London:20250727T054700
+DESCRIPTION:Take prescribed medication (ADHD/EUPD supportive).
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:ba494749-cf06-4bd1-940d-166e54ee5ddc@sir-integrated
+SUMMARY:Grounding Ritual
+DTSTART;TZID=Europe/London:20250727T060000
+DTEND;TZID=Europe/London:20250727T063000
+DESCRIPTION:Morning barefoot grounding ritual: stand on earth\nvisualize Earth and solar energy flowing through you.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:c7f9f977-cdfc-4baf-9f5a-68c9651c0649@sir-integrated
+SUMMARY:Shilajit Supplement
+DTSTART;TZID=Europe/London:20250727T063000
+DTEND;TZID=Europe/London:20250727T063500
+DESCRIPTION:Dissolve shilajit resin in warm water to energize your body and support testosterone.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:6ddcd0da-16a8-4e2b-924c-70164f5c4ae9@sir-integrated
+SUMMARY:Breakfast - High Vibration
+DTSTART;TZID=Europe/London:20250727T063500
+DTEND;TZID=Europe/London:20250727T071500
+DESCRIPTION:Hydrate with lemon water + Himalayan salt. Enjoy seasonal fruits with chia/flax in plant milk and nuts.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:a16a4b50-47b9-4728-a694-9ba538871fa1@sir-integrated
+SUMMARY:Morning Snack
+DTSTART;TZID=Europe/London:20250727T100000
+DTEND;TZID=Europe/London:20250727T101500
+DESCRIPTION:Quick fuel: dates with almond butter or raw cacao + coconut oil energy balls to maintain energy without caffeine.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:60f15e35-2c88-45fd-bcd4-fb326f3f4f70@sir-integrated
+SUMMARY:Lunch - King’s Meal
+DTSTART;TZID=Europe/London:20250727T120000
+DTEND;TZID=Europe/London:20250727T124500
+DESCRIPTION:Protein: lentils\, chickpeas\, tempeh\, quinoa. Complex carbs: sweet potato\, wild rice\, squash. Greens: kale\, spinach\, herbs. Fermented side: kimchi or sauerkraut.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:7e23aa2f-39fb-492c-ba22-05d6c3cda2df@sir-integrated
+SUMMARY:Afternoon Snack
+DTSTART;TZID=Europe/London:20250727T150000
+DTEND;TZID=Europe/London:20250727T151500
+DESCRIPTION:Power snacks: pumpkin seeds for zinc/testosterone\, cacao energy balls\, ginger/turmeric shot.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:c5f96569-788d-4c9c-a87a-9a6de1081d8e@sir-integrated
+SUMMARY:Fix Car/Electronics & Projects
+DTSTART;TZID=Europe/London:20250727T173000
+DTEND;TZID=Europe/London:20250727T183000
+DESCRIPTION:Hands-on time: work on car repairs\, electronics\, or creative projects. Maintain focus and flow.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:30cce81a-ad5a-4704-88ca-926dd2ccb102@sir-integrated
+SUMMARY:Dinner with Sam - Grounding Meal
+DTSTART;TZID=Europe/London:20250727T183000
+DTEND;TZID=Europe/London:20250727T193000
+DESCRIPTION:Evening meal with Sam: warm bowls or stews with brown rice and stir-fried veg. Include testosterone-friendly foods. Avoid food after 8PM.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:a1131edf-66e3-4648-809b-ee692445ace9@sir-integrated
+SUMMARY:Evening Wash & Self-care
+DTSTART;TZID=Europe/London:20250727T203000
+DTEND;TZID=Europe/London:20250727T210000
+DESCRIPTION:Nighttime hygiene: shower or bath\, skincare\, decompress and reflect on the day.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:fd3d2787-4894-459e-b6d4-a023a3e5986b@sir-integrated
+SUMMARY:Testosterone & Fertility Booster
+DTSTART;TZID=Europe/London:20250727T210000
+DTEND;TZID=Europe/London:20250727T211500
+DESCRIPTION:Bodyweight exercises\, breathwork\, HIIT\; adaptogens like ashwagandha and maca to support fertility and hormonal balance.
+RRULE:FREQ=DAILY
+END:VEVENT
+BEGIN:VEVENT
+UID:ca6c1950-112d-4fdc-8b3e-e38c9ba3db00@sir-integrated
+SUMMARY:Start Herb & Berry Seeds Indoors
+DTSTART;TZID=Europe/London:20250802T090000
+DTEND;TZID=Europe/London:20250802T100000
+DESCRIPTION:Sow seeds for basil\, rosemary\, mint\, and berries indoors. Use organic soil\, keep moist\, and place under gentle sunlight.
+END:VEVENT
+BEGIN:VEVENT
+UID:d354bbfc-fdc3-4ebc-bbf6-ec60b2470396@sir-integrated
+SUMMARY:Transplant Herbs & Berries Outdoors
+DTSTART;TZID=Europe/London:20250901T100000
+DTEND;TZID=Europe/London:20250901T110000
+DESCRIPTION:Move herb seedlings and berry cuttings outside to raised beds or pots.
+END:VEVENT
+BEGIN:VEVENT
+UID:571fe86d-6f8c-4cea-8e4b-3f03d59e8d88@sir-integrated
+SUMMARY:Sow Leafy Greens Seeds
+DTSTART;TZID=Europe/London:20250820T090000
+DTEND;TZID=Europe/London:20250820T100000
+DESCRIPTION:Sow seeds for spinach\, kale\, and chard directly into garden beds or containers.
+END:VEVENT
+BEGIN:VEVENT
+UID:09c41295-9d2b-4a34-a5be-2f1f629ea3aa@sir-integrated
+SUMMARY:Transplant Leafy Greens
+DTSTART;TZID=Europe/London:20250915T100000
+DTEND;TZID=Europe/London:20250915T110000
+DESCRIPTION:Transplant spinach\, kale\, and chard seedlings to larger spaces or raised beds.
+END:VEVENT
+END:VCALENDAR

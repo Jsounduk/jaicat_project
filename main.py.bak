@@ -1,0 +1,715 @@
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import ttk
+from PIL import Image, ImageTk
+import pyttsx3
+import speech_recognition as sr
+import os
+import json
+import cv2
+import face_recognition
+import time
+from features.nlp import NLPSystem
+from services.spotify_integration import SpotifyIntegration
+from services.weather_service import WeatherService
+from services.calendar_service import CalendarService
+from ui.JaicatUI import JaicatUI
+from services.finance import FinanceService
+from services.job_search import JobSearchService
+from services.youtube_analysis import YouTubeAnalysis
+from services.travel_recommendations import TravelRecommendations
+from services.usb_cam import USBCam
+from services.project_management import ProjectManagement
+from services.phone_cam import PhoneCamera
+from services.swann_cctv import SwannCCTV
+from services.ip_cam import IPCamera
+from services.food import FoodService
+from services.file_analysis import FileAnalysisService
+import tkinter as tk
+from tkinter import messagebox
+from tkinter import ttk
+from services.business_management import BusinessManagementService
+
+
+from utils.file_handling import read_file, write_to_file, file_exists, get_file_extension, list_files_in_directory
+from network.socket_utils import create_socket, listen_for_connections, accept_connection, send_data, receive_data, close_socket
+from machine_learning.tensorflow_utils import load_model, make_prediction, evaluate_model, preprocess_data
+
+
+
+from lib.nlp.translation import TranslationService
+from lib.nlp.spacy_utils import SpacyUtils
+from lib.nlp.medical import MedicalNLP
+from lib.nlp.fitness import FitnessNLP
+from lib.nlp.engineering import EngineeringNLP
+from lib.nlp.crime import CrimeAnalyzer
+from lib.nlg.Social_media_post import SocialMediaPostGenerator
+from computer_vision.home_surveillance import HomeSurveillance
+from computer_vision.contact_recognition import ContactRecognition
+from computer_vision.car_model import UKCarModel
+from computer_vision.car_detection import CarDetection
+from computer_vision.car_part_recognition import CarPartRecognition
+from computer_vision.contact_recognition import ContactRecognition
+from computer_vision.face_recognition import FaceRecognition
+from computer_vision.license_plate_detection import LicensePlateDetection
+from computer_vision.object_detection import ObjectDetection
+from onedrive import OneDriveIntegration
+#from opencv_utils import USBCam
+#from people_recognition import Contact_service
+from computer_vision.license_plate_detection import LicensePlateDetection
+from computer_vision.object_detection import ObjectDetection
+from command.Commands import CommandProcessor
+from services.detection_service import DetectionService
+from services.bluetooth_service import BluetoothService
+
+
+
+class Jaicat:
+    def __init__(self):
+        print("Initializing the Jaicat AI assistant...")
+
+        # Initialize text-to-speech engine
+        self.engine = pyttsx3.init()
+        self.engine.setProperty('rate', 150)
+        self.engine.setProperty('volume', 1.0)
+
+        # Initialize speech recognition
+        self.recognizer = sr.Recognizer()
+        self.microphone = sr.Microphone()
+
+        self.weather_service = WeatherService()  # Initialize Weather Service
+        self.calendar_service = CalendarService()  # Initialize Calendar Service
+       
+
+        # Track current user and face recognition state
+        self.current_user = None
+        self.face_recognized = False
+        self.current_mood = "neutral"  # Default mood
+
+        # Initialize NLP system
+        self.nlp_system = NLPSystem()
+
+        # Initialize GUI
+        print("Setting up the GUI...")
+        self.window = tk.Tk()
+        self.window.title("Jaicat - AI Assistant")
+        self.window.geometry("1200x800")  # Set window size
+        self.window.configure(bg="#2C3E50")  # Change background color
+
+        self.create_widgets()
+
+        self.finance_service = FinanceService()
+
+        self.finance_service = FinanceService()
+
+        self.job_search_service = JobSearchService()
+
+        self.travel_recommendations_service = TravelRecommendations()
+
+        self.usb_cam_service = USBCam()
+
+        self.project_management_service = ProjectManagement()
+
+        self.phone_camera_service = PhoneCamera()
+
+#       self.swann_cctv_service = SwannCCTV(api_key=swann_api_key, base_url=swann_base_url)
+
+#        self.ip_camera_service = IPCamera(camera_url=camera_url)
+
+#       self.food_service = FoodService(api_key=api_keys)
+
+        self.file_analysis_service = FileAnalysisService()
+
+        self.translation_service = TranslationService()
+
+        self.spacy_utils = SpacyUtils()
+    
+        self.medical_nlp = MedicalNLP()
+
+        self.fitness_nlp = FitnessNLP()
+
+        self.engineering_nlp = EngineeringNLP()
+
+        self.crime_analyzer = CrimeAnalyzer(data_path='path_to_your_crime_data.csv')
+
+        self.social_media_post_generator = SocialMediaPostGenerator()
+        
+        self.surveillance_system = HomeSurveillance()
+
+        self.contact_recognition_system = ContactRecognition()
+
+        self.car_model_system = UKCarModel("C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7.weights", "computer_vision/yolov7.cfg", "computer_vision\coco.names")
+
+        self.command_processor = CommandProcessor()
+
+        self.bluetooth_service = BluetoothService()
+        
+        self.business_management_service = BusinessManagementService()
+
+
+
+
+
+
+
+        
+
+    def create_widgets(self):
+        """Set up the UI components like buttons, labels, input boxes, etc."""
+        
+        # Frame to contain all widgets
+        main_frame = tk.Frame(self.window, bg="#2C3E50")
+        main_frame.pack(fill="both", expand=True)
+
+        # Label to show the face image
+        self.face_image_label = tk.Label(main_frame)
+        self.face_image_label.grid(row=0, column=0, padx=10, pady=10, columnspan=2)
+
+        # Button to play a song via Spotify
+        self.play_button = tk.Button(main_frame, text="Play Music", command=self.play_song, font=("Arial", 12), bg="#3498db", fg="white")
+        self.play_button.grid(row=1, column=0, padx=10, pady=10)
+
+        # Calendar Widget
+        self.calendar_label = tk.Label(main_frame, text="Calendar", font=("Arial", 14), bg="#2C3E50", fg="white")
+        self.calendar_label.grid(row=2, column=0, padx=10, pady=10)
+        self.calendar = tk.Label(main_frame, text=self.calendar_service.get_current_date(), font=("Arial", 14), bg="#1ABC9C", fg="white")
+        self.calendar.grid(row=3, column=0, padx=10, pady=10)
+
+        # Weather Label
+        self.weather_label = tk.Label(main_frame, text="Weather", font=("Arial", 14), bg="#2C3E50", fg="white")
+        self.weather_label.grid(row=2, column=1, padx=10, pady=10)
+        self.weather = tk.Label(main_frame, text=self.weather_service.get_weather(42.3478, -71.0466), font=("Arial", 14), bg="#1ABC9C", fg="white")
+        self.weather.grid(row=3, column=1, padx=10, pady=10)
+
+        # Circular Button for user input
+        self.input_button = tk.Button(main_frame, text="Text Input", command=self.show_input_box, font=("Arial", 12), bg="#E74C3C", fg="white")
+        self.input_button.grid(row=4, column=0, padx=10, pady=10)
+
+        # Hidden text input box
+        self.text_input = tk.Entry(main_frame, font=("Arial", 14))
+        self.text_input.grid(row=5, column=0, padx=10, pady=10, columnspan=2)
+        self.text_input.grid_remove()
+
+        # Status Bar
+        self.status_bar = tk.Label(self.window, text="Ready", bd=1, relief=tk.SUNKEN, anchor=tk.W, font=("Arial", 12))
+        self.status_bar.pack(side=tk.BOTTOM, fill=tk.X)
+
+    def show_input_box(self):
+        """Show the hidden input box when the button is clicked."""
+        self.text_input.grid()
+
+    def example_spacy_usage():
+        spacy_utils = SpacyUtils()
+        text = "Apple is looking at buying U.K. startup for $1 billion"
+        analysis = spacy_utils.analyze_text(text)
+        print("Tokens:", analysis['tokens'])
+        print("Entities:", analysis['entities'])
+        print("POS Tags:", analysis['pos_tags'])
+
+    def example_medical_usage():
+        medical_nlp = MedicalNLP()
+        text = "The patient has a headache and nausea, which are symptoms of the flu."
+        analysis = medical_nlp.analyze_medical_text(text)
+        print("Entities:", analysis['entities'])
+        print("Symptom Classification:", analysis['symptom_classification'])
+    
+    def example_usage():
+    # Example: Read a file
+        content = read_file('path/to/your/file.txt')
+        print(content)
+
+        # Example: Write to a file
+        result = write_to_file('path/to/your/output.txt', 'This is a test content.')
+        print(result)
+
+        # Example: Check if a file exists
+        exists = file_exists('path/to/your/file.txt')
+        print("File exists:", exists)
+
+        # Example: Get file extension
+        extension = get_file_extension('path/to/your/file.txt')
+        print("File extension:", extension)
+
+        # Example: List files in a directory
+        files = list_files_in_directory('path/to/your/directory')
+        print("Files in directory:", files)
+    def example_server():
+    # Create a socket
+        server_socket = create_socket(port=8080)
+
+        # Listen for incoming connections
+        listen_for_connections(server_socket)
+
+        # Accept a connection
+        client_socket, address = accept_connection(server_socket)
+
+        # Send and receive data
+        send_data(client_socket, "Hello, client!")
+        data = receive_data(client_socket)
+
+        # Close the sockets
+        close_socket(client_socket)
+        close_socket(server_socket)
+    
+    def example_usage():
+        # Load a pre-trained model
+        model_path = "path/to/your/model.h5"
+        model = load_model(model_path)
+
+        # Preprocess input data
+        input_data = ...  # Load your input data here
+        processed_data = preprocess_data(input_data)
+
+        # Make a prediction
+        prediction = make_prediction(model, processed_data)
+
+        # Evaluate the model
+        test_data = ...  # Load your test data here
+        test_labels = ...  # Load your test labels here
+        evaluate_model(model, test_data, test_labels)
+
+    def example_translation_usage():
+        translator = TranslationService()
+        text = "Hello, how are you?"
+        translated_text = translator.translate_text(text, dest_language='es')  # Translate to Spanish
+        print(f"Translated text: {translated_text}")
+
+    def display_calendar_events(self):
+        events = self.calendar_service.get_upcoming_events()
+        if events:
+            event_text = "\n".join(events)
+            self.display_response(f"Upcoming events:\n{event_text}")
+        else:
+            self.display_response("No upcoming events.")
+    def control_bluetooth_device(self, device_name):
+        response = self.bluetooth_service.connect_to_device(device_name)
+        self.display_response(response)
+
+    def check_stock_price(self, stock_name):
+        stock_price = self.finance_service.get_stock_price(stock_name)
+        if stock_price:
+            self.display_response(f"The current price of {stock_name} is {stock_price}")
+        else:
+            self.display_response(f"Couldn't fetch the stock price for {stock_name}.")
+
+    def play_song(self):
+        self.display_response("Playing music via Spotify...")
+        response = SpotifyIntegration().play_song("Imagine")
+        self.display_response(response)
+
+    def display_response(self, message):
+        """Display a response in the status bar or as a message box."""
+        self.status_bar.config(text=message)
+        messagebox.showinfo("Jaicat", message)
+
+    def change_user_face(self, mood="neutral"):
+        """Change the face image based on mood."""
+        if mood == "happy":
+            face_image = Image.open("face_happy.png")
+        elif mood == "flirty":
+            face_image = Image.open("face_flirty.png")
+        elif mood == "sad":
+            face_image = Image.open("face_sad.png")
+        else:
+            face_image = Image.open("face_neutral.png")
+
+        self.face_image_tk = ImageTk.PhotoImage(face_image)
+        self.face_image_label.config(image=self.face_image_tk)
+        self.face_image_label.image = self.face_image_tk
+
+    def set_mood(self, mood):
+        """Set the current mood and update behavior."""
+        self.current_mood = mood
+        self.update_mood_behavior()
+
+    def update_mood_behavior(self):
+        """Update the face and speech based on the current mood."""
+        if self.current_mood == "happy":
+            self.change_user_face(mood="happy")
+            self.speak("I'm feeling great today!")
+        elif self.current_mood == "flirty":
+            self.change_user_face(mood="flirty")
+            self.speak("Hello there, looking good!")
+        elif self.current_mood == "sad":
+            self.change_user_face(mood="sad")
+            self.speak("I'm feeling a bit down today.")
+        else:
+            self.change_user_face(mood="neutral")
+            self.speak("I'm here to assist you.")
+
+    def recognize_face(self):
+        """Perform face recognition."""
+        # Implement face recognition logic
+        self.face_recognized = True
+        self.current_user = "Jay"
+        if self.current_user == "Jay":
+            self.set_mood("flirty")  # Set flirty mood for Jay
+        else:
+            self.set_mood("neutral")  # Default mood for others
+
+    def speak(self, text):
+        """Speak with different styles based on the current mood."""
+        if self.current_mood == "happy":
+            text = "😊 " + text
+        elif self.current_mood == "flirty":
+            text = "💖 " + text
+        elif self.current_mood == "sad":
+            text = "😢 " + text
+
+        print(f"Speaking: {text}")
+        self.engine.say(text)
+        self.engine.runAndWait()
+
+    def process_user_input(self, user_input):
+        """Process the input using NLP and respond."""
+        # Using NLP and NLU to analyze the user input
+        sentiment = self.nlp_system.analyze_sentiment(user_input)
+        
+        # Change mood based on sentiment analysis
+        if sentiment == "positive":
+            self.set_mood("happy")
+        elif sentiment == "negative":
+            self.set_mood("sad")
+        else:
+            self.set_mood("neutral")
+        
+
+        
+        
+        
+        # Generate a response using NLP
+        response = self.nlp_system.process(user_input)
+        self.speak(response)
+    
+    def analyze_youtube_video(self, video_url):
+        """Analyze the YouTube video using the YouTube analysis service."""
+        video_id = video_url.split("v=")[-1]  # Extract video ID from URL
+        analysis_results = self.youtube_service.analyze_youtube_video(video_id)
+        self.speak(f"Title: {analysis_results['title']}, Description: {analysis_results['description']}")
+    
+    def extract_intent(text):
+    # NLU logic to identify intent from user input
+        pass
+
+    def extract_entities(text):
+    # NLU logic to extract relevant entities like 'song_name', 'job_title', etc.
+        pass
+    
+def process_command(self, command):
+    # Use the NLU system to extract intent and entities
+    intent = self.nlu_system.extract_intent(command)
+    entities = self.nlu_system.extract_entities(command)
+
+    if intent == "play_music":
+        song_name = entities.get('song_name')
+        if song_name:
+            self.play_song(song_name)
+        else:
+            self.speak("Please provide the name of the song.")
+
+    elif intent == "check_calendar":
+        self.display_calendar_events()
+
+    elif intent == "check_weather":
+        location = entities.get('location', 'New York')  # Default to New York if no location provided
+        self.check_weather(location)
+
+    elif intent == "check_stock_price":
+        stock_name = entities.get('stock_name')
+        if stock_name:
+            self.check_stock_price(stock_name)
+        else:
+            self.speak("Please provide the name of the stock.")
+
+    elif intent == "find_jobs":
+        job_title = entities.get('job_title')
+        if job_title:
+            jobs = self.job_search_service.search_jobs(job_title)
+            if jobs:
+                self.speak(f"Top job listings: {', '.join(jobs)}")
+            else:
+                self.speak("No jobs found.")
+        else:
+            self.speak("Please provide the job title you are looking for.")
+    elif intent == "get_news":
+        category = entities.get('category', 'general')
+    headlines = self.news_service.get_news(category=category)
+    if headlines:
+        self.speak(f"Here are the top headlines: {', '.join(headlines)}")
+    else:
+        self.speak("No news available at the moment.")
+    if intent == "control_device":
+        device_id = entities.get('device_id')
+    action = entities.get('action')
+    if device_id and action:
+        response = self.home_automation_service.control_device(device_id, action)
+        self.speak(response)
+    else:
+        self.speak("Please specify the device and action.")
+    if intent == "check_stock_price":
+        stock_symbol = entities.get('stock_symbol')
+    if stock_symbol:
+        price = self.finance_service.get_stock_price(stock_symbol)
+        self.speak(f"The current price of {stock_symbol} is {price}")
+    else:
+        self.speak("Please provide a stock symbol.")
+
+    if intent == "send_email":
+        recipient = entities.get('recipient')
+        subject = entities.get('subject', 'No Subject')
+        body = entities.get('body', 'No Content')
+    if recipient:
+        response = self.email_service.send_email(recipient, subject, body)
+        self.speak(response)
+    else:
+        self.speak("Please provide the recipient's email address.")
+    
+    if intent == "analyze_youtube":
+            video_url = self.nlu_system.extract_entities(command)['video_url']
+            self.analyze_youtube_video(video_url)
+    if intent == "get_travel_recommendations":
+        category = self.nlu_system.extract_entities(command).get('category', '')
+        recommendations = self.travel_recommendations_service.get_recommendations(category)
+        response = f"Travel recommendations: {', '.join(recommendations)}"
+        self.speak(response)
+    if intent == "capture_image":
+        self.usb_cam_service.start_camera()
+        self.usb_cam_service.capture_image("captured_image.png")  # Specify filename as needed
+        self.usb_cam_service.release_camera()
+        response = "Image captured successfully."
+        self.speak(response)
+    if intent == "create_project":
+        project_name = self.nlu_system.extract_entities(command).get('project_name', 'Default Project')
+        response = self.project_management_service.create_project(project_name)
+        self.speak(response)
+
+    elif intent == "add_task":
+        project_name = self.nlu_system.extract_entities(command).get('project_name', 'Default Project')
+        task = self.nlu_system.extract_entities(command).get('task', 'New Task')
+        response = self.project_management_service.add_task(project_name, task)
+        self.speak(response)
+
+    elif intent == "list_projects":
+        response = self.project_management_service.list_projects()
+        self.speak(response)
+
+    elif intent == "complete_project":
+        project_name = self.nlu_system.extract_entities(command).get('project_name', 'Default Project')
+        response = self.project_management_service.complete_project(project_name)
+        self.speak(response)
+
+    if intent == "capture_image":
+        response = self.phone_camera_service.capture_image()
+        self.speak(response)
+    if intent == "get_camera_status":
+        status = self.swann_cctv_service.get_camera_status()
+        self.speak(f"Camera status: {status}")
+    
+    elif intent == "capture_snapshot":
+        camera_id = self.nlu_system.extract_entities(command)['camera_id']
+        snapshot_response = self.swann_cctv_service.capture_snapshot(camera_id)
+        self.speak(snapshot_response)
+    
+    elif intent == "start_recording":
+        camera_id = self.nlu_system.extract_entities(command)['camera_id']
+        success = self.swann_cctv_service.start_recording(camera_id)
+        response = "Recording started." if success else "Failed to start recording."
+        self.speak(response)
+
+    elif intent == "stop_recording":
+        camera_id = self.nlu_system.extract_entities(command)['camera_id']
+        success = self.swann_cctv_service.stop_recording(camera_id)
+        response = "Recording stopped." if success else "Failed to stop recording."
+        self.speak(response)
+
+    if intent == "capture_snapshot":
+        snapshot_response = self.ip_camera_service.capture_snapshot()
+        self.speak(snapshot_response)
+    
+    elif intent == "start_recording":
+        success_response = self.ip_camera_service.start_recording()
+        self.speak(success_response)
+
+    elif intent == "stop_recording":
+        stop_response = self.ip_camera_service.stop_recording()
+        self.speak(stop_response)
+
+    if intent == "get_nutrition":
+        food_item = self.nlu_system.extract_entities(command)['food_item']
+        nutrition_info = self.food_service.get_nutrition_facts(food_item)
+        self.speak(nutrition_info)
+    
+    elif intent == "find_recipes":
+        query = self.nlu_system.extract_entities(command)['ingredient']
+        recipes = self.food_service.find_recipes(query)
+        self.speak(recipes)
+
+    elif intent == "get_recipe_instructions":
+        recipe_id = self.nlu_system.extract_entities(command)['recipe_id']
+        instructions = self.food_service.get_recipe_instructions(recipe_id)
+        self.speak(instructions)
+    
+    if intent == "analyze_file":
+        file_path = self.nlu_system.extract_entities(command)['file_path']
+        analysis_result = self.file_analysis_service.file_analysis(file_path)
+        self.speak(analysis_result)
+
+    if "translate" in command:
+        text_to_translate = command.replace("translate", "").strip()
+        translated_text = self.translation_service.translate_text(text_to_translate, dest_language='fr')  # Translate to French
+        response = f"Translated text: {translated_text}"
+        self.speak(response)
+    
+    if "analyze text" in command:
+        text_to_analyze = command.replace("analyze text", "").strip()
+        analysis_result = self.spacy_utils.analyze_text(text_to_analyze)
+        response = f"Tokens: {analysis_result['tokens']}, Entities: {analysis_result['entities']}, POS Tags: {analysis_result['pos_tags']}"
+        self.speak(response)
+    
+    if "analyze medical text" in command:
+        text_to_analyze = command.replace("analyze medical text", "").strip()
+        analysis_result = self.medical_nlp.analyze_medical_text(text_to_analyze)
+        response = f"Entities: {analysis_result['entities']}, Symptoms Classification: {analysis_result['symptom_classification']}"
+        self.speak(response)
+
+    if "analyze fitness data" in command:
+        # Mock data for demonstration; you can replace this with actual data
+        fitness_data = {'steps': 10000, 'calories_burned': 500, 'workout_duration': 30}
+        analysis_result = self.fitness_nlp.analyze_fitness_data(fitness_data)
+        self.speak(analysis_result)
+
+    elif "recommend workout" in command:
+        fitness_level = command.replace("recommend workout", "").strip()
+        recommendation = self.fitness_nlp.recommend_workout(fitness_level)
+        self.speak(recommendation)
+
+    elif "set fitness goal" in command:
+        goal = command.replace("set fitness goal", "").strip()
+        confirmation = self.fitness_nlp.set_fitness_goal(goal)
+        self.speak(confirmation)
+
+    if "calculate force" in command:
+        params = self.extract_params(command)  # Define this method to extract mass and acceleration
+        force = self.engineering_nlp.calculate_force(params['mass'], params['acceleration'])
+        self.speak(f"The calculated force is {force} Newtons.")
+
+    elif "calculate work" in command:
+        params = self.extract_params(command)  # Define this method to extract force and distance
+        work = self.engineering_nlp.calculate_work(params['force'], params['distance'])
+        self.speak(f"The calculated work is {work} Joules.")
+
+    elif "calculate energy" in command:
+        params = self.extract_params(command)  # Define this method to extract mass and height
+        energy = self.engineering_nlp.calculate_energy(params['mass'], params['height'])
+        self.speak(f"The calculated potential energy is {energy} Joules.")
+    
+    elif "structural analysis" in command:
+        params = self.extract_params(command)  # Define this method to extract load, length, width, height
+        stress = self.engineering_nlp.structural_analysis(params['load'], params['length'], params['width'], params['height'])
+        self.speak(f"The bending stress is {stress} Pascals.")
+    if "analyze crime" in command:
+        crime_type = self.extract_crime_type(command)  # Define this method to extract the crime type
+        count = self.crime_analyzer.analyze_crime_type(crime_type)
+        self.speak(f"There are {count} occurrences of {crime_type}.")
+
+    elif "top crimes" in command:
+        top_crimes = self.crime_analyzer.get_top_crime_types()
+        self.speak(f"The top crimes are: {', '.join(top_crimes.index)} with counts: {', '.join(map(str, top_crimes.values))}.")
+
+    if "generate post" in command:
+        context = {
+            "link": "https://example.com",
+            "event": "our launch event",
+            "product_name": "Awesome Product",
+            "offer": "50% off this week only",
+            "date": "October 5"
+        }
+        post = self.social_media_post_generator.generate_post(context)
+        formatted_post = self.social_media_post_generator.format_post(post)
+        self.speak(f"Here is your social media post: {formatted_post}")
+    
+    if "start surveillance" in command.lower():
+        self.surveillance_system.start_surveillance()
+
+    if "start contact recognition" in command.lower():
+        self.contact_recognition_system.start_recognition()
+    
+    if "start car detection" in command.lower():
+        self.car_model_system.start_detection()
+
+    if "discover bluetooth devices" in command.lower():
+            devices = self.bluetooth_service.discover_devices()
+            if devices:
+                response = f"Found {len(devices)} devices: {devices}"
+            else:
+                response = "No Bluetooth devices found."
+            self.speak(response)
+    
+    if "nutrition facts" in command:
+        food_item = command.replace("nutrition facts for", "").strip()
+        nutrition_info = self.health_service.get_nutrition_facts(food_item)
+        response = f"Nutritional info for {food_item}: {nutrition_info}"
+        self.speak(response)
+
+    elif "healthy" in command:
+        food_item = command.replace("is", "").replace("healthy", "").strip()
+        is_healthy = self.health_service.is_healthy(food_item)
+        response = f"{food_item} is {'healthy' if is_healthy else 'not healthy'}."
+        self.speak(response)
+
+    elif "recipes" in command:
+        ingredient = command.replace("give me recipes with", "").strip()
+        recipes = self.health_service.get_recipes(ingredient)
+        response = f"Recipes with {ingredient}: {recipes}"
+        self.speak(response)
+    
+    if intent == "add_project":
+            project_name = entities.get('project_name', 'Unnamed Project')
+            deadline = entities.get('deadline', 'No deadline provided')
+            description = entities.get('description', 'No description provided')
+            response = self.business_management_service.add_project(project_name, description, deadline)
+            self.speak(response)
+        
+    elif intent == "track_finances":
+            income = entities.get('income', 0)
+            expense = entities.get('expense', 0)
+            response = self.business_management_service.track_finances(income=income, expense=expense)
+            self.speak(response)
+        
+    elif intent == "schedule_meeting":
+            title = entities.get('meeting_title', 'No title provided')
+            time = entities.get('time', 'No time provided')
+            participants = entities.get('participants', [])
+            response = self.business_management_service.add_meeting(title, time, participants)
+            self.speak(response)
+        
+    elif intent == "add_performance_metric":
+            metric_name = entities.get('metric_name', 'Unnamed Metric')
+            value = entities.get('value', 0)
+            response = self.business_management_service.add_performance_metric(metric_name, value)
+            self.speak(response)
+
+    elif intent == "get_business_summary":
+            summary = self.business_management_service.get_summary()
+            summary_str = f"Projects: {summary['projects']}\n" \
+                          f"Finances: Income - {summary['finances']['income']}, Expenses - {summary['finances']['expenses']}\n" \
+                          f"Meetings: {summary['meetings']}\n" \
+                          f"Performance Metrics: {summary['performance_metrics']}"
+            self.speak(summary_str)
+
+
+
+    # Handle more intents here as you add services and features
+
+    
+        
+
+        
+
+    def run(self):
+        self.window.mainloop()
+
+
+if __name__ == "__main__":
+    assistant = Jaicat()
+    assistant.run()

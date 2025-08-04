@@ -1,0 +1,110 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision
+
+02/08/2025  20:05    <DIR>          .
+01/08/2025  17:05    <DIR>          ..
+10/10/2024  22:11             1,118 car_detection.py
+02/08/2025  16:03             6,577 car_model.py
+10/10/2024  22:11             1,509 car_part_recognition.py
+01/08/2025  12:34    <DIR>          coco
+06/10/2024  20:35               625 coco.names
+10/10/2024  22:11               705 coco.names.txt
+06/10/2024  16:55             1,425 coco.yaml
+10/10/2024  22:11             2,959 contact_recognition.py
+10/10/2024  22:11                 2 detections.json
+10/10/2024  22:12                22 dir.bat
+02/08/2025  20:05                 0 dirlist.txt
+10/10/2024  22:11             1,450 face_recognition.py
+10/10/2024  22:11             2,568 home_surveillance.py
+10/10/2024  22:11               597 license_plate_detection.py
+10/10/2024  22:11                 2 local_car_data.json
+10/10/2024  22:11             4,022 motorbike_model.py
+10/10/2024  22:11             5,650 object_detection.py
+01/08/2025  14:35            16,116 oneDrive.py
+10/10/2024  22:11             7,930 opencv_utils.py
+10/10/2024  22:11             2,579 people_recognition.py
+01/08/2025  16:50               441 plate_cascade.xml
+01/08/2025  18:01             1,426 uk_car_model_onnx.py
+10/10/2024  22:11                 0 uk_plate_cascade.xml
+10/10/2024  22:11             2,891 vehicle_detection.py
+10/10/2024  22:11             2,564 visualization.py
+01/08/2025  12:34    <DIR>          yolov7-python
+10/10/2024  22:11             1,448 yolov7.cfg
+06/10/2024  20:33        75,587,165 yolov7.pt
+19/02/2025  20:02       147,898,248 yolov7.weights
+14/07/2025  20:05             3,999 yolov7.yaml
+01/08/2025  12:34                42 __init__.py
+02/08/2025  16:05    <DIR>          __pycache__
+              29 File(s)    223,554,080 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\coco
+
+01/08/2025  12:34    <DIR>          .
+02/08/2025  20:05    <DIR>          ..
+14/07/2025  20:07             1,425 coco.names.txt.yaml
+01/08/2025  12:34                42 __init__.py
+               2 File(s)          1,467 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python
+
+01/08/2025  12:34    <DIR>          .
+02/08/2025  20:05    <DIR>          ..
+01/08/2025  12:34    <DIR>          data
+01/08/2025  17:43             4,525 detection.py
+31/07/2025  17:20                26 requirements.txt
+31/07/2025  17:20        24,975,795 yolov7-tiny.onnx
+01/08/2025  12:34                42 __init__.py
+               4 File(s)     24,980,388 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\data
+
+01/08/2025  12:34    <DIR>          .
+01/08/2025  12:34    <DIR>          ..
+31/07/2025  17:20               705 class.names
+01/08/2025  12:34    <DIR>          images
+01/08/2025  12:34    <DIR>          videos
+01/08/2025  12:34                42 __init__.py
+               2 File(s)            747 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\data\images
+
+01/08/2025  12:34    <DIR>          .
+01/08/2025  12:34    <DIR>          ..
+31/07/2025  17:20           133,495 horses.jpg
+31/07/2025  17:20         2,111,845 road.png
+31/07/2025  17:20           168,949 zidane.jpg
+01/08/2025  12:34                42 __init__.py
+               4 File(s)      2,414,331 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\data\videos
+
+01/08/2025  12:34    <DIR>          .
+01/08/2025  12:34    <DIR>          ..
+31/07/2025  17:20        32,513,861 road.mp4
+01/08/2025  12:34                42 __init__.py
+               2 File(s)     32,513,903 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\__pycache__
+
+02/08/2025  16:05    <DIR>          .
+02/08/2025  20:05    <DIR>          ..
+31/07/2025  18:47             1,973 car_detection.cpython-312.pyc
+02/08/2025  16:05            11,339 car_model.cpython-312.pyc
+03/01/2025  23:55             2,668 car_part_recognition.cpython-312.pyc
+03/01/2025  23:55             4,253 contact_recognition.cpython-312.pyc
+03/01/2025  23:55             2,416 face_recognition.cpython-312.pyc
+03/01/2025  23:55             3,305 home_surveillance.cpython-312.pyc
+03/01/2025  23:55             1,010 license_plate_detection.cpython-312.pyc
+03/01/2025  23:55             7,187 motorbike_model.cpython-312.pyc
+03/01/2025  23:54             8,197 object_detection.cpython-312.pyc
+01/08/2025  14:42            21,151 oneDrive.cpython-312.pyc
+01/08/2025  18:20             2,933 uk_car_model_onnx.cpython-312.pyc
+03/01/2025  23:55             4,322 visualization.cpython-312.pyc
+01/08/2025  12:49               162 __init__.cpython-312.pyc
+              13 File(s)         70,916 bytes
+
+     Total Files Listed:
+              56 File(s)    283,535,832 bytes
+              20 Dir(s)   1,444,663,296 bytes free

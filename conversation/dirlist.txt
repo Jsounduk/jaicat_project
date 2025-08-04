@@ -1,0 +1,28 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\conversation
+
+31/07/2025  18:26    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12             6,873 dialogue_manager copy.py
+10/10/2024  22:12             9,950 dialogue_manager.py
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:26                 0 dirlist.txt
+10/10/2024  22:12             2,028 nlg.py
+10/10/2024  22:12             5,577 nlu.py
+03/01/2025  23:55    <DIR>          __pycache__
+               6 File(s)         24,450 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\conversation\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+31/07/2025  18:26    <DIR>          ..
+03/01/2025  23:55             8,054 dialogue_manager.cpython-312.pyc
+03/01/2025  23:55             3,118 nlg.cpython-312.pyc
+10/10/2024  22:12             4,082 nlu.cpython-312.pyc
+               3 File(s)         15,254 bytes
+
+     Total Files Listed:
+               9 File(s)         39,704 bytes
+               5 Dir(s)  12,528,766,976 bytes free

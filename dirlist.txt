@@ -1,0 +1,2679 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project
+
+31/07/2025  17:28    <DIR>          .
+27/07/2025  13:37    <DIR>          ..
+10/10/2024  22:11               532 .cache
+03/01/2025  23:16                92 .gitattributes
+10/10/2024  22:11            23,066 0_dzBfVzmoSfyyR-c9.jpg
+10/10/2024  22:11            25,198 0_GTgne40Gv4ryd1qZ.jpg
+10/10/2024  22:11            35,580 0_zxjamgcHxll0nj6g (1).jpg
+10/10/2024  22:11            35,580 0_zxjamgcHxll0nj6g.webp
+10/10/2024  22:11               170 business_data.json
+05/01/2025  10:45    <DIR>          command
+31/07/2025  17:20    <DIR>          computer_vision
+03/01/2025  23:11    <DIR>          config
+03/01/2025  23:11    <DIR>          conversation
+10/10/2024  22:12               851 conversation_management.py
+03/01/2025  23:11    <DIR>          data
+03/01/2025  23:11    <DIR>          database
+10/10/2024  22:12                22 dir.bat
+31/07/2025  17:28                 0 dirlist.txt
+05/01/2025  21:26    <DIR>          Documentation
+03/01/2025  23:11    <DIR>          enrollment_json
+03/01/2025  23:11    <DIR>          enrollment_pictures
+10/10/2024  22:12           119,153 face_concerned.jpeg
+10/10/2024  22:12         1,373,010 face_concerned.png
+10/10/2024  22:12           117,040 face_flirty.jpeg
+10/10/2024  22:12         1,231,084 face_flirty.png
+23/07/2024  23:33         1,926,637 face_happy.png
+10/10/2024  22:12           148,241 face_neutral.jpeg
+10/10/2024  22:12         1,450,224 face_neutral.png
+10/10/2024  22:12            84,262 face_sad.jpeg
+10/10/2024  22:12           979,057 face_sad.png
+03/01/2025  23:12    <DIR>          features
+10/10/2024  22:12               879 filename.txt
+10/10/2024  22:12               149 file_handling.py
+10/10/2024  22:12               272 image_processing.py
+10/10/2024  22:12            54,712 layingdown.jpeg
+03/01/2025  23:12    <DIR>          lib
+03/01/2025  23:12    <DIR>          machine_learning
+10/10/2024  22:12            29,439 main - Master Before Changing my self.txt
+10/10/2024  22:12            21,399 main copy 2.txt
+10/10/2024  22:12            41,421 main copy.txt
+27/07/2025  16:18             2,820 main.py
+03/01/2025  23:12    <DIR>          models
+03/01/2025  23:12    <DIR>          network
+03/01/2025  22:51                16 README.md
+03/01/2025  23:12    <DIR>          security
+03/01/2025  23:12    <DIR>          services
+26/07/2025  14:53             5,079 Sir_Integrated_Calendar.ics
+03/01/2025  23:12    <DIR>          TESTING OPENAI
+03/01/2025  23:12    <DIR>          Tests
+19/02/2025  21:11    <DIR>          ui
+03/01/2025  23:12    <DIR>          utils
+03/01/2025  23:11    <DIR>          __pycache__
+              29 File(s)      7,705,985 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git
+
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  20:34            12,288 .MERGE_MSG.swp
+19/01/2025  11:05                23 COMMIT_EDITMSG
+03/01/2025  23:51               650 config
+06/10/2024  19:42                73 description
+05/01/2025  21:26               102 FETCH_HEAD
+03/01/2025  19:43    <DIR>          filter-repo
+03/01/2025  22:51                21 HEAD
+03/01/2025  19:02    <DIR>          hooks
+19/02/2025  21:07            22,024 index
+03/01/2025  22:45    <DIR>          info
+03/01/2025  19:06    <DIR>          lfs
+03/01/2025  22:45    <DIR>          logs
+19/01/2025  11:05    <DIR>          objects
+05/01/2025  21:26                41 ORIG_HEAD
+03/01/2025  22:45                46 packed-refs
+03/01/2025  23:16    <DIR>          refs
+               9 File(s)         35,268 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\filter-repo
+
+03/01/2025  19:43    <DIR>          .
+03/01/2025  22:45               136 already_ran
+03/01/2025  22:45                36 changed-refs
+03/01/2025  22:45             1,521 commit-map
+03/01/2025  22:45               164 first-changed-commits
+03/01/2025  22:45               286 ref-map
+03/01/2025  22:45                35 suboptimal-issues
+               6 File(s)          2,178 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\hooks
+
+03/01/2025  19:02    <DIR>          .
+06/10/2024  19:42               478 applypatch-msg.sample
+06/10/2024  19:42               896 commit-msg.sample
+06/10/2024  19:42             4,726 fsmonitor-watchman.sample
+03/01/2025  19:02               351 post-checkout
+03/01/2025  19:02               347 post-commit
+03/01/2025  19:02               345 post-merge
+06/10/2024  19:42               189 post-update.sample
+06/10/2024  19:42               424 pre-applypatch.sample
+06/10/2024  19:42             1,649 pre-commit.sample
+06/10/2024  19:42               416 pre-merge-commit.sample
+03/01/2025  19:02               341 pre-push
+06/10/2024  19:42             1,374 pre-push.sample
+06/10/2024  19:42             4,898 pre-rebase.sample
+06/10/2024  19:42               544 pre-receive.sample
+06/10/2024  19:42             1,492 prepare-commit-msg.sample
+06/10/2024  19:42             2,783 push-to-checkout.sample
+06/10/2024  19:42             2,308 sendemail-validate.sample
+06/10/2024  19:42             3,650 update.sample
+              18 File(s)         27,211 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\info
+
+03/01/2025  22:45    <DIR>          .
+06/10/2024  19:42               240 exclude
+03/01/2025  22:45                 0 refs
+               2 File(s)            240 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs
+
+03/01/2025  19:06    <DIR>          .
+03/01/2025  19:06    <DIR>          cache
+03/01/2025  19:03    <DIR>          objects
+19/02/2025  19:04    <DIR>          tmp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\cache
+
+03/01/2025  19:06    <DIR>          .
+03/01/2025  19:06    <DIR>          ..
+03/01/2025  19:06    <DIR>          locks
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\cache\locks
+
+03/01/2025  19:06    <DIR>          .
+03/01/2025  19:06    <DIR>          ..
+03/01/2025  19:06    <DIR>          refs
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\cache\locks\refs
+
+03/01/2025  19:06    <DIR>          .
+03/01/2025  19:06    <DIR>          ..
+03/01/2025  20:07    <DIR>          heads
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\cache\locks\refs\heads
+
+03/01/2025  20:07    <DIR>          .
+03/01/2025  19:06    <DIR>          ..
+03/01/2025  20:07    <DIR>          jaicat_1
+03/01/2025  19:06    <DIR>          main
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\cache\locks\refs\heads\jaicat_1
+
+03/01/2025  20:07    <DIR>          .
+03/01/2025  20:07    <DIR>          ..
+03/01/2025  22:44                24 verifiable
+               1 File(s)             24 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\cache\locks\refs\heads\main
+
+03/01/2025  19:06    <DIR>          .
+03/01/2025  20:07    <DIR>          ..
+19/01/2025  11:05                24 verifiable
+               1 File(s)             24 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\objects
+
+03/01/2025  19:03    <DIR>          .
+03/01/2025  19:06    <DIR>          ..
+03/01/2025  19:03    <DIR>          4e
+03/01/2025  19:03    <DIR>          d1
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\objects\4e
+
+03/01/2025  19:03    <DIR>          .
+03/01/2025  19:03    <DIR>          ..
+03/01/2025  19:03    <DIR>          cf
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\objects\4e\cf
+
+03/01/2025  19:03    <DIR>          .
+03/01/2025  19:03    <DIR>          ..
+03/01/2025  19:03       147,898,248 4ecf7ca13ec5039ec7b79b0f25b156fda5eaf819d6c2bb6828ba55fe4f928332
+               1 File(s)    147,898,248 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\objects\d1
+
+03/01/2025  19:03    <DIR>          .
+03/01/2025  19:03    <DIR>          ..
+03/01/2025  19:03    <DIR>          ac
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\objects\d1\ac
+
+03/01/2025  19:03    <DIR>          .
+03/01/2025  19:03    <DIR>          ..
+03/01/2025  19:03        75,587,165 d1ac3c74eb96a3eec77949c0f37a06bc272756606ff011d9353f7abff4e0c71d
+               1 File(s)     75,587,165 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\lfs\tmp
+
+19/02/2025  19:04    <DIR>          .
+03/01/2025  19:06    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\logs
+
+03/01/2025  22:45    <DIR>          .
+19/01/2025  11:05             1,188 HEAD
+03/01/2025  23:16    <DIR>          refs
+               1 File(s)          1,188 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\logs\refs
+
+03/01/2025  23:16    <DIR>          .
+03/01/2025  22:45    <DIR>          ..
+03/01/2025  23:10    <DIR>          heads
+03/01/2025  22:49    <DIR>          remotes
+03/01/2025  23:16               151 stash
+               1 File(s)            151 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\logs\refs\heads
+
+03/01/2025  23:10    <DIR>          .
+03/01/2025  23:16    <DIR>          ..
+10/10/2024  22:13               163 jaicat_1
+19/01/2025  11:05               851 main
+               2 File(s)          1,014 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\logs\refs\remotes
+
+03/01/2025  22:49    <DIR>          .
+03/01/2025  23:16    <DIR>          ..
+03/01/2025  22:49    <DIR>          origin
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\logs\refs\remotes\origin
+
+03/01/2025  22:49    <DIR>          .
+03/01/2025  22:49    <DIR>          ..
+19/01/2025  11:05               794 main
+               1 File(s)            794 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects
+
+19/01/2025  11:05    <DIR>          .
+03/01/2025  23:10    <DIR>          00
+03/01/2025  23:10    <DIR>          01
+03/01/2025  23:10    <DIR>          02
+03/01/2025  23:10    <DIR>          03
+03/01/2025  23:10    <DIR>          04
+03/01/2025  23:28    <DIR>          05
+03/01/2025  23:10    <DIR>          06
+03/01/2025  23:10    <DIR>          07
+19/01/2025  11:05    <DIR>          0b
+05/01/2025  21:24    <DIR>          0c
+03/01/2025  23:10    <DIR>          0d
+05/01/2025  21:24    <DIR>          0e
+05/01/2025  21:24    <DIR>          0f
+05/01/2025  21:24    <DIR>          10
+03/01/2025  23:10    <DIR>          11
+03/01/2025  23:10    <DIR>          12
+03/01/2025  23:10    <DIR>          13
+03/01/2025  23:10    <DIR>          14
+05/01/2025  21:24    <DIR>          16
+05/01/2025  21:24    <DIR>          17
+03/01/2025  23:10    <DIR>          18
+05/01/2025  21:24    <DIR>          19
+03/01/2025  23:10    <DIR>          1b
+03/01/2025  22:49    <DIR>          1c
+03/01/2025  23:10    <DIR>          1d
+03/01/2025  23:10    <DIR>          1e
+05/01/2025  21:24    <DIR>          1f
+05/01/2025  21:24    <DIR>          21
+05/01/2025  21:24    <DIR>          22
+03/01/2025  23:10    <DIR>          24
+03/01/2025  23:28    <DIR>          26
+19/01/2025  11:05    <DIR>          27
+03/01/2025  23:10    <DIR>          28
+03/01/2025  23:10    <DIR>          29
+03/01/2025  23:10    <DIR>          2a
+03/01/2025  23:10    <DIR>          2b
+19/01/2025  11:05    <DIR>          2d
+03/01/2025  23:10    <DIR>          2e
+19/01/2025  11:05    <DIR>          2f
+03/01/2025  23:10    <DIR>          30
+03/01/2025  23:10    <DIR>          31
+05/01/2025  21:24    <DIR>          32
+05/01/2025  21:24    <DIR>          35
+03/01/2025  23:10    <DIR>          36
+05/01/2025  21:24    <DIR>          37
+05/01/2025  21:26    <DIR>          38
+03/01/2025  23:10    <DIR>          39
+03/01/2025  23:10    <DIR>          3a
+03/01/2025  23:10    <DIR>          3b
+03/01/2025  23:10    <DIR>          3c
+03/01/2025  23:10    <DIR>          3d
+05/01/2025  21:24    <DIR>          3e
+03/01/2025  23:10    <DIR>          3f
+03/01/2025  23:10    <DIR>          40
+05/01/2025  21:26    <DIR>          41
+03/01/2025  23:28    <DIR>          42
+03/01/2025  23:10    <DIR>          43
+03/01/2025  23:10    <DIR>          44
+05/01/2025  21:26    <DIR>          45
+05/01/2025  21:24    <DIR>          46
+05/01/2025  21:24    <DIR>          47
+03/01/2025  23:10    <DIR>          48
+05/01/2025  21:24    <DIR>          49
+03/01/2025  23:10    <DIR>          4b
+03/01/2025  23:10    <DIR>          4c
+03/01/2025  23:10    <DIR>          4d
+05/01/2025  21:24    <DIR>          4e
+05/01/2025  21:24    <DIR>          4f
+03/01/2025  23:10    <DIR>          50
+03/01/2025  23:10    <DIR>          51
+03/01/2025  23:10    <DIR>          52
+03/01/2025  23:10    <DIR>          53
+03/01/2025  23:10    <DIR>          54
+03/01/2025  23:10    <DIR>          55
+03/01/2025  23:10    <DIR>          56
+03/01/2025  23:28    <DIR>          57
+03/01/2025  23:10    <DIR>          59
+05/01/2025  21:24    <DIR>          5a
+03/01/2025  23:10    <DIR>          5b
+03/01/2025  23:10    <DIR>          5d
+03/01/2025  23:10    <DIR>          5e
+03/01/2025  23:10    <DIR>          5f
+05/01/2025  21:24    <DIR>          60
+05/01/2025  21:26    <DIR>          61
+03/01/2025  23:28    <DIR>          63
+03/01/2025  23:10    <DIR>          64
+03/01/2025  23:10    <DIR>          65
+03/01/2025  23:10    <DIR>          66
+05/01/2025  21:24    <DIR>          67
+03/01/2025  23:10    <DIR>          69
+03/01/2025  23:10    <DIR>          6b
+05/01/2025  21:24    <DIR>          6e
+03/01/2025  23:16    <DIR>          6f
+05/01/2025  21:24    <DIR>          72
+03/01/2025  23:10    <DIR>          73
+03/01/2025  23:10    <DIR>          74
+03/01/2025  23:10    <DIR>          75
+03/01/2025  23:10    <DIR>          76
+19/01/2025  11:05    <DIR>          77
+05/01/2025  21:24    <DIR>          78
+05/01/2025  21:26    <DIR>          79
+03/01/2025  23:10    <DIR>          7b
+03/01/2025  23:10    <DIR>          7c
+05/01/2025  21:24    <DIR>          7d
+03/01/2025  23:10    <DIR>          7e
+05/01/2025  21:24    <DIR>          7f
+03/01/2025  23:10    <DIR>          80
+05/01/2025  21:24    <DIR>          81
+19/01/2025  11:05    <DIR>          82
+03/01/2025  23:10    <DIR>          83
+03/01/2025  23:10    <DIR>          84
+05/01/2025  21:24    <DIR>          85
+03/01/2025  23:10    <DIR>          86
+05/01/2025  21:24    <DIR>          88
+03/01/2025  23:10    <DIR>          89
+03/01/2025  23:10    <DIR>          8a
+05/01/2025  21:26    <DIR>          8b
+19/01/2025  11:05    <DIR>          8c
+03/01/2025  23:10    <DIR>          8d
+03/01/2025  23:10    <DIR>          8e
+03/01/2025  23:10    <DIR>          8f
+03/01/2025  23:16    <DIR>          90
+05/01/2025  21:24    <DIR>          91
+03/01/2025  23:10    <DIR>          93
+05/01/2025  21:24    <DIR>          94
+03/01/2025  23:10    <DIR>          96
+05/01/2025  21:24    <DIR>          97
+03/01/2025  23:10    <DIR>          98
+03/01/2025  23:10    <DIR>          99
+03/01/2025  23:10    <DIR>          9a
+19/01/2025  11:05    <DIR>          9b
+03/01/2025  23:10    <DIR>          9c
+03/01/2025  23:10    <DIR>          9e
+03/01/2025  23:10    <DIR>          9f
+03/01/2025  23:10    <DIR>          a1
+05/01/2025  21:24    <DIR>          a2
+03/01/2025  23:10    <DIR>          a4
+03/01/2025  23:10    <DIR>          a6
+05/01/2025  21:24    <DIR>          a7
+03/01/2025  23:10    <DIR>          ab
+03/01/2025  23:28    <DIR>          ac
+03/01/2025  23:10    <DIR>          ad
+05/01/2025  21:24    <DIR>          ae
+03/01/2025  23:10    <DIR>          b1
+03/01/2025  23:10    <DIR>          b4
+03/01/2025  23:10    <DIR>          b5
+03/01/2025  23:10    <DIR>          b6
+03/01/2025  23:10    <DIR>          b7
+05/01/2025  21:24    <DIR>          b9
+05/01/2025  21:24    <DIR>          ba
+03/01/2025  23:10    <DIR>          bb
+03/01/2025  23:10    <DIR>          bc
+03/01/2025  23:10    <DIR>          bd
+05/01/2025  21:24    <DIR>          be
+03/01/2025  23:10    <DIR>          bf
+05/01/2025  21:24    <DIR>          c0
+03/01/2025  23:10    <DIR>          c1
+03/01/2025  23:10    <DIR>          c2
+05/01/2025  21:24    <DIR>          c3
+03/01/2025  23:10    <DIR>          c4
+03/01/2025  23:10    <DIR>          c5
+05/01/2025  21:24    <DIR>          c6
+05/01/2025  21:24    <DIR>          c7
+03/01/2025  23:11    <DIR>          c8
+05/01/2025  21:24    <DIR>          c9
+03/01/2025  23:11    <DIR>          ca
+03/01/2025  23:11    <DIR>          cb
+19/01/2025  11:05    <DIR>          cc
+03/01/2025  23:11    <DIR>          cd
+03/01/2025  23:11    <DIR>          ce
+03/01/2025  23:11    <DIR>          cf
+03/01/2025  23:11    <DIR>          d0
+03/01/2025  23:11    <DIR>          d1
+03/01/2025  23:11    <DIR>          d2
+05/01/2025  21:24    <DIR>          d3
+03/01/2025  23:11    <DIR>          d4
+03/01/2025  23:11    <DIR>          d5
+03/01/2025  23:11    <DIR>          d7
+03/01/2025  23:11    <DIR>          d8
+03/01/2025  23:11    <DIR>          d9
+03/01/2025  23:11    <DIR>          da
+05/01/2025  21:24    <DIR>          db
+03/01/2025  23:11    <DIR>          dc
+03/01/2025  23:11    <DIR>          de
+05/01/2025  21:24    <DIR>          df
+03/01/2025  23:11    <DIR>          e0
+05/01/2025  21:24    <DIR>          e1
+05/01/2025  21:24    <DIR>          e2
+05/01/2025  21:24    <DIR>          e3
+03/01/2025  23:11    <DIR>          e4
+03/01/2025  23:28    <DIR>          e5
+03/01/2025  23:11    <DIR>          e6
+05/01/2025  21:24    <DIR>          e9
+05/01/2025  21:24    <DIR>          ea
+03/01/2025  23:11    <DIR>          ec
+03/01/2025  23:11    <DIR>          ed
+03/01/2025  23:11    <DIR>          ef
+03/01/2025  23:11    <DIR>          f1
+03/01/2025  23:11    <DIR>          f2
+03/01/2025  23:11    <DIR>          f3
+03/01/2025  23:11    <DIR>          f4
+19/01/2025  11:05    <DIR>          f5
+05/01/2025  21:24    <DIR>          f6
+03/01/2025  23:11    <DIR>          f7
+05/01/2025  21:24    <DIR>          f8
+05/01/2025  21:24    <DIR>          f9
+05/01/2025  21:24    <DIR>          fa
+05/01/2025  21:24    <DIR>          fc
+03/01/2025  23:11    <DIR>          fd
+19/01/2025  11:05    <DIR>          fe
+05/01/2025  21:24    <DIR>          ff
+03/01/2025  22:45    <DIR>          info
+03/01/2025  22:45    <DIR>          pack
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\00
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             3,133 5213960837e790b7af8a33bdebc943f936852f
+               1 File(s)          3,133 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\01
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42               663 48ad118005f8d705d630a30fb61db056eb52e2
+03/01/2025  23:28                85 660ba73f9d8b5e3a0ca11123bf63e4cddeb81e
+06/10/2024  20:42             1,692 cad54e38e5d4cc2df1b1dbc59c02a3701afcbd
+               3 File(s)          2,440 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\02
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,515 cc703d4004db6b4143b30e8fd1783fe037d10e
+10/10/2024  20:46             1,520 e8fdccc08b3c1f9909059bb8b7f196616b5d4e
+               2 File(s)          3,035 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\03
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             3,170 4c3af78fed04e7959bd41fe86becf033a6f674
+06/10/2024  20:42               187 fbba33ad9b88acedd9fb95c1c63edb0bd7ffed
+               2 File(s)          3,357 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\04
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28           977,966 44301924bab9a357e06c5e6847e7865eaf945b
+               1 File(s)        977,966 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\05
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               760 6a3808e87b888afd7fbed0a278123747583b84
+               1 File(s)            760 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\06
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                17 37a088a01e8ddab3bf3fa98dbe804cbde1a0dc
+03/01/2025  23:28             2,302 58d082b1ae074697b9c8c6962767f67c4a2a6c
+               2 File(s)          2,319 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\07
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,184 115fcbb9e6129b3e1fd20730b28d7d109dd78b
+03/01/2025  23:28             2,290 fe77dc3348fd575180254e343c2ed022f60531
+               2 File(s)          3,474 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\0b
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+19/01/2025  11:05             3,428 0d1d9ece3cd3a2fa921ddc8384ad8bcb12f8bb
+10/10/2024  22:15             1,518 1e49e9bdbf55d664bc9ef3db6ae16168da1f25
+03/01/2025  23:28               380 60470fde09c8c22f268cd3ed16acb3a43d7a9e
+03/01/2025  23:28               982 af42f11555ee2d964d5736e5d76c9cfa9b1459
+               4 File(s)          6,308 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\0c
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,011 110ed982633ce7e3fc7ff60c22f892fda754c2
+05/01/2025  21:24             4,309 a1aeca8906f227baf1a8c326bc8bc278f4108b
+06/10/2024  20:42               101 a786d1d3530fea1cbb827f703e7609d48e8df1
+06/10/2024  20:42               318 ad9df06c22da5c4605f4cf6063acd8f949d8c6
+               4 File(s)          5,739 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\0d
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               426 b1eea788990fdf78c8d923e97259917e80b834
+               1 File(s)            426 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\0e
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               172 0fc23d67ef4085d2204789fb7438e1762bc078
+03/01/2025  23:28               156 509c217431e07f4ce33ba3fa967604b30b3dc3
+05/01/2025  21:24                69 9b49884822a358757f7e1006fbe596fae150ae
+               3 File(s)            397 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\0f
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               275 fd9c3589b770910bc2f71a7cd7ff4f1387537b
+               1 File(s)            275 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\10
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               837 542eabea03beb42a74ee1c3b5dd1213e9652f7
+               1 File(s)            837 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\11
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28           116,794 07b42a0af7300d7066886b3c4709dbc8b8bb70
+03/01/2025  23:28            54,564 e627b8816b271b589463ec4b1e82cd83208489
+               2 File(s)        171,358 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\12
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  21:59             6,614 402ef56137c3e522dbeff91d72fa6fc834a8c6
+               1 File(s)          6,614 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\13
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  21:12             1,548 17c27b295a74a5d13bdcbc2f9ddfa31303af2b
+03/01/2025  22:49                92 21f0d8023765179e5e52352f3b5950bfdf463d
+               2 File(s)          1,640 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\14
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,863 c5cf32fe00c6c9019aa737359dafc8c44d45c0
+               1 File(s)          1,863 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\16
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             2,283 959899bb3ef7c6567907f44114dc818d05c05f
+05/01/2025  21:24             1,455 b933b87dcc24341269d2db91bfa2514c1f092c
+               2 File(s)          3,738 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\17
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,590 e544ffc1d4f0f8c4d2cb8d5da89c5bfe341814
+               1 File(s)          1,590 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\18
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  22:15               130 0c4cca824342518dd49ca8a6fcd02c42292396
+03/01/2025  23:28               203 456e05ca855c8cb5acf2c419efad0123802d72
+               2 File(s)            333 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\19
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  22:00             1,487 56ed45dd418844469db568b192d2348112cc60
+03/01/2025  23:28                90 a6f1f87057ae294e40d2b15776dff281b19877
+05/01/2025  21:24                70 bfb1eea5651b96ff559aa80244db3118ef10a3
+               3 File(s)          1,647 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\1b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                74 05f5963e981e755a87d0999e80e93418a39ddc
+               1 File(s)             74 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\1c
+
+03/01/2025  22:49    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  22:49                32 60d3ec3fd466229d2792262428a3a315a9675d
+               1 File(s)             32 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\1d
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                73 0e9889746b2ad6adc7b550caee2367fc9ca7cf
+06/10/2024  20:42             3,443 28b7ae202c42277e132e133f2af041af49c4a7
+               2 File(s)          3,516 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\1e
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               697 222bce81170c43d3308f5cf45de78c29658c16
+06/10/2024  20:42             2,706 a6673f9d40fa7ef15686ee49d0c5e9a4de678c
+03/01/2025  23:28               380 e779193808c1668e33f8c6b0f1389d01e93261
+               3 File(s)          3,783 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\1f
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             8,272 00876a2b48b3f98f233acdb96bf4b32602323f
+03/01/2025  23:28               602 812316c3094b5030037a9c21e9c14ee37546e9
+05/01/2025  21:24             4,136 84da49e8b1286798fcb2d1ffb2b7a364acce13
+03/01/2025  23:28               706 92b4277b810018ac3924a82a6f6a33105fa969
+               4 File(s)         13,716 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\21
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,166 05872a19b7aa638e1d77c35fcaa770bda59aca
+03/01/2025  23:28                69 7350102f27a656bdc0bed4c88a4f2f1c28e276
+               2 File(s)          1,235 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\22
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24                69 1fbb668fd1dc42ef13e0da6d5358382a5e0c6c
+               1 File(s)             69 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\24
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               856 a1b18582f78805c90b14bfeef9a8ca31fa2faa
+               1 File(s)            856 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\26
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             4,047 4390bbd43658e2ec1560c276309fd97000a73e
+03/01/2025  23:28             1,345 ca7cf6a0737548497c1a9210328784198c4e14
+               2 File(s)          5,392 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\27
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,589 03378c7d905940e76e82034d1242ed18646127
+03/01/2025  23:28               831 4d5dd6b9bc14cf6033ec15c870f6d0b724b948
+10/10/2024  20:41             1,518 4f7898b41d08851451379232e5a0d2b76a804a
+10/10/2024  20:54                58 88e2297e8695cec29351fe6f97e510758a0be6
+19/01/2025  11:05             1,590 a8389236d7f1308dfe22f4fd5df3843e7e3aca
+               5 File(s)          5,586 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\28
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28           147,859 7514b1f088de32ec92487a13be0e4b73826c29
+03/01/2025  23:28                85 e18cee97462e724a651a5fad9d5eadd815fda1
+               2 File(s)        147,944 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\29
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42               602 cf9560f871ffbc92d38386c848ec17773bd285
+06/10/2024  20:42               212 d89d4ea817a9b9346730890ac37b855d367f11
+               2 File(s)            814 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\2a
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  20:46               780 bb1530c8f2de43599af9359a7c61bfdcbcb040
+               1 File(s)            780 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\2b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,105 f6947e70028c13538b2a31b6ae6b038061596b
+               1 File(s)          1,105 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\2d
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             1,148 98a6c371f8d624d968ab5edc4b39d9769fc76f
+06/10/2024  20:42               440 b362a8bb98167d3e64dea5bc0f1e8a0265d84d
+19/01/2025  11:05             1,480 e31f47ad9861ee39bb76a5819768674e439574
+               3 File(s)          3,068 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\2e
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,488 4857e3b57fe2d09c9a75a3bda96205cb393bc8
+03/01/2025  23:28               578 889ee4e1f8606dc5d94d052ccf164dec6af98a
+03/01/2025  23:28               944 904ebf44189d07a4a5c8d800ba0527116efe39
+06/10/2024  20:42               606 aec55e113feced30e6f9a874b49082b7166b2a
+               4 File(s)          3,616 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\2f
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               893 58edb6abd3ae07d2b1f4c391f529cae704c50f
+19/01/2025  11:05                69 9e2646d7a47d71fbaf52ac11ea809c88a4391e
+               2 File(s)            962 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\30
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,059 6b69ed135c93cdead7bc5265ddb2ee3c3a566a
+03/01/2025  23:28             2,193 f316816b117821b814875c8e2d87e47f16606a
+               2 File(s)          3,252 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\31
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               496 4e5915617f1c552af23d6a7d6dbc6c3737f02c
+03/01/2025  23:28               799 73a9e8930ab44db1340f6907c93500fab27bf8
+06/10/2024  21:59            11,685 8001e48bbc0e068a7d53b01ad6bb32899fd9f0
+03/01/2025  23:28             1,236 b981ce9f1b5639db413063dc8c6410bd665ee5
+               4 File(s)         14,216 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\32
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             2,300 8205b8b22d8089317b53116572e36d660eaafa
+               1 File(s)          2,300 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\35
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,376 dc22b350420e0e5cc8e0ce20363c530132a056
+03/01/2025  23:28             1,545 e02fd2f8e9cdab368542c524e8880ddf2c684b
+               2 File(s)          2,921 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\36
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               195 2890c292af35efa5493f259c7afd5b7643cf16
+               1 File(s)            195 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\37
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,269 e69c3d6b224644801379a8ba8b0510cf4fdb68
+03/01/2025  23:28             1,763 ea98c9da9d7863f109caec55ecd7eed1fcf257
+               2 File(s)          3,032 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\38
+
+05/01/2025  21:26    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+19/01/2025  11:05               148 6ed43d0f7386869a62ab4362ffbcd365351fc1
+03/01/2025  23:28                77 c5819fc9716c73c4bf5a6577bf47d3aad98df5
+               2 File(s)            225 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\39
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               415 18373d5aa79904498c54349b167f3916dd4d02
+               1 File(s)            415 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\3a
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28           391,568 41972e8ae0c17f2db8b26dded04bfcc2cea20d
+03/01/2025  23:28            83,813 431daf22941eea3c7bf778dbafaafb4cab754b
+               2 File(s)        475,381 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\3b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                77 313a517b2aabc2b0dd50ad837773d8bb2b93ba
+               1 File(s)             77 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\3c
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               428 485510e0db934d06122d2b6b69e263bcf20795
+               1 File(s)            428 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\3d
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               535 fc88260ce566dddbd13115493d2e7c9d05c1d9
+               1 File(s)            535 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\3e
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               981 2fd361d5db362543619990ed6daa06f163cf4f
+               1 File(s)            981 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\3f
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28            10,768 a6f07893e4702a79948219c8f40e85dbcb40f6
+               1 File(s)         10,768 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\40
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             2,414 9b0209492ad3ccbfc8986f3008970eb7add208
+03/01/2025  23:28               500 fe56aafd54875512bde319774f4cd67e50ebaf
+               2 File(s)          2,914 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\41
+
+05/01/2025  21:26    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:26               872 f1627213ec85740c65490a1aec2652b2284e36
+05/01/2025  21:24             2,824 f4016c1be698d02dbe09be0fb589b0195513e2
+               2 File(s)          3,696 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\42
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             5,562 234d4371f2d791bf2b88fbd30592508f01673a
+03/01/2025  23:28             1,586 c380131eca000152fbd2b45f31ec3dc17961de
+06/10/2024  22:00               325 c450ba6a99246ddb28f172ab52892f47c98137
+               3 File(s)          7,473 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\43
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  22:15               177 590321761105d42687a6bd2013c8df0d499c47
+               1 File(s)            177 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\44
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             2,828 04e45219c2eb8bafb7154fa0a33eb2a56e9feb
+10/10/2024  22:15               780 cf1c22fbd021d8fe73006cec4689fa79fe61ff
+               2 File(s)          3,608 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\45
+
+05/01/2025  21:26    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             7,272 14cca4606af3ca739b58e62856e71b42cad5b5
+05/01/2025  21:26               230 afc2579be32e578d447993d9c68d60aa5a56e5
+               2 File(s)          7,502 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\46
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             3,378 fb80e5f341ad612542968dfa65254f51dab307
+               1 File(s)          3,378 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\47
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               968 6d83c14ae482ea54754d46e49ecc1d1a585891
+               1 File(s)            968 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\48
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               544 6aad341859487f410e33db54e23ffd351c9ad7
+               1 File(s)            544 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\49
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               522 0830b5bc27648ea37eee68b30d41bc405fd3cb
+05/01/2025  21:24                78 cc8e691dd1d677697b344882ca1ea2738c2a30
+               2 File(s)            600 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\4b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,100 30fc764b5343babf8d083d7c69f83f4c41d244
+               1 File(s)          1,100 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\4c
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,935 87c67773ebfc7998078c4492b25e58c4678b76
+06/10/2024  20:42             1,002 dd9b8af70cd548e7b1542b06dbf2e2e4617d25
+               2 File(s)          2,937 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\4d
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  21:59             5,104 23ae0d337e8bb766238d205cc808a9f957b90b
+03/01/2025  23:28               703 316ecb12e1240f4154ac071d734b71525b18fe
+03/01/2025  23:28               385 4ba63696bc973cb2e89ff798815490683fcd5b
+03/01/2025  23:28               737 8b6f674bf5967e8b6d7193b3f947011fd939e0
+               4 File(s)          6,929 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\4e
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               900 1e38ac1b23d5b12971af280fdd4f7edaae9e82
+05/01/2025  21:24               213 2fea612aef7fc1e87597a2f411c2777a390ca5
+03/01/2025  23:28               446 543b898f16352c70ceee1f327ef92f44c6e5c1
+               3 File(s)          1,559 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\4f
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,527 0dab637721483e18bd321d2fa430d7535d4cb3
+03/01/2025  23:28             1,137 ce515c26d8c0f9905585f3be0b29e4809a83ca
+               2 File(s)          2,664 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\50
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  21:59             8,279 bdff6aeee3e25dae824094405c1b248747b113
+               1 File(s)          8,279 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\51
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  22:15             1,345 3f0bdee2fc4fc7e7b84fbd433fa7fdaf966696
+10/10/2024  20:54             1,549 8df8eaf393814931189e045e6c137c8a28e834
+               2 File(s)          2,894 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\52
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,922 8febfce906ab838128257ffa35b8fb7ff2b5d1
+               1 File(s)          1,922 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\53
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               736 98b8ace2818ad1338dbcf14930876b4c9d7742
+               1 File(s)            736 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\54
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             2,070 64498f6cb79349eb245e06d800d768fee51e37
+               1 File(s)          2,070 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\55
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               279 28fb90d1dfb8026a6db69bf6d7d6f97159d095
+10/10/2024  21:37               230 482b9a027ef017d840612765876d9fbf6f4569
+10/10/2024  22:15        93,036,446 fe3c8a601aee575e64b46ab268c7da4123a237
+03/01/2025  23:28           395,485 ffbc2cf6c387f726cc694c480f2fa1c354c3a4
+               4 File(s)     93,432,440 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\56
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               139 68928de9c0ec31b8d1ec758e77154094d01b0d
+03/01/2025  23:28             1,170 790f2d38d0c5a5ee0f8cd4c459ffb776d0d97f
+03/01/2025  23:28             4,309 eee51adaeaa098fc6eaaf3404de84e6d0738f3
+               3 File(s)          5,618 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\57
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,204 dd46107d7718de0d783870e3030370195e81df
+               1 File(s)          1,204 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\59
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             1,484 04bf280df9751c8aa1ff84563151eaf717f82b
+03/01/2025  23:28               412 94c8c9bf49e111ca7118147b9ef0642f72234a
+               2 File(s)          1,896 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\5a
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               187 77b3298f422a207a2618117661cafb3ba5c1e9
+06/10/2024  20:42             5,031 e7d550bdb9766f29946b0d87f07787a8599cb0
+               2 File(s)          5,218 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\5b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               886 dd711d3fd641992439acf08082b0617f5002b4
+               1 File(s)            886 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\5d
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             4,137 ad1936f42030cb83a88288a97f62a787987828
+               1 File(s)          4,137 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\5e
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             3,554 94ee54b61a420194c66e7ff2609ca473379e84
+10/10/2024  19:45             1,344 a963068efcb3cb9812333227fffe3fe8d248ed
+               2 File(s)          4,898 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\5f
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               221 7924696ec4f79805c5bcf75ad8f5da2edadcbf
+               1 File(s)            221 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\60
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             2,041 56c242621a569034232b3fb496fd0c77f45669
+05/01/2025  21:24             1,859 730491e6fa21b040e75d2464d784619cf8a5e1
+               2 File(s)          3,900 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\61
+
+05/01/2025  21:26    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               277 7e74ec92e331c12258e70a13e6a864185a1f7e
+05/01/2025  21:24             1,985 9abb1b52b52489cc23053887c3eb9eff0b34cf
+03/01/2025  23:28             1,123 9de998c39ffeadf1e779e25294d10b681a315a
+19/01/2025  11:05           648,750 e55eacce6e22304bd58dbe2302c48ae2610b48
+               4 File(s)        652,135 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\63
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               121 01c2470f27c58e9f233326e85736f7d1e557db
+               1 File(s)            121 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\64
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28         1,230,956 3493a38f67447e4a8ca1723d595e095d26251b
+03/01/2025  23:28                36 eca02086f61c2a38a5e87e9c0539a0c03fb37b
+               2 File(s)      1,230,992 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\65
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             1,072 3cddc8ac4e0f140f3aa54aa8f9e2aefddd7431
+03/01/2025  23:28             1,834 9c520f2520acb8303f457728a8c2264e0eecb8
+               2 File(s)          2,906 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\66
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               755 c551c6c5f18028ae2e95b9ea2b2490d5f717ec
+               1 File(s)            755 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\67
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             3,664 5443a9b3581351869deda0e56c629aca0071e0
+03/01/2025  23:28             1,176 57638f31e57bcfb921ee2aa4c8538185468331
+05/01/2025  21:24               572 f4bdb7403875b69bbe758d60abf0023d5d348b
+03/01/2025  23:28             1,985 f4fb4f89037b9e30701738c1f8d0d608d3dec0
+               4 File(s)          7,397 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\69
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  22:15             1,655 e8f139c901745a26db74ed5c62f8d3a1b9af9e
+               1 File(s)          1,655 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\6b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               302 15ae2088b872bac3ac30b367500e56c9229246
+03/01/2025  23:28            11,685 2a2e314c12b4254e5691ceb73f90f9fe513471
+               2 File(s)         11,987 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\6e
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               591 02b8726e68fb949f21a6bdc71cf351bcd07469
+03/01/2025  23:28                98 12847e224e12af6c575354d32f25e4cf383d99
+05/01/2025  21:24               759 1682aaaed85ca707bd95810090cbf327ea93b5
+               3 File(s)          1,448 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\6f
+
+03/01/2025  23:16    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               110 3c49481c92e3fe3b414e858068c92e507ca366
+03/01/2025  23:16                92 57d221fc043fc0fa85acb626612f2fd12f93d9
+06/10/2024  20:42             3,534 f876582ab4340058a08d756591c7fe07977c58
+               3 File(s)          3,736 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\72
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             2,426 099efbe22a5818491019f93ce209d826f80d7d
+               1 File(s)          2,426 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\73
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  20:41               319 10ade8de3e2649eaf7d4aee5dd2f64c33cf8d6
+10/10/2024  20:41               743 66bfadfe510cfc4b52a353f6b51c23e24801bb
+03/01/2025  23:28             1,640 d98aca483885dfca1ff096bfcfe2ce1d904a41
+               3 File(s)          2,702 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\74
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               359 2432d43635df47c7afbbf9ab6d15c6075cd443
+03/01/2025  23:28               990 4ef71447e6ef8608c7f4aaf89028ae534fe2e8
+               2 File(s)          1,349 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\75
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               357 b4f00c1c29321f9741e530b75f6fb106c1f6c5
+03/01/2025  23:28               698 effdb650e37b95660293ad3c15fb0ed6d4e4ed
+               2 File(s)          1,055 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\76
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                77 6fa898e852d29df25798b5e12c371a024e1b6f
+03/01/2025  23:28               438 703565dc05df1f5a530e69b91f8ac37f67bf2d
+               2 File(s)            515 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\77
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                62 316c95ef93ab8c927b8edc7bdf972571d3ad78
+03/01/2025  23:16               193 4b0e9af6471cf966bc6ce89568f3d3a2345361
+03/01/2025  23:28             1,983 64bb0d25a5a66dd070451c4766787ed61db556
+19/01/2025  11:05               995 b7f761efecc8020a4d812a0214cd2622121663
+05/01/2025  21:24               167 f036ecd8f9545212a811af5cfb21bcd6c79acb
+               5 File(s)          3,400 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\78
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               275 2ca80e8d4a7a7f78fc2309157d8df7a625c28c
+03/01/2025  23:28               636 87867c2e747dd390dce97977cbb9d95f3447eb
+05/01/2025  21:24             1,234 8b6120a6c4d9c763c79fa62f16d853c892c678
+06/10/2024  20:42               294 aa18bccb810fd84a40c57dc7fcb322c6c14a59
+               4 File(s)          2,439 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\79
+
+05/01/2025  21:26    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:26             1,585 2a2d4307ec64ad5c36ef533a13ecb46412f275
+               1 File(s)          1,585 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\7b
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28            23,072 044e8a0f2eabcd21c815ba3f4a2ebf85b7b920
+               1 File(s)         23,072 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\7c
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             5,118 64032e5b1b39bf997c0bf789f485a1dcbfdff3
+10/10/2024  19:45             2,804 6dd17116eb23809969d183dec86242b05a5e52
+               2 File(s)          7,922 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\7d
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,344 07e881df48cd5af5fa699230c7dd7332023f49
+06/10/2024  20:42            11,681 7032a9f287a53ac5ea8f70450a7bb2ac72fc86
+05/01/2025  21:24               358 cc32770390e7fec78c25074c28e2e4ac2d5f20
+               3 File(s)         13,383 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\7e
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  21:59             1,908 201cef080ca91ccbbbef7bacf1af568ca9e0b6
+               1 File(s)          1,908 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\7f
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  22:15             5,958 2e814c68be3153b51d70549e87a033f7b6f4af
+05/01/2025  21:24                74 575a726ba995439b8f2bf48966007c19609dea
+06/10/2024  20:42               602 f49e22b264cb86a2a0873e4f135356c20ba05f
+               3 File(s)          6,634 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\80
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               131 cd358c94f5287b519cf435e95fc20605a36ab1
+03/01/2025  23:28                95 ce64c6f652756516cc50fb7b0f9c82d7c60cf6
+03/01/2025  23:28               456 cec3ee97678294d1fee353814ed9f19eb49795
+               3 File(s)            682 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\81
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               399 b03d963417ddc17a28727d71defc78f65f5e33
+05/01/2025  21:24             1,934 f7551ac2f84e3d3e97b929e68a16a7364e535f
+               2 File(s)          2,333 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\82
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  22:49               191 1b6939544c685bc82ea5cd61c383860464ba77
+19/01/2025  11:05               178 47d82f531835377803f7b5cd7f1bec123a87f3
+03/01/2025  23:28         1,449,064 562a97c39552483464c9d8ab66a760650d1dd1
+03/01/2025  23:28               680 c4242ab15b993449bd487d6f75d38cd4e2e384
+               4 File(s)      1,450,113 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\83
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  20:48             1,518 1a13ac37f76de4e8702e904e2dc5ffc1100edc
+               1 File(s)          1,518 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\84
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               727 4e785360591d631863944dd2544a35d1bbe73a
+03/01/2025  23:28               172 6ef5bdecc42e44ea340b329577d08381593c0e
+03/01/2025  23:28            35,546 764220680bcfbcbff63c596309c152606329ad
+03/01/2025  23:28               543 dbb8c9db2c8bce7a744424acbb1972954a4920
+               4 File(s)         36,988 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\85
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,586 529b06b258550840d5bacb5f480827efd83cb8
+03/01/2025  23:16               206 6e4c736166208fed70f92b715c2f163207e6cf
+03/01/2025  23:28             1,387 fa60898664f09c6b6676109bc0ef0db2fb9fe9
+               3 File(s)          3,179 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\86
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,413 99b0eaddecc854111e0015ea8d776f0763a2fa
+               1 File(s)          1,413 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\88
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               944 0b05b4770cc663b5cf70c7a2f7016b7019da7f
+05/01/2025  21:24             3,133 194f5cd6d1d99bc654b9ddc237543917035b90
+05/01/2025  21:24             3,555 cd5fa967217942acee3f204f9587b10c89c53b
+03/01/2025  23:28             1,708 d59979548df87a54d63a7bee76be4d6e69219e
+               4 File(s)          9,340 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\89
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  19:45               325 715298e494a4fc0930c48a21e7a0069c6c5f3f
+03/01/2025  23:28               817 a481432149ae78cb151126f5b01013fe56a8e3
+               2 File(s)          1,142 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\8a
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             2,482 c30846d4b5455423248113f87ac5c97d0f01f4
+               1 File(s)          2,482 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\8b
+
+05/01/2025  21:26    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,057 47b7cd2eb62b93d4e6de9b0874934afed0d46e
+05/01/2025  21:24             1,384 6c56d109ee287ed640875e7a7d655807ebed7c
+05/01/2025  21:26             1,590 6d485258708b7fd4b3d6e0bb62739843f390a4
+               3 File(s)          4,031 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\8c
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                72 33f7c7bc0ce3d11d702d2d76e3c37856cf2545
+19/01/2025  11:05             1,343 a12121750f88515cc513cb9fe5c18678ead831
+03/01/2025  23:28             1,388 a2d7955bdca1d43c2cc09308afe22d8e1562fe
+03/01/2025  23:28               573 b9a4b2f619e0e004d1efb8ad2497ed87f0387d
+               4 File(s)          3,376 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\8d
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  21:29             1,581 674e7994addf4b68638774a03899f11939533a
+               1 File(s)          1,581 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\8e
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28         1,372,463 33378a4307249001909d8b8bbe9f84c20cc332
+03/01/2025  23:28               573 6c341902d19495d8a8968d82db1a550a12ad75
+10/10/2024  21:29               165 6d94379afe8cca066a6b00e20f65dbb94658cc
+03/01/2025  23:28             1,379 da0f663504dfd6267727a6ccd33ca7427213c9
+               4 File(s)      1,374,580 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\8f
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               401 2ba45b103dfe340d86f5622689801bbba431b2
+               1 File(s)            401 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\90
+
+03/01/2025  23:16    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  22:49                54 0e9ffebc321bb11adb92ed4ff66030b66b2b94
+03/01/2025  23:16                85 5254b6e54c6ee35001d7510f24948fde05fb85
+03/01/2025  23:28             1,289 6b1a60bae902d98a40e52bd816e1843c94c875
+               3 File(s)          1,428 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\91
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  20:41             5,966 82e9ae071f6a7161df919471da77d66249b761
+05/01/2025  21:24               446 843fad43ea24d451cf67d687142c0fa3b38ddb
+03/01/2025  23:28             2,071 955b49b1dcee43ff4608a8e183e33022f98fda
+06/10/2024  20:42               121 ad48422880366890bce4c6114e5c57bc031eb6
+06/10/2024  22:00               628 ad6e543072259887fa47c8c346ed8c147c6f6a
+05/01/2025  21:24               176 bcee08648ef18ae702bcc95e2f530a73087433
+               6 File(s)          9,408 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\93
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42               666 79de668cd270382c9dccf3b3bf52356368dd92
+03/01/2025  23:28               244 c1b85eca727fa67d98233fcc737294203fff78
+               2 File(s)            910 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\94
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             1,548 92feb840c42eec3b6f97362c4444a544d3b404
+10/10/2024  19:45               746 9ea1c77188b07e26a4d1527599b10291609f3f
+05/01/2025  21:24             1,434 e4cfa93f9be0251d582f5615bfc5e790a24879
+               3 File(s)          3,728 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\96
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  20:49               172 da032ec26d77cf6e9f4d424d226312a02aa992
+               1 File(s)            172 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\97
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,135 2d6c28ad1c87a07d65548f3b59bb7d2fad9323
+03/01/2025  23:28             3,806 73eb566a7e2768ed6680693dae053f49bce27c
+               2 File(s)          4,941 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\98
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               400 16e61ef5a47f584c30fa07a049e7e2ecfe7d08
+               1 File(s)            400 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\99
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               389 15f390afe87365b1068621de576b25803e9447
+03/01/2025  23:28               663 1ba7b30de6abf190cdd634fb910335bbb212a5
+               2 File(s)          1,052 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\9a
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               293 7b71c1700c3b69773306c6818e15a8945a4ac4
+03/01/2025  23:28               412 e077a201252bd8c9122fab46d93763b5e551b2
+               2 File(s)            705 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\9b
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+19/01/2025  11:05               695 9e440506c1b5bb5983badf1d9145d1ffd90628
+               1 File(s)            695 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\9c
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               533 c1a600c8f5fe12801bd8571fa7757db0721211
+               1 File(s)            533 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\9e
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                17 26dfeeb6e641a33dae4961196235bdb965b21b
+03/01/2025  23:28               652 80a32649a603bccd8695f510a34c510985a9e3
+03/01/2025  23:28               430 f33cda695b924d0825efe25a235559c20cc015
+               3 File(s)          1,099 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\9f
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               102 14174423faefaa54a7ea9b1f6378432dc36fdf
+03/01/2025  23:28               128 851e1a0cd0476b280ffe1bd66c2577017e86cc
+03/01/2025  23:28             8,279 becf45b4f00c29fab72823f6a24ea9a50e1737
+               3 File(s)          8,509 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\a1
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               187 5f15390eb9184b8dff4ea4a2a234943b6b679d
+03/01/2025  23:28               255 702f6c04da92929cc9b117691c0ad645c105ef
+03/01/2025  23:28               748 d126c903bf9aacb8cf619d00447545c9047866
+03/01/2025  22:49               152 ef7ea7c339ab0728918d03c8a82ea293270abe
+               4 File(s)          1,342 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\a2
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,267 3d947738f0a624913139ae2473ac0a7480fe71
+05/01/2025  21:24               148 3e3a1349b3d2ef37fd3cad06afc6cd0760ed1e
+03/01/2025  23:28               183 417fa2283c66accc02735db001374c561f10d2
+03/01/2025  23:28               642 a8183495eda16c4423acc510a7a0168caf0b3b
+               4 File(s)          2,240 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\a4
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,885 0480c9af886f4a06f04e00abbb39b2b9548311
+10/10/2024  19:45               708 837e0e054bcd43a72f63e9506f8a98387b2eb3
+03/01/2025  23:28             4,117 f9f026d6b333881d5457b3e81d6a04ed1d615b
+               3 File(s)          6,710 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\a6
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               762 47a59898d2a239b0a758c04724f6d49ec90a97
+10/10/2024  19:45             1,516 4b101b4262fda23134d2b6671f3a56ccf8553c
+               2 File(s)          2,278 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\a7
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               238 002e2f59734fe8308da9d337d77990fdc8d178
+10/10/2024  21:31               783 10a7ad344d9b4e88afb4365b072b317bbda810
+03/01/2025  23:28               319 31ac5b6c91183185c457efbacf2b7398444cb5
+05/01/2025  21:24                73 6814434186f9fa78a635a41f661b3b119747da
+03/01/2025  23:28               622 93ee3c0b5c9b3c24c1442e85ecca3837269ab3
+               5 File(s)          2,035 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ab
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               866 3f2f00c0bf5f9b1e7eda941c9ffd6517d0e3a6
+03/01/2025  23:28             3,226 55d32910c7bf3eb0f82e86c73f8109bc307dd5
+10/10/2024  21:23               177 ce719038abe00812cbeb0cf5dc27e6115b5e1c
+               3 File(s)          4,269 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ac
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             7,270 07ef93f7bf32005fd5be19537f5cbaac496466
+03/01/2025  23:28               894 0c223d771949dfc6da3bb521686cac845ecdef
+03/01/2025  23:28               761 87d0a9ed371dcf1739f4edb1c73862bb7771fb
+               3 File(s)          8,925 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ad
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,298 4151c13df8efdff017e3cbd6736758230976cf
+               1 File(s)          1,298 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ae
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               399 a2c81b20a94014d473653a09c97614d85de51e
+05/01/2025  21:24             5,360 d1389e601476c5be785dd69b551c4dbd1ab3a0
+10/10/2024  20:46               158 fb04a30371051957a848952c7c28a920c196c9
+               3 File(s)          5,917 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\b1
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,291 d9c043d452357b802c0cfa595c7ccaeb18d051
+06/10/2024  20:42             2,993 dac0c48c65dc54f768a5554211af3636dd3b9b
+               2 File(s)          4,284 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\b4
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  20:44               156 7601c67b990c1c7ae71c316c9614bdc4cfee9d
+               1 File(s)            156 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\b5
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               832 8a5d875bfa06ca4ab204fc1e30c8f60fe9ed1b
+               1 File(s)            832 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\b6
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  19:45               130 10f362ad0f6d0bdc385a8f9b4d9f0e988c2715
+03/01/2025  23:28               134 3de6a0f4bd6c44ce58c14502a1166cef83a09a
+03/01/2025  23:28               593 87747490812df829016f14e12efd41dcdb876c
+               3 File(s)            857 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\b7
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  21:34             1,580 1e0a143472946b4eee93eb8e3ce58cb12efd4a
+03/01/2025  23:28               133 3b23b59a68f7708cab678cad899a2107cad276
+               2 File(s)          1,713 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\b9
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,122 9f9473c357cd660baf641ec9ac29b76ba1958b
+               1 File(s)          1,122 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ba
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               296 76a74ab4fbcb1a55eeab6aee4e2122d71b7c32
+05/01/2025  21:24             1,287 985b3f159daf737810e23ce7582253a70c1e89
+05/01/2025  21:24                77 db059749e5fd1ae5f7b2b8e265ba036180598f
+               3 File(s)          1,660 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\bb
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,554 ae285bfb5a9664393d5ae87ecd782a5bd7496a
+03/01/2025  23:28             1,160 de17f4c81aae4144184aaa65480c7c5a4420ec
+               2 File(s)          2,714 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\bc
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             6,607 6af96fcfda89f0394b1af3652bb9101f0d03dd
+03/01/2025  23:28               339 fcdf1bd1fef92f3ac094b57ccb693db818294b
+               2 File(s)          6,946 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\bd
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42               130 c7cb9a64a74d818b686d43c1255b2b83a3de77
+               1 File(s)            130 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\be
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             5,441 70b50c77543c6a2385ea7e0b32f55a3fa9a027
+03/01/2025  23:28               213 a2625bc2e9d35b10bb569c9f0a63d7c8daaefb
+05/01/2025  21:24             1,413 b8ea2204b047e0023a235aad8a44067b588c3b
+               3 File(s)          7,067 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\bf
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               514 ef05529f22108da269d294a81d04b60a8923ee
+               1 File(s)            514 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c0
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,330 4f197c453844ca3b0cc9d3de76b2a2e8c2b0b7
+05/01/2025  21:24             2,041 a0da58ba20a9c1e92ed5846242c1524d27df8c
+               2 File(s)          3,371 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c1
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               556 64453c6d44f796488561327d46aec6c5ed860b
+03/01/2025  23:28                69 8b7b1d0f9d5d3af859efd5730c486b27b7fa37
+               2 File(s)            625 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c2
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  19:45             5,982 3bc3de4f3b7039c1dda7a4e2efb3ab6ad3bace
+               1 File(s)          5,982 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c3
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             2,481 1d941a12615eb3c85d85a70da66e3dfb92437c
+06/10/2024  21:59             1,741 67cb45b2a9dc1497282ff7200f5961e1bb60ba
+03/01/2025  23:28                70 9c968ebb8cfc5e26bbedd076ef822820eb2e57
+               3 File(s)          4,292 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c4
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               821 f3d39f75397e10af65618ba162ff03448be2ad
+06/10/2024  20:42               131 fd371bbcfdd9c44fa08943e234a12d15ca63a9
+               2 File(s)            952 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c5
+
+03/01/2025  23:10    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               378 52c1c74ea6ee84fe640f4a72e4dcad8599ae01
+06/10/2024  21:59             1,752 bcf4df8cfc06d75028275e82aea8097f780860
+               2 File(s)          2,130 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c6
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               422 0c125c3a828fc6413c29cb7dc47ec07c70525b
+05/01/2025  21:24               884 6523e9a6c531151b8d031a28b4abba81c9eef4
+03/01/2025  23:28             1,128 fcd05d651c70d40dd48e692d1ab802621a57ff
+               3 File(s)          2,434 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c7
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             5,292 7f85055276beaa6c572a8e98ab7fbb91f4f1d0
+05/01/2025  21:24                97 cb4784ec439ed863c880117140d03c69d8af78
+               2 File(s)          5,389 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c8
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               357 f80e3a3c4d738239e524a633830c9ec2ba41db
+               1 File(s)            357 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\c9
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                91 3b2f88dc3fc2822bc49f636f02b36ba4a46de3
+05/01/2025  21:24             1,330 832842fd5ea89b75d0c42272ba9e4c2ee52f0f
+03/01/2025  23:28                59 e7036c5023631b816ef15d2d86318cd9de20d9
+               3 File(s)          1,480 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ca
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               386 76c80b5b2cd0b25047f75736656cfebc9da7aa
+03/01/2025  23:28               432 dcf89e52361042e8e0bac589bcabfa4c042368
+               2 File(s)            818 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\cb
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  22:15               740 35f6ecd3f3953216a1bea0c2c84e0122bc8d4d
+               1 File(s)            740 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\cc
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             2,894 39fd21eb53292b0eafb1728d69b91db7f78064
+19/01/2025  11:05             2,515 62c5004f02b9469f3cc5953f4912ecfb0766a1
+               2 File(s)          5,409 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\cd
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  19:45               187 6683c5e088c7e1242f7252ddf3a42c510a1694
+               1 File(s)            187 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ce
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             1,891 679272b4d40c8e20bd1732d0c1e8eed8d8b0de
+               1 File(s)          1,891 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\cf
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               859 9e3fdb7ec8bccdd7b5c4db7f41b7ebbb210002
+               1 File(s)            859 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d0
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42             2,495 0b8bd677c40394b2e5d81df5b2aa83b90f8727
+               1 File(s)          2,495 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d1
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               187 5821af93c613e678e7c16ac2f966514c5ced35
+               1 File(s)            187 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d2
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  19:45             1,646 2e4664028bf5ca8bb8d91d372d01ccc0b5588c
+03/01/2025  23:28             1,272 c49cb94aa08129152cc6be485043a628695298
+               2 File(s)          2,918 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d3
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,296 b1b9272ff0226ad1947d5a9b2da4c0084db4f7
+               1 File(s)          1,296 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d4
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               711 616bca2fc24bd7d84beac556773734eda0eb8f
+10/10/2024  20:54                70 d28a8285550118cdc268d04fc216a275c0a30d
+               2 File(s)            781 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d5
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,530 5d14e66bc2dd339bd8db29c0de15514cf0f243
+               1 File(s)          1,530 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d7
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  21:12             5,969 6f4bbaf4d66732b2a0bb75b310e83609be36ac
+03/01/2025  23:28               140 b1655ca6bc45cf0553d62ba4776f3b64261dfe
+               2 File(s)          6,109 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d8
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               587 6c21d11e3e327f8c99f6892ad635836c65eee1
+               1 File(s)            587 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\d9
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28            25,209 aebc43d90d0cdb24a817184141fd39af264fae
+               1 File(s)         25,209 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\da
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  21:59             4,314 202d93284ed986fce99699ec5901a9b9618156
+03/01/2025  23:28               243 456ebade6aaa65ccc8b19d35815aa0c6e8ffbc
+               2 File(s)          4,557 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\db
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               997 97d8e49aa7126d26f8acc2b77517b619721d90
+               1 File(s)            997 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\dc
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               886 322d0804add9e081662bf03b1996dd097edf09
+               1 File(s)            886 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\de
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               108 5c486d626ab360158e60af822c0eb7b7549181
+03/01/2025  23:28             1,082 fd27d7bec4df62ff71d713993eb6cc5251eb29
+               2 File(s)          1,190 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\df
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               132 d1f34c35b0ed500f2d879c9993ea002231cc86
+               1 File(s)            132 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e0
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28           118,912 e08cb25f20f7f2f0762eed3e748f7d8bdfd7aa
+               1 File(s)        118,912 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e1
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             1,708 168011111281b6abaeb3112ac76a945495d37a
+               1 File(s)          1,708 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e2
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             2,414 54153a30d5aa2f75665923aa64bca8e4894e6e
+03/01/2025  23:28               284 63b01b49993fb09be12d7b5f7bf952b6b8507a
+05/01/2025  21:24               886 9a044f472b9ffb2199675f208db40f5a955ef1
+10/10/2024  19:45               698 b06229945a0ef0b89516f964c0da9c10c9b006
+               4 File(s)          4,282 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e3
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               150 20ecf62eba967cba674bebd314abca9079ea96
+05/01/2025  21:24             2,146 60ee7fb0a06c782b8e708b48b3b6013e3c789a
+05/01/2025  21:24             1,982 8d1ec59babf989614d0830e9d63ce5b4b4c6db
+               3 File(s)          4,278 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e4
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28                64 b1e0c2123942fa2968216897998ae64a39ea83
+               1 File(s)             64 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e5
+
+03/01/2025  23:28    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               126 002a7ba03b1c6f30ed3196a66d3df3d4f0fb04
+10/10/2024  19:47               167 00cf56a5507588aaa111a089328c726c5264e8
+03/01/2025  23:28               491 346c4eba648529be584968f789e8642cdb3fd4
+               3 File(s)            784 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e6
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               822 5f86cc1aab82cb7963f1c3f37012a902e6516b
+03/01/2025  23:28                15 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+               2 File(s)            837 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\e9
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               855 ffa3d15f2fe856577e64193a3cab01b09f9390
+               1 File(s)            855 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ea
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,088 44d310dadc2ca69fbc4bdf6083489a7afbd3be
+05/01/2025  21:24             3,806 e250843eeb43e360b8b8af459502cd90d7dc46
+               2 File(s)          4,894 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ec
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42               126 860ba0a6e4627215269de3956cc4317a971f7c
+03/01/2025  23:28             1,670 f7eb5db15c55d47eafbe444204fbea40eedef5
+               2 File(s)          1,796 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ed
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,026 4a8e3b6d89b8a1e61e9bd1250eedbd9e0e4b99
+06/10/2024  20:42             1,313 e971ee4e591505310927141f56f9ec21fba964
+               2 File(s)          2,339 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ef
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,437 31c02cbba5f85ce55a429ba8c6654d163b4d58
+               1 File(s)          1,437 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f1
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               425 511d2a73dda647c8a38782bf769ee1e18319e7
+10/10/2024  19:45             5,453 f57a628abd29c98f048c983baf1fd2bb24be5f
+               2 File(s)          5,878 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f2
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               558 8c59920533755735cfe42048fb2feba35ec34c
+               1 File(s)            558 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f3
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             5,441 2c06821d57ccd6f6b2cf0102d073c47df3b7b8
+               1 File(s)          5,441 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f4
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               240 f7cf8c06e43dd8b6073b0c19876bc26acf8930
+               1 File(s)            240 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f5
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42        70,175,188 2d354446b701f06a67ad7adc8a7f960767d496
+19/01/2025  11:05               167 4e46fa019f9fdf7cfd65d5d6fb7a0770cb2e13
+03/01/2025  23:28               295 5500818404f3525a6c1cadfa20d344d0826a44
+               3 File(s)     70,175,650 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f6
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             2,519 5c4e2bd2750f03c831f922717f651336042e55
+03/01/2025  23:28             6,614 b9481454c10351b909b0554106813a265d321c
+05/01/2025  21:24             1,388 f72a5f96def09be44817dbb1f23da810671e98
+               3 File(s)         10,521 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f7
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28             1,715 7deee96dd901d84be1c8233ffbc65dec23a91e
+               1 File(s)          1,715 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f8
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               102 151284429a0d234d74f838238e48bbe683d423
+03/01/2025  23:28         1,927,241 df7aacb9fc586b56c4a5fe00188d6136645c53
+               2 File(s)      1,927,343 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\f9
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24             5,580 3198916e558aeb9b2dae8227769b2f52556b9d
+03/01/2025  23:28               130 448a8ca4a86dcd1f1726c8ef33365ddffa60ca
+05/01/2025  21:24               695 89950e7c44e5e283c78cda50be3cd0d43d37d5
+06/10/2024  20:42             2,574 ee6746ef21116353d0ed847d891294c29c6b44
+               4 File(s)          8,979 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\fa
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+05/01/2025  21:24               286 a18f0f8a82e0d023cf89e89d8f8bea6bb9840c
+               1 File(s)            286 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\fc
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  23:28               719 39c31b1032dd44b63528189780e827f2cbeae2
+03/01/2025  23:28               410 54c496c940f9dcdfafa2931e4c61a9fd78c8b6
+06/10/2024  20:42                69 5cc270e63290c8282b5f1f8d3c9110be6c0f6c
+06/10/2024  20:42             1,413 5d4ab823bb3cec7367dd874bfb5154b85b706b
+05/01/2025  21:24               318 7e9248b8ed444998e9fad9540852942784e0d0
+               5 File(s)          2,929 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\fd
+
+03/01/2025  23:11    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+06/10/2024  20:42               173 82eaf7d63f86ae4da67bdb3554cfef0ab626ac
+               1 File(s)            173 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\fe
+
+19/01/2025  11:05    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+19/01/2025  11:05             7,304 2eec2668c6d2e2d43c885c2e183c153b26cffc
+10/10/2024  20:54               162 d5394ce157831d0630276636761f5e3a1e6bf4
+10/10/2024  19:45               318 f7665bf10b263ffce3ce48922ee93f4eb57b12
+               3 File(s)          7,784 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\ff
+
+05/01/2025  21:24    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+10/10/2024  19:42               128 2ba33f7b32c4b6053e2dd78b991d395c8eb254
+03/01/2025  23:28               357 5a02330cb9ba30324568343c6ffc0c2c54588c
+05/01/2025  21:24             1,711 7177a15005c7155add9944a7cb37d6a09c09ae
+               3 File(s)          2,196 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\info
+
+03/01/2025  22:45    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  22:37             1,832 commit-graph
+03/01/2025  22:45                54 packs
+               2 File(s)          1,886 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\objects\pack
+
+03/01/2025  22:45    <DIR>          .
+19/01/2025  11:05    <DIR>          ..
+03/01/2025  22:45             1,100 pack-d3b1b7cf66ad317ab08fb781dba8d8ae68e1b200.idx
+03/01/2025  22:45                41 pack-d3b1b7cf66ad317ab08fb781dba8d8ae68e1b200.pack
+03/01/2025  22:45                56 pack-d3b1b7cf66ad317ab08fb781dba8d8ae68e1b200.rev
+               3 File(s)          1,197 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\refs
+
+03/01/2025  23:16    <DIR>          .
+19/01/2025  11:05    <DIR>          heads
+03/01/2025  22:49    <DIR>          remotes
+03/01/2025  23:16                41 stash
+06/10/2024  19:42    <DIR>          tags
+               1 File(s)             41 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\refs\heads
+
+19/01/2025  11:05    <DIR>          .
+03/01/2025  23:16    <DIR>          ..
+10/10/2024  22:13                41 jaicat_1
+19/01/2025  11:05                41 main
+               2 File(s)             82 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\refs\remotes
+
+03/01/2025  22:49    <DIR>          .
+03/01/2025  23:16    <DIR>          ..
+19/01/2025  11:05    <DIR>          origin
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\refs\remotes\origin
+
+19/01/2025  11:05    <DIR>          .
+03/01/2025  22:49    <DIR>          ..
+19/01/2025  11:05                41 main
+               1 File(s)             41 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\.git\refs\tags
+
+06/10/2024  19:42    <DIR>          .
+03/01/2025  23:16    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\command
+
+05/01/2025  10:45    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+05/01/2025  21:05             2,893 Commands.py
+05/01/2025  21:05               592 Commands.txt
+05/01/2025  09:29            22,852 Commands1.txt
+05/01/2025  21:08    <DIR>          __pycache__
+               3 File(s)         26,337 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\command\__pycache__
+
+05/01/2025  21:08    <DIR>          .
+05/01/2025  10:45    <DIR>          ..
+05/01/2025  21:08             4,568 Commands.cpython-312.pyc
+               1 File(s)          4,568 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision
+
+31/07/2025  17:20    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:11             1,118 car_detection.py
+10/10/2024  22:11             5,933 car_model.py
+10/10/2024  22:11             1,509 car_part_recognition.py
+14/07/2025  20:08    <DIR>          coco
+06/10/2024  20:35               625 coco.names
+10/10/2024  22:11               705 coco.names.txt
+06/10/2024  16:55             1,425 coco.yaml
+10/10/2024  22:11             2,959 contact_recognition.py
+10/10/2024  22:11                 2 detections.json
+10/10/2024  22:11             1,450 face_recognition.py
+10/10/2024  22:11             2,568 home_surveillance.py
+10/10/2024  22:11               597 license_plate_detection.py
+10/10/2024  22:11                 2 local_car_data.json
+10/10/2024  22:11             4,022 motorbike_model.py
+10/10/2024  22:11             5,650 object_detection.py
+10/10/2024  22:11               102 oneDrive.py
+10/10/2024  22:11             7,930 opencv_utils.py
+10/10/2024  22:11             2,579 people_recognition.py
+10/10/2024  22:11                 0 uk_plate_cascade.xml
+10/10/2024  22:11             2,891 vehicle_detection.py
+10/10/2024  22:11             2,564 visualization.py
+31/07/2025  17:20    <DIR>          yolov7-python
+10/10/2024  22:11             1,448 yolov7.cfg
+06/10/2024  20:33        75,587,165 yolov7.pt
+19/02/2025  20:02       147,898,248 yolov7.weights
+14/07/2025  20:05             3,999 yolov7.yaml
+03/01/2025  23:55    <DIR>          __pycache__
+              24 File(s)    223,535,491 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\coco
+
+14/07/2025  20:08    <DIR>          .
+31/07/2025  17:20    <DIR>          ..
+14/07/2025  20:07             1,425 coco.names.txt.yaml
+               1 File(s)          1,425 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python
+
+31/07/2025  17:20    <DIR>          .
+31/07/2025  17:20    <DIR>          ..
+31/07/2025  17:20    <DIR>          data
+31/07/2025  17:20             4,673 detection.py
+31/07/2025  17:20                26 requirements.txt
+31/07/2025  17:20        24,975,795 yolov7-tiny.onnx
+               3 File(s)     24,980,494 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\data
+
+31/07/2025  17:20    <DIR>          .
+31/07/2025  17:20    <DIR>          ..
+31/07/2025  17:20               705 class.names
+31/07/2025  17:20    <DIR>          images
+31/07/2025  17:20    <DIR>          videos
+               1 File(s)            705 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\data\images
+
+31/07/2025  17:20    <DIR>          .
+31/07/2025  17:20    <DIR>          ..
+31/07/2025  17:20           133,495 horses.jpg
+31/07/2025  17:20         2,111,845 road.png
+31/07/2025  17:20           168,949 zidane.jpg
+               3 File(s)      2,414,289 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\data\videos
+
+31/07/2025  17:20    <DIR>          .
+31/07/2025  17:20    <DIR>          ..
+31/07/2025  17:20        32,513,861 road.mp4
+               1 File(s)     32,513,861 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\computer_vision\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+31/07/2025  17:20    <DIR>          ..
+03/01/2025  23:55            10,433 car_model.cpython-312.pyc
+03/01/2025  23:55             2,668 car_part_recognition.cpython-312.pyc
+03/01/2025  23:55             4,253 contact_recognition.cpython-312.pyc
+03/01/2025  23:55             2,416 face_recognition.cpython-312.pyc
+03/01/2025  23:55             3,305 home_surveillance.cpython-312.pyc
+03/01/2025  23:55             1,010 license_plate_detection.cpython-312.pyc
+03/01/2025  23:55             7,187 motorbike_model.cpython-312.pyc
+03/01/2025  23:54             8,197 object_detection.cpython-312.pyc
+03/01/2025  23:55             4,322 visualization.cpython-312.pyc
+               9 File(s)         43,791 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\config
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12                 0 api_keys.py
+10/10/2024  22:12               254 config.json
+               2 File(s)            254 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\conversation
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12             6,873 dialogue_manager copy.py
+10/10/2024  22:12             9,950 dialogue_manager.py
+10/10/2024  22:12             2,028 nlg.py
+10/10/2024  22:12             5,577 nlu.py
+03/01/2025  23:55    <DIR>          __pycache__
+               4 File(s)         24,428 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\conversation\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:11    <DIR>          ..
+03/01/2025  23:55             8,054 dialogue_manager.cpython-312.pyc
+03/01/2025  23:55             3,118 nlg.cpython-312.pyc
+10/10/2024  22:12             4,082 nlu.cpython-312.pyc
+               3 File(s)         15,254 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\data
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12                 0 calendar_data.csv
+10/10/2024  22:12                 0 weather_data.csv
+               2 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\database
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12             1,930 conversation.py
+10/10/2024  22:12               814 enginnering_mod.py
+10/10/2024  22:12             1,199 knowledge_base.py
+10/10/2024  22:12             3,509 knowledge_graph.py
+10/10/2024  22:12               806 motorbikes.py
+10/10/2024  22:12             2,002 mysql_utils.py
+10/10/2024  22:12             1,300 Nas.py
+10/10/2024  22:12               880 web_scraping.py
+               8 File(s)         12,440 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\Documentation
+
+05/01/2025  21:26    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:11             2,209 documentation.py
+05/01/2025  21:26           670,790 Master Project Of Jaicat.docx
+10/10/2024  22:11                 0 README.md
+               3 File(s)        672,999 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\enrollment_json
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12               193 Jay.json
+10/10/2024  22:12               117 Samantha.json
+               2 File(s)            310 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\enrollment_pictures
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12           399,702 Jay.png
+10/10/2024  22:12           395,876 Samantha.png
+               2 File(s)        795,578 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\features
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12             2,117 code_generation.py
+10/10/2024  22:12             3,056 dialogue_manager.py
+10/10/2024  22:12             5,140 nlp copy.py
+22/07/2025  18:11             2,281 nlp.py
+10/10/2024  22:12             1,470 nlu.py
+10/10/2024  22:12               307 SentimentAnalysis.py
+10/10/2024  22:12               307 sentiment_analysis.py
+10/10/2024  22:12               285 text_classification.py
+22/07/2025  18:11    <DIR>          __pycache__
+               8 File(s)         14,963 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\features\__pycache__
+
+22/07/2025  18:11    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+10/10/2024  22:12             2,849 code_generation.cpython-312.pyc
+22/07/2025  18:11             3,585 nlp.cpython-312.pyc
+03/01/2025  23:55             2,327 nlu.cpython-312.pyc
+10/10/2024  22:12               667 sentiment_analysis.cpython-312.pyc
+10/10/2024  22:12               653 text_classification.cpython-312.pyc
+               5 File(s)         10,081 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+03/01/2025  23:12    <DIR>          nlg
+03/01/2025  23:12    <DIR>          nlp
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlg
+
+03/01/2025  23:12    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+10/10/2024  22:12             2,101 Social_media_post.py
+03/01/2025  23:55    <DIR>          __pycache__
+               1 File(s)          2,101 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlg\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             2,609 Social_media_post.cpython-312.pyc
+               1 File(s)          2,609 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlp
+
+03/01/2025  23:12    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+10/10/2024  22:12             2,126 crime.py
+10/10/2024  22:12             1,860 engineering.py
+10/10/2024  22:12             1,842 fitness.py
+10/10/2024  22:12             2,668 medical.py
+10/10/2024  22:12             1,595 motorbike_engine.py
+10/10/2024  22:12               586 nltk_utils.py
+10/10/2024  22:12             4,656 politics.py
+10/10/2024  22:12            12,557 sexual_content.py
+10/10/2024  22:12             2,149 spacy_utils.py
+10/10/2024  22:12               851 translation.py
+03/01/2025  23:55    <DIR>          __pycache__
+              10 File(s)         30,890 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlp\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             3,155 crime.cpython-312.pyc
+03/01/2025  23:55             2,406 engineering.cpython-312.pyc
+03/01/2025  23:55             2,503 fitness.cpython-312.pyc
+03/01/2025  23:55             3,091 medical.cpython-312.pyc
+03/01/2025  23:55             3,315 spacy_utils.cpython-312.pyc
+03/01/2025  23:55             1,441 translation.cpython-312.pyc
+               6 File(s)         15,911 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\machine_learning
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12             3,300 Machine_Learning.py
+10/10/2024  22:12               805 sklearn_utils.py
+10/10/2024  22:12             1,085 tensorflow_utils.py
+03/01/2025  23:55    <DIR>          __pycache__
+               3 File(s)          5,190 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\machine_learning\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             1,579 tensorflow_utils.cpython-312.pyc
+               1 File(s)          1,579 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\models
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12                 0 calendar_model.pkl
+10/10/2024  22:12             1,062 code_generation_model copy.py
+10/10/2024  22:12             1,062 code_generation_model.py
+10/10/2024  22:12                 0 intent_model.pkl
+10/10/2024  22:12               839 nlp_model.py
+10/10/2024  22:12               952 text_classification_model.py
+10/10/2024  22:12                 0 weather_model.pkl
+03/01/2025  23:12    <DIR>          __pycache__
+               7 File(s)          3,915 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\models\__pycache__
+
+03/01/2025  23:12    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+10/10/2024  22:12             2,085 code_generation_model.cpython-312.pyc
+10/10/2024  22:12             1,833 nlp_model.cpython-312.pyc
+10/10/2024  22:12             1,773 text_classification_model.cpython-312.pyc
+               3 File(s)          5,691 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\network
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12             1,345 socket_utils.py
+03/01/2025  23:55    <DIR>          __pycache__
+               1 File(s)          1,345 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\network\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             2,320 socket_utils.cpython-312.pyc
+               1 File(s)          2,320 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\security
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12                 0 encryption_utils.py
+               1 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+27/07/2025  16:14             1,026 bluetooth_service.py
+10/10/2024  22:12             3,838 business_management.py
+19/01/2025  11:27             6,489 calendar_api.py
+19/01/2025  16:09               138 calendar_service.py
+10/10/2024  22:12               935 contol bluetooth.py
+10/10/2024  22:12             2,258 detection_service.py
+10/10/2024  22:12             1,630 education.py
+05/01/2025  19:42             3,198 email_service.py
+10/10/2024  22:12             2,262 Engineering.py
+10/10/2024  22:12               319 epub_parsing.py
+10/10/2024  22:12             6,941 file_analysis.py
+10/10/2024  22:12               625 finance.py
+10/10/2024  22:12             1,650 fitness.py
+05/01/2025  21:47             3,332 food.py
+10/10/2024  22:12               340 google_calendar_api.py
+10/10/2024  22:12             1,981 health.py
+10/10/2024  22:12               533 image_analyze.py
+10/10/2024  22:12             1,907 ip_cam.py
+10/10/2024  22:12               678 job_search.py
+10/10/2024  22:12             1,884 mental_health.py
+10/10/2024  22:12             1,283 motorbike_parts.py
+10/10/2024  22:12               660 news_integration.py
+10/10/2024  22:12               575 pdf_parsing.py
+10/10/2024  22:12               683 phone_cam.py
+10/10/2024  22:12             6,550 Politics.py
+10/10/2024  22:12             1,625 project_management.py
+10/10/2024  22:12            11,227 sexual_content.py
+10/10/2024  22:12               520 smart_home.py
+10/10/2024  22:12             3,635 Social_media_monitor.py
+10/10/2024  22:12             1,962 spotify_integration 1.txt
+10/10/2024  22:12             2,775 spotify_integration.py
+10/10/2024  22:12             1,647 swann_cctv.py
+10/10/2024  22:12             1,567 travel_recommendations.py
+10/10/2024  22:12             1,325 usb_cam.py
+10/10/2024  22:12             2,774 user_enrollment.py
+10/10/2024  22:12               728 vehicle_lookup.py
+10/10/2024  22:12               287 weather_api.py
+19/01/2025  16:42             1,468 weather_service.py
+10/10/2024  22:12             4,203 youtube_analysis.py
+27/07/2025  16:15    <DIR>          __pycache__
+              39 File(s)         87,458 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\__pycache__
+
+27/07/2025  16:15    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+27/07/2025  16:15             2,217 bluetooth_service.cpython-312.pyc
+03/01/2025  23:55             5,602 business_management.cpython-312.pyc
+19/01/2025  16:09               652 calendar_service.cpython-312.pyc
+03/01/2025  23:55             3,538 detection_service.cpython-312.pyc
+05/01/2025  19:46             4,114 email_service.cpython-312.pyc
+03/01/2025  23:55            10,416 file_analysis.cpython-312.pyc
+03/01/2025  23:54             1,277 finance.cpython-312.pyc
+05/01/2025  21:48             4,528 food.cpython-312.pyc
+03/01/2025  23:55             2,602 ip_cam.cpython-312.pyc
+03/01/2025  23:54             1,257 job_search.cpython-312.pyc
+03/01/2025  23:55             1,727 motorbike_parts.cpython-312.pyc
+03/01/2025  23:54             1,364 phone_cam.cpython-312.pyc
+03/01/2025  23:55             2,365 project_management.cpython-312.pyc
+03/01/2025  23:54             3,107 spotify_integration.cpython-312.pyc
+03/01/2025  23:55             2,654 swann_cctv.cpython-312.pyc
+03/01/2025  23:54             1,310 travel_recommendations.cpython-312.pyc
+03/01/2025  23:55             2,228 usb_cam.cpython-312.pyc
+19/01/2025  16:51             1,210 weather_service.cpython-312.pyc
+03/01/2025  23:54             6,467 youtube_analysis.cpython-312.pyc
+              19 File(s)         58,635 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\TESTING OPENAI
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:11               401 openai test.py
+               1 File(s)            401 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\Tests
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:11                 0 test_dialogue_manager.py
+10/10/2024  22:11                 0 test_nlg.py
+10/10/2024  22:11                 0 test_nlu.py
+10/10/2024  22:11             1,328 test_object_detection.py
+10/10/2024  22:11                 0 test_services.py
+10/10/2024  22:11                 0 test_utilities.py
+               6 File(s)          1,328 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\ui
+
+19/02/2025  21:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+23/07/2024  23:33         1,926,637 default_image.png
+23/07/2024  23:33         1,926,637 face_happy.png
+04/01/2025  19:58            19,046 JaicatUI original.txt
+27/07/2025  16:15             5,602 JaicatUI.py
+10/10/2024  22:12                 0 pyqt_utils.py
+27/07/2025  16:15    <DIR>          __pycache__
+               5 File(s)      3,877,922 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\ui\__pycache__
+
+27/07/2025  16:15    <DIR>          .
+19/02/2025  21:11    <DIR>          ..
+27/07/2025  16:15             8,476 JaicatUI.cpython-312.pyc
+               1 File(s)          8,476 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\utils
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:12             1,053 file_handling.py
+10/10/2024  22:12             2,196 image_processing.py
+10/10/2024  22:12             1,341 moving_image.py
+10/10/2024  22:12             1,397 sync_relationships.py
+10/10/2024  22:12             2,584 text_processing.py
+10/10/2024  22:12               738 UK_law.py
+03/01/2025  23:55    <DIR>          __pycache__
+               6 File(s)          9,309 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\utils\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             1,940 file_handling.cpython-312.pyc
+               1 File(s)          1,940 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\__pycache__
+
+03/01/2025  23:11    <DIR>          .
+31/07/2025  17:28    <DIR>          ..
+10/10/2024  22:11               507 image_processing.cpython-312.pyc
+               1 File(s)            507 bytes
+
+     Total Files Listed:
+             709 File(s)    693,225,362 bytes
+             836 Dir(s)  12,567,035,904 bytes free

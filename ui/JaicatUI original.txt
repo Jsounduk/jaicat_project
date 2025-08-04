@@ -1,0 +1,435 @@
+import tkinter as tk
+from tkinter import ttk, messagebox, filedialog
+import json
+import os
+import csv
+from PIL import Image, ImageTk
+
+class JaicatUI:
+    def __init__(self, assistant):
+        """Initialize the UI and connect it to the Jaicat assistant."""
+        self.assistant = assistant  # Reference to the Jaicat assistant
+
+
+        # Set up the window
+        self.window = tk.Tk()
+        self.window.title("Jaicat - AI Assistant")
+        self.window.geometry("1200x800")  # Set window size
+        self.window.configure(bg="#2C3E50")  # Change background color
+
+        self.root = tk.Tk()
+        self.root.title("Jaicat Surveillance System")
+        
+        # Create a label for the video feed
+        self.video_label = tk.Label(self.root)
+        self.video_label.pack()
+
+        self.create_widgets()
+
+    def create_widgets(self):
+        """Set up the UI components like buttons, labels, input boxes, etc."""
+
+        # Frame to contain all widgets
+        main_frame = tk.Frame(self.window, bg="#2C3E50")
+        main_frame.pack(fill="both", expand=True)
+
+        # Label to show the face image
+        self.face_image = Image.open("face_happy.png")  # Default to happy face
+        self.face_image_tk = ImageTk.PhotoImage(self.face_image)
+        self.face_image_label = tk.Label(main_frame, image=self.face_image_tk)
+        self.face_image_label.grid(row=0, column=0, padx=10, pady=10, columnspan=2)
+
+        # Button to play a song via Spotify
+        self.play_button = tk.Button(main_frame, text="Play Music", command=self.assistant.play_song, font=("Arial", 12), bg="#3498db", fg="white")
+        self.play_button.grid(row=1, column=0, padx=10, pady=10)
+
+        # Calendar Widget
+        self.calendar = tk.Label(main_frame, text=self.assistant.calendar_service.get_current_date(), font=("Arial", 14), bg="#1ABC9C", fg="white")
+        self.calendar_label = tk.Label(main_frame, text="Calendar", font=("Arial", 14), bg="#2C3E50", fg="white")
+        self.calendar_label.grid(row=2, column=0, padx=10, pady=10)
+        self.calendar = tk.Label(main_frame, text=self.assistant.calendar_service.get_current_date(), font=("Arial", 14), bg="#1ABC9C", fg="white")
+        self.calendar.grid(row=3, column=0, padx=10, pady=10)
+
+        # Weather Label
+        self.weather_label = tk.Label(main_frame, text="Weather", font=("Arial", 14), bg="#2C3E50", fg="white")
+        self.weather_label.grid(row=2, column=1, padx=10, pady=10)
+        self.weather = tk.Label(main_frame, text=self.assistant.weather_service.get_weather(), font=("Arial", 14), bg="#1ABC9C", fg="white")
+        self.weather.grid(row=3, column=1, padx=10, pady=10)
+
+        # Circular Button for user input
+        self.input_button = tk.Button(main_frame, text="Text Input", command=self.show_input_box, font=("Arial", 12), bg="#E74C3C", fg="white")
+        self.input_button.grid(row=4, column=0, padx=10, pady=10)
+
+        # Hidden text input box
+        self.text_input = tk.Entry(main_frame, font=("Arial", 14))
+        self.text_input.grid(row=5, column=0, padx=10, pady=10, columnspan=2)
+        self.text_input.grid_remove()
+
+        # Submit Button for text input
+        self.submit_button = tk.Button(main_frame, text="Submit", command=self.on_submit)
+        self.submit_button.grid(row=6, column=0, padx=10, pady=10)
+
+        # Response Box
+        self.response_box = tk.Text(main_frame, height=10, width=60, font=("Arial", 14))
+        self.response_box.grid(row=7, column=0, padx=10, pady=10, columnspan=2)
+
+        # Status Bar
+        self.status_bar = tk.Label(self.window, text="Ready", bd=1, relief=tk.SUNKEN, anchor=tk.W, font=("Arial", 12))
+        self.status_bar.pack(side=tk.BOTTOM, fill=tk.X)
+
+        # Add a button to show motorbike detections
+        self.show_motorbikes_button = tk.Button(self.window, text="Show Motorbike Detections", command=self.show_motorbike_detections)
+        self.show_motorbikes_button.pack(pady=10)
+
+        # Create a menu for visualizing saved detections
+        self.detection_btn = tk.Button(self.window, text="View Saved Detections", command=self.view_detections)
+        self.detection_btn.pack(pady=10)
+
+        """Create the UI elements for Bluetooth management."""
+        self.scan_button = tk.Button(self.root, text="Scan Bluetooth Devices", command=self.scan_devices)
+        self.scan_button.pack(pady=10)
+
+        self.devices_listbox = tk.Listbox(self.root)
+        self.devices_listbox.pack(pady=10)
+
+        self.connect_button = tk.Button(self.root, text="Connect to Selected Device", command=self.connect_device)
+        self.connect_button.pack(pady=10)
+
+    def scan_devices(self):
+        """Scan for Bluetooth devices and display them."""
+        devices = self.bluetooth_service.scan_devices()
+        self.devices_listbox.delete(0, tk.END)  # Clear previous entries
+
+        if devices:
+            for addr, name in devices:
+                self.devices_listbox.insert(tk.END, f"{name} ({addr})")
+        else:
+            messagebox.showinfo("Bluetooth", "No Bluetooth devices found.")
+
+    def connect_device(self):
+        """Connect to the selected Bluetooth device."""
+        try:
+            selected_device = self.devices_listbox.get(self.devices_listbox.curselection())
+            device_address = selected_device.split('(')[1].replace(')', '')
+            if self.bluetooth_service.connect_to_device(device_address):
+                messagebox.showinfo("Bluetooth", f"Connected to {selected_device}")
+            else:
+                messagebox.showerror("Bluetooth", f"Failed to connect to {selected_device}")
+        except IndexError:
+            messagebox.showerror("Bluetooth", "Please select a device to connect.")
+
+        
+
+    def view_detections(self):
+        """Display saved detections in a table format."""
+        detections_file = "computer_vision/detections.json"
+
+        # Check if the detections file exists
+        if not os.path.exists(detections_file):
+            messagebox.showerror("Error", "No saved detections found.")
+            return
+
+        # Load the saved detections from the JSON file
+        with open(detections_file, 'r') as file:
+            detections = json.load(file)
+
+        # Create a new window for displaying detections
+        det_window = tk.Toplevel(self.window)
+        det_window.title("Saved Detections")
+
+        # Create a table to show the detection details
+        columns = ("License Plate", "Model", "Manufacturer", "Confidence")
+        tree = ttk.Treeview(det_window, columns=columns, show='headings')
+        tree.pack(expand=True, fill='both')
+
+        # Define the column headings
+        for col in columns:
+            tree.heading(col, text=col)
+
+        # Insert each detection into the table
+        for detection in detections:
+            license_plate = detection.get('license_plate', 'N/A')
+            vehicle_data = detection.get('vehicle_data', {})
+            model = vehicle_data.get('model', 'Unknown')
+            manufacturer = vehicle_data.get('manufacturer', 'Unknown')
+            detected_cars = detection.get('detected_cars', [])
+            confidence = detected_cars[0].get('confidence', 0) if detected_cars else 0
+            tree.insert('', 'end', values=(license_plate, model, manufacturer, f"{confidence:.2f}"))
+
+        # Add export button to save detections to CSV
+        export_btn = tk.Button(det_window, text="Export to CSV", command=lambda: self.export_to_csv(detections))
+        export_btn.pack(pady=10)
+
+    def export_to_csv(self, detections):
+        """Export the saved detections to a CSV file."""
+        file_path = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV Files", "*.csv")])
+        if not file_path:
+            return
+
+        try:
+            with open(file_path, 'w', newline='') as csvfile:
+                fieldnames = ["License Plate", "Model", "Manufacturer", "Confidence"]
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+                writer.writeheader()
+                for detection in detections:
+                    license_plate = detection.get('license_plate', 'N/A')
+                    vehicle_data = detection.get('vehicle_data', {})
+                    model = vehicle_data.get('model', 'Unknown')
+                    manufacturer = vehicle_data.get('manufacturer', 'Unknown')
+                    detected_cars = detection.get('detected_cars', [])
+                    confidence = detected_cars[0].get('confidence', 0) if detected_cars else 0
+                    writer.writerow({
+                        "License Plate": license_plate,
+                        "Model": model,
+                        "Manufacturer": manufacturer,
+                        "Confidence": f"{confidence:.2f}"
+                    })
+            messagebox.showinfo("Success", f"Detections exported successfully to {file_path}")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to export to CSV: {e}")
+
+    def show_input_box(self):
+        """Show the text input box when the button is clicked."""
+        self.text_input.grid()
+
+    def on_submit(self):
+        """Handle the submit button."""
+        user_input = self.text_input.get()
+        self.assistant.process_user_input(user_input)
+
+    def display_response(self, message):
+        """Display a response in the status bar or as a message box."""
+        self.status_bar.config(text=message)
+        self.response_box.insert(tk.END, f"Jaicat: {message}\n")
+        self.response_box.see(tk.END)
+
+    def change_face_image(self, mood="neutral"):
+        """Change the face image based on mood."""
+        if mood == "happy":
+            face_image = Image.open("face_happy.png")
+        elif mood == "flirty":
+            face_image = Image.open("face_flirty.png")
+        else:
+            face_image = Image.open("face_neutral.png")
+
+        self.face_image_tk = ImageTk.PhotoImage(face_image)
+        self.face_image_label.config(image=self.face_image_tk)
+        self.face_image_label.image = self.face_image_tk
+
+    def show_motorbike_detections(self):
+        """
+        Display motorbike detection data from local JSON storage.
+        """
+        try:
+            # Path to the local motorbike data file
+            motorbike_data_file = "computer_vision/local_motorbike_data.json"
+
+            # Check if the file exists
+            if os.path.exists(motorbike_data_file):
+                with open(motorbike_data_file, 'r') as file:
+                    motorbike_data = json.load(file)
+
+                # If no motorbike data is available
+                if not motorbike_data:
+                    messagebox.showinfo("Motorbike Detections", "No motorbike detections found.")
+                    return
+
+                # Create a new window to display motorbike detections
+                detection_window = tk.Toplevel(self.window)
+                detection_window.title("Motorbike Detections")
+
+                # Add a listbox to display motorbike details
+                detection_listbox = tk.Listbox(detection_window, width=100, height=20)
+                detection_listbox.pack(padx=10, pady=10)
+
+                # Populate the listbox with motorbike detection details
+                for plate_number, details in motorbike_data.items():
+                    detection_listbox.insert(tk.END, f"License Plate: {plate_number}")
+                    detection_listbox.insert(tk.END, f"Model: {details['model']}")
+                    detection_listbox.insert(tk.END, f"Manufacturer: {details['manufacturer']}")
+                    detection_listbox.insert(tk.END, "-" * 50)
+
+            else:
+                messagebox.showwarning("Error", "Motorbike data file not found.")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to load motorbike detections: {e}")
+
+    def show_saved_detections(self):
+        # Logic to display saved vehicle/motorbike detections
+        saved_detections = self.jaicat.get_saved_detections()  # Fetch saved data from Jaicat
+        if not saved_detections:
+            print("No detections found.")
+        else:
+            # Display detections in UI (replace with actual UI code)
+            print(f"Saved Detections: {saved_detections}")
+
+    def export_saved_detections(self):
+        # Logic to export saved vehicle/motorbike detections as a CSV
+        saved_detections = self.jaicat.get_saved_detections()
+        if saved_detections:
+            self.jaicat.export_detections_to_csv(saved_detections)  # Use Jaicat's export method
+            print("Detections exported successfully.")
+        else:
+            print("No detections available to export.")
+    def display_bluetooth_devices(self, devices):
+        """Display a list of available Bluetooth devices."""
+        if devices:
+            self.display_message("Bluetooth Devices:")
+            for addr, name in devices:
+                self.display_message(f"{name} ({addr})")
+        else:
+            self.display_message("No Bluetooth devices found.")
+    
+    def display_connected_device(self, device_addr):
+        """Display connected Bluetooth device."""
+        self.display_message(f"Connected to: {device_addr}")
+    
+    def display_feed(self, frame, detected_objects, face_recognition_result):
+        # Convert the OpenCV frame to an ImageTk object
+        frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        img = Image.fromarray(frame_rgb)
+        imgtk = ImageTk.PhotoImage(image=img)
+
+        # Display the frame
+        self.video_label.imgtk = imgtk
+        self.video_label.configure(image=imgtk)
+
+        # Show detected objects and face recognition results
+        print(f"Detected Objects: {detected_objects}")
+        print(f"Face Recognition: {face_recognition_result}")
+
+    def run(self):
+        self.root.mainloop()
+
+    def speak(self, text):
+        """Speak using the assistant's text-to-speech engine."""
+        self.assistant.engine.say(text)
+        self.assistant.engine.runAndWait()
+
+    def run(self):
+        """Run the main event loop for the GUI."""
+        self.window.mainloop()
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = JaicatUI(root)
+    root.mainloop()
+
+# ui/JaicatUI.py
+
+import cv2
+from services.phone_cam import PhoneCamera
+from tkinter import Button
+
+class JaicatUI:
+    def __init__(self, assistant):
+        self.assistant = assistant
+        self.window = self.create_ui()
+        self.phone_camera = None
+
+    def create_ui(self):
+        # Code for creating the main UI
+        pass
+
+    def start_phone_camera(self):
+        """
+        Start phone camera feed and display in UI.
+        """
+        stream_url = "http://192.168.1.101:8080/video"  # Example IP stream URL for the phone camera
+        self.phone_camera = PhoneCamera(stream_url)
+        self.phone_camera.start_camera()
+
+        while True:
+            frame = self.phone_camera.capture_frame()
+            cv2.imshow("Phone Camera Feed", frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        
+        self.phone_camera.stop_camera()
+        cv2.destroyAllWindows()
+
+    def create_buttons(self):
+        """
+        Create buttons for camera and other functionalities.
+        """
+        phone_cam_button = Button(self.window, text="Open Phone Camera", command=self.start_phone_camera)
+        phone_cam_button.pack()
+
+def display_email_accounts(self, email_accounts):
+    self.clear_display()
+    for idx, account in enumerate(email_accounts, start=1):
+        self.add_text(f"{idx}- {account['address']}")
+    self.add_text("Please select an email account by number.")
+
+
+def display_nutrition_info(self, nutrition_data):
+    """Display nutritional information in the main window."""
+    if "error" in nutrition_data:
+        self.display_response(f"Error: {nutrition_data['error']}")
+        return
+
+    nutrition_text = (
+        f"Product Name: {nutrition_data.get('product_name')}\n"
+        f"Calories: {nutrition_data.get('calories')} kcal\n"
+        f"Fat: {nutrition_data.get('fat')} g\n"
+        f"Saturated Fat: {nutrition_data.get('saturated_fat')} g\n"
+        f"Sugars: {nutrition_data.get('sugars')} g\n"
+        f"Protein: {nutrition_data.get('protein')} g\n"
+        f"Salt: {nutrition_data.get('salt')} g\n"
+    )
+    self.display_response(nutrition_text)
+def scan_barcode_and_get_nutrition(self):
+    """Scan a barcode and display nutritional information."""
+    barcode = self.food_service.scan_barcode()
+    if barcode:
+        nutrition_data = self.food_service.get_nutrition_by_barcode(barcode)
+        if "error" not in nutrition_data:
+            self.display_nutrition_info(nutrition_data)
+        else:
+            self.display_response(f"Error: {nutrition_data['error']}")
+    else:
+        self.display_response("No barcode detected.")
+
+def display_macronutrient_percentages(self, nutrition_data):
+    """Display macronutrient percentages."""
+    percentages = self.food_service.calculate_macronutrient_percentage(nutrition_data)
+    if "error" not in percentages:
+        self.display_response(
+            f"Carbohydrates: {percentages['carbs_percentage']:.2f}%\n"
+            f"Protein: {percentages['protein_percentage']:.2f}%\n"
+            f"Fat: {percentages['fat_percentage']:.2f}%"
+        )
+    else:
+        self.display_response(f"Error: {percentages['error']}")
+
+        # ui/jaicatUI.py
+def scan_barcode_and_get_nutrition(self):
+    """Scan a barcode and display nutritional information."""
+    barcode = self.assistant.food_service.scan_barcode()
+    if barcode:
+        nutrition_data = self.assistant.food_service.get_nutrition_by_barcode(barcode)
+        if "error" not in nutrition_data:
+            self.display_nutrition_info(nutrition_data)
+        else:
+            self.display_response(f"Error: {nutrition_data['error']}")
+    else:
+        self.display_response("No barcode detected.")
+
+def display_nutrition_info(self, nutrition_data):
+    """Display nutritional information in the main window."""
+    if "error" in nutrition_data:
+        self.display_response(f"Error: {nutrition_data['error']}")
+        return
+
+    nutrition_text = (
+        f"Product Name: {nutrition_data.get('product_name')}\n"
+        f"Calories: {nutrition_data.get('calories')} kcal\n"
+        f"Fat: {nutrition_data.get('fat')} g\n"
+        f"Saturated Fat: {nutrition_data.get('saturated_fat')} g\n"
+        f"Sugars: {nutrition_data.get('sugars')} g\n"
+        f"Protein: {nutrition_data.get('protein')} g\n"
+        f"Salt: {nutrition_data.get('salt')} g\n"
+    )
+    self.display_response(nutrition_text)

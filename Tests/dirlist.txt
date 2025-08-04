@@ -1,0 +1,20 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\Tests
+
+31/07/2025  18:21    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:21                 0 dirlist.txt
+10/10/2024  22:11                 0 test_dialogue_manager.py
+10/10/2024  22:11                 0 test_nlg.py
+10/10/2024  22:11                 0 test_nlu.py
+10/10/2024  22:11             1,328 test_object_detection.py
+10/10/2024  22:11                 0 test_services.py
+10/10/2024  22:11                 0 test_utilities.py
+               8 File(s)          1,350 bytes
+
+     Total Files Listed:
+               8 File(s)          1,350 bytes
+               2 Dir(s)  12,534,349,824 bytes free

@@ -1,0 +1,60 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib
+
+31/07/2025  18:22    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:22                 0 dirlist.txt
+03/01/2025  23:12    <DIR>          nlg
+03/01/2025  23:12    <DIR>          nlp
+               2 File(s)             22 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlg
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  18:22    <DIR>          ..
+10/10/2024  22:12             2,101 Social_media_post.py
+03/01/2025  23:55    <DIR>          __pycache__
+               1 File(s)          2,101 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlg\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             2,609 Social_media_post.cpython-312.pyc
+               1 File(s)          2,609 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlp
+
+03/01/2025  23:12    <DIR>          .
+31/07/2025  18:22    <DIR>          ..
+10/10/2024  22:12             2,126 crime.py
+10/10/2024  22:12             1,860 engineering.py
+10/10/2024  22:12             1,842 fitness.py
+10/10/2024  22:12             2,668 medical.py
+10/10/2024  22:12             1,595 motorbike_engine.py
+10/10/2024  22:12               586 nltk_utils.py
+10/10/2024  22:12             4,656 politics.py
+10/10/2024  22:12            12,557 sexual_content.py
+10/10/2024  22:12             2,149 spacy_utils.py
+10/10/2024  22:12               851 translation.py
+03/01/2025  23:55    <DIR>          __pycache__
+              10 File(s)         30,890 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\lib\nlp\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+03/01/2025  23:12    <DIR>          ..
+03/01/2025  23:55             3,155 crime.cpython-312.pyc
+03/01/2025  23:55             2,406 engineering.cpython-312.pyc
+03/01/2025  23:55             2,503 fitness.cpython-312.pyc
+03/01/2025  23:55             3,091 medical.cpython-312.pyc
+03/01/2025  23:55             3,315 spacy_utils.cpython-312.pyc
+03/01/2025  23:55             1,441 translation.cpython-312.pyc
+               6 File(s)         15,911 bytes
+
+     Total Files Listed:
+              20 File(s)         51,533 bytes
+              14 Dir(s)  12,526,104,576 bytes free

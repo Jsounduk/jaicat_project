@@ -1,0 +1,25 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\command
+
+31/07/2025  18:27    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+05/01/2025  21:05             2,893 Commands.py
+05/01/2025  21:05               592 Commands.txt
+05/01/2025  09:29            22,852 Commands1.txt
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:27                 0 dirlist.txt
+05/01/2025  21:08    <DIR>          __pycache__
+               5 File(s)         26,359 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\command\__pycache__
+
+05/01/2025  21:08    <DIR>          .
+31/07/2025  18:27    <DIR>          ..
+05/01/2025  21:08             4,568 Commands.cpython-312.pyc
+               1 File(s)          4,568 bytes
+
+     Total Files Listed:
+               6 File(s)         30,927 bytes
+               5 Dir(s)  12,528,812,032 bytes free

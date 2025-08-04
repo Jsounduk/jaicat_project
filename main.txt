@@ -1,0 +1,82 @@
+# === CLEANED UP JARVIS-LIKE STARTUP ===
+
+import csv
+import pyttsx3
+import speech_recognition as sr
+import os
+import json
+import cv2
+import face_recognition
+import logging
+import tkinter as tk
+from tkinter import ttk, messagebox
+from PIL import Image, ImageTk
+from cryptography.fernet import Fernet
+
+# Core Services
+from services.spotify_integration import SpotifyIntegration
+from ui.JaicatUI import JaicatUI
+from features.nlp import NLPSystem
+from services.calendar_service import CalendarService
+from services.weather_service import WeatherService
+from services.bluetooth_service import BluetoothService
+from services.detection_service import DetectionService
+from services.food import FoodService
+from computer_vision.license_plate_detection import LicensePlateDetection
+from conversation.dialogue_manager import DialogueManager
+
+# Optional Imports (disabled for now)
+# from computer_vision.car_model import UKCarModel
+# from computer_vision.object_detection import ObjectDetection
+
+
+class Jaicat:
+    def __init__(self):
+        print("Initializing Jaicat AI assistant...")
+        logging.basicConfig(level=logging.INFO)
+
+        # Core Components
+        self.calendar_service = CalendarService()
+        self.weather_service = WeatherService()
+        self.bluetooth_service = BluetoothService()
+        self.nlp_system = NLPSystem()
+        self.dialogue_manager = DialogueManager()
+        self.food_service = FoodService("https://openfoodfacts-api.herokuapp.com/")
+        self.license_plate_detection = LicensePlateDetection()
+        self.detection_service = DetectionService('computer_vision/detections.json')
+        self.spotify_service = SpotifyIntegration()
+
+        # Speech Engines
+        self.recognizer = sr.Recognizer()
+        self.microphone = sr.Microphone()
+        self.engine = pyttsx3.init()
+        self.engine.setProperty('rate', 150)
+        self.engine.setProperty('volume', 1.0)
+
+        # UI
+        self.ui = JaicatUI(self)
+
+        # Identity
+        self.current_user = None
+        self.face_recognized = False
+        self.enrollment_pictures_path = 'C:\\Users\\josh_\\Desktop\\jaicat_project\\enrollment_pictures\\'
+        self.enrollment_json_path = 'C:\\Users\\josh_\\Desktop\\jaicat_project\\enrollment_json\\'
+
+        # Encryption Setup
+        self.encryption_key = b'YOUR_ENCRYPTION_KEY_HERE'
+        self.cipher = Fernet(self.encryption_key)
+
+        logging.info("Jaicat initialized.")
+
+    def run(self):
+        print("Starting Jaicat...")
+        self.ui.run()
+
+
+if __name__ == "__main__":
+    try:
+        jaicat = Jaicat()
+        jaicat.run()
+    except Exception as e:
+        logging.exception("An error occurred while running Jaicat:")
+        print(f"An error occurred: {e}")

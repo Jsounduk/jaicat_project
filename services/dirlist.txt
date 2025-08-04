@@ -1,0 +1,79 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services
+
+31/07/2025  18:21    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+27/07/2025  16:14             1,026 bluetooth_service.py
+10/10/2024  22:12             3,838 business_management.py
+19/01/2025  11:27             6,489 calendar_api.py
+19/01/2025  16:09               138 calendar_service.py
+10/10/2024  22:12               935 contol bluetooth.py
+10/10/2024  22:12             2,258 detection_service.py
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:21                 0 dirlist.txt
+10/10/2024  22:12             1,630 education.py
+05/01/2025  19:42             3,198 email_service.py
+10/10/2024  22:12             2,262 Engineering.py
+10/10/2024  22:12               319 epub_parsing.py
+10/10/2024  22:12             6,941 file_analysis.py
+10/10/2024  22:12               625 finance.py
+10/10/2024  22:12             1,650 fitness.py
+05/01/2025  21:47             3,332 food.py
+10/10/2024  22:12               340 google_calendar_api.py
+10/10/2024  22:12             1,981 health.py
+10/10/2024  22:12               533 image_analyze.py
+10/10/2024  22:12             1,907 ip_cam.py
+10/10/2024  22:12               678 job_search.py
+10/10/2024  22:12             1,884 mental_health.py
+10/10/2024  22:12             1,283 motorbike_parts.py
+10/10/2024  22:12               660 news_integration.py
+10/10/2024  22:12               575 pdf_parsing.py
+10/10/2024  22:12               683 phone_cam.py
+10/10/2024  22:12             6,550 Politics.py
+10/10/2024  22:12             1,625 project_management.py
+10/10/2024  22:12            11,227 sexual_content.py
+10/10/2024  22:12               520 smart_home.py
+10/10/2024  22:12             3,635 Social_media_monitor.py
+10/10/2024  22:12             1,962 spotify_integration 1.txt
+10/10/2024  22:12             2,775 spotify_integration.py
+10/10/2024  22:12             1,647 swann_cctv.py
+10/10/2024  22:12             1,567 travel_recommendations.py
+10/10/2024  22:12             1,325 usb_cam.py
+10/10/2024  22:12             2,774 user_enrollment.py
+10/10/2024  22:12               728 vehicle_lookup.py
+10/10/2024  22:12               287 weather_api.py
+19/01/2025  16:42             1,468 weather_service.py
+10/10/2024  22:12             4,203 youtube_analysis.py
+27/07/2025  16:15    <DIR>          __pycache__
+              41 File(s)         87,480 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\__pycache__
+
+27/07/2025  16:15    <DIR>          .
+31/07/2025  18:21    <DIR>          ..
+27/07/2025  16:15             2,217 bluetooth_service.cpython-312.pyc
+03/01/2025  23:55             5,602 business_management.cpython-312.pyc
+19/01/2025  16:09               652 calendar_service.cpython-312.pyc
+03/01/2025  23:55             3,538 detection_service.cpython-312.pyc
+05/01/2025  19:46             4,114 email_service.cpython-312.pyc
+03/01/2025  23:55            10,416 file_analysis.cpython-312.pyc
+03/01/2025  23:54             1,277 finance.cpython-312.pyc
+05/01/2025  21:48             4,528 food.cpython-312.pyc
+03/01/2025  23:55             2,602 ip_cam.cpython-312.pyc
+03/01/2025  23:54             1,257 job_search.cpython-312.pyc
+03/01/2025  23:55             1,727 motorbike_parts.cpython-312.pyc
+03/01/2025  23:54             1,364 phone_cam.cpython-312.pyc
+03/01/2025  23:55             2,365 project_management.cpython-312.pyc
+03/01/2025  23:54             3,107 spotify_integration.cpython-312.pyc
+03/01/2025  23:55             2,654 swann_cctv.cpython-312.pyc
+03/01/2025  23:54             1,310 travel_recommendations.cpython-312.pyc
+03/01/2025  23:55             2,228 usb_cam.cpython-312.pyc
+19/01/2025  16:51             1,210 weather_service.cpython-312.pyc
+03/01/2025  23:54             6,467 youtube_analysis.cpython-312.pyc
+              19 File(s)         58,635 bytes
+
+     Total Files Listed:
+              60 File(s)        146,115 bytes
+               5 Dir(s)  12,534,874,112 bytes free

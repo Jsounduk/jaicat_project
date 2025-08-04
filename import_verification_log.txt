@@ -1,0 +1,141 @@
+====== JAICAT IMPORT VERIFICATION REPORT ======
+
+📄 Files Checked:
+C:\Users\josh_\Desktop\jaicat_project\check_jaicat_health.py
+C:\Users\josh_\Desktop\jaicat_project\conversation_management.py
+C:\Users\josh_\Desktop\jaicat_project\file_handling.py
+C:\Users\josh_\Desktop\jaicat_project\image_processing.py
+C:\Users\josh_\Desktop\jaicat_project\main.py
+C:\Users\josh_\Desktop\jaicat_project\verify_imports.py
+C:\Users\josh_\Desktop\jaicat_project\command\Commands.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\car_detection.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\car_model.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\car_part_recognition.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\contact_recognition.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\face_recognition.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\home_surveillance.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\license_plate_detection.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\motorbike_model.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\object_detection.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\oneDrive.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\opencv_utils.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\people_recognition.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\vehicle_detection.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\visualization.py
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\detection.py
+C:\Users\josh_\Desktop\jaicat_project\config\api_keys.py
+C:\Users\josh_\Desktop\jaicat_project\conversation\dialogue_manager copy.py
+C:\Users\josh_\Desktop\jaicat_project\conversation\dialogue_manager.py
+C:\Users\josh_\Desktop\jaicat_project\conversation\nlg.py
+C:\Users\josh_\Desktop\jaicat_project\conversation\nlu.py
+C:\Users\josh_\Desktop\jaicat_project\database\conversation.py
+C:\Users\josh_\Desktop\jaicat_project\database\enginnering_mod.py
+C:\Users\josh_\Desktop\jaicat_project\database\knowledge_base.py
+C:\Users\josh_\Desktop\jaicat_project\database\knowledge_graph.py
+C:\Users\josh_\Desktop\jaicat_project\database\motorbikes.py
+C:\Users\josh_\Desktop\jaicat_project\database\mysql_utils.py
+C:\Users\josh_\Desktop\jaicat_project\database\Nas.py
+C:\Users\josh_\Desktop\jaicat_project\database\web_scraping.py
+C:\Users\josh_\Desktop\jaicat_project\Documentation\documentation.py
+C:\Users\josh_\Desktop\jaicat_project\features\code_generation.py
+C:\Users\josh_\Desktop\jaicat_project\features\dialogue_manager.py
+C:\Users\josh_\Desktop\jaicat_project\features\nlp copy.py
+C:\Users\josh_\Desktop\jaicat_project\features\nlp.py
+C:\Users\josh_\Desktop\jaicat_project\features\nlu.py
+C:\Users\josh_\Desktop\jaicat_project\features\SentimentAnalysis.py
+C:\Users\josh_\Desktop\jaicat_project\features\sentiment_analysis.py
+C:\Users\josh_\Desktop\jaicat_project\features\text_classification.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlg\Social_media_post.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\crime.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\engineering.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\fitness.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\medical.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\motorbike_engine.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\nltk_utils.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\politics.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\sexual_content.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\spacy_utils.py
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\translation.py
+C:\Users\josh_\Desktop\jaicat_project\machine_learning\Machine_Learning.py
+C:\Users\josh_\Desktop\jaicat_project\machine_learning\sklearn_utils.py
+C:\Users\josh_\Desktop\jaicat_project\machine_learning\tensorflow_utils.py
+C:\Users\josh_\Desktop\jaicat_project\models\code_generation_model copy.py
+C:\Users\josh_\Desktop\jaicat_project\models\code_generation_model.py
+C:\Users\josh_\Desktop\jaicat_project\models\nlp_model.py
+C:\Users\josh_\Desktop\jaicat_project\models\text_classification_model.py
+C:\Users\josh_\Desktop\jaicat_project\network\socket_utils.py
+C:\Users\josh_\Desktop\jaicat_project\security\encryption_utils.py
+C:\Users\josh_\Desktop\jaicat_project\services\bluetooth_service.py
+C:\Users\josh_\Desktop\jaicat_project\services\business_management.py
+C:\Users\josh_\Desktop\jaicat_project\services\calendar_api.py
+C:\Users\josh_\Desktop\jaicat_project\services\calendar_service.py
+C:\Users\josh_\Desktop\jaicat_project\services\contol bluetooth.py
+C:\Users\josh_\Desktop\jaicat_project\services\detection_service.py
+C:\Users\josh_\Desktop\jaicat_project\services\education.py
+C:\Users\josh_\Desktop\jaicat_project\services\email_service.py
+C:\Users\josh_\Desktop\jaicat_project\services\Engineering.py
+C:\Users\josh_\Desktop\jaicat_project\services\epub_parsing.py
+C:\Users\josh_\Desktop\jaicat_project\services\file_analysis.py
+C:\Users\josh_\Desktop\jaicat_project\services\finance.py
+C:\Users\josh_\Desktop\jaicat_project\services\fitness.py
+C:\Users\josh_\Desktop\jaicat_project\services\food.py
+C:\Users\josh_\Desktop\jaicat_project\services\google_calendar_api.py
+C:\Users\josh_\Desktop\jaicat_project\services\health.py
+C:\Users\josh_\Desktop\jaicat_project\services\image_analyze.py
+C:\Users\josh_\Desktop\jaicat_project\services\ip_cam.py
+C:\Users\josh_\Desktop\jaicat_project\services\job_search.py
+C:\Users\josh_\Desktop\jaicat_project\services\mental_health.py
+C:\Users\josh_\Desktop\jaicat_project\services\motorbike_parts.py
+C:\Users\josh_\Desktop\jaicat_project\services\news_integration.py
+C:\Users\josh_\Desktop\jaicat_project\services\pdf_parsing.py
+C:\Users\josh_\Desktop\jaicat_project\services\phone_cam.py
+C:\Users\josh_\Desktop\jaicat_project\services\Politics.py
+C:\Users\josh_\Desktop\jaicat_project\services\project_management.py
+C:\Users\josh_\Desktop\jaicat_project\services\sexual_content.py
+C:\Users\josh_\Desktop\jaicat_project\services\smart_home.py
+C:\Users\josh_\Desktop\jaicat_project\services\Social_media_monitor.py
+C:\Users\josh_\Desktop\jaicat_project\services\spotify_integration.py
+C:\Users\josh_\Desktop\jaicat_project\services\swann_cctv.py
+C:\Users\josh_\Desktop\jaicat_project\services\travel_recommendations.py
+C:\Users\josh_\Desktop\jaicat_project\services\usb_cam.py
+C:\Users\josh_\Desktop\jaicat_project\services\user_enrollment.py
+C:\Users\josh_\Desktop\jaicat_project\services\vehicle_lookup.py
+C:\Users\josh_\Desktop\jaicat_project\services\weather_api.py
+C:\Users\josh_\Desktop\jaicat_project\services\weather_service.py
+C:\Users\josh_\Desktop\jaicat_project\services\youtube_analysis.py
+C:\Users\josh_\Desktop\jaicat_project\TESTING OPENAI\openai test.py
+C:\Users\josh_\Desktop\jaicat_project\Tests\test_dialogue_manager.py
+C:\Users\josh_\Desktop\jaicat_project\Tests\test_nlg.py
+C:\Users\josh_\Desktop\jaicat_project\Tests\test_nlu.py
+C:\Users\josh_\Desktop\jaicat_project\Tests\test_object_detection.py
+C:\Users\josh_\Desktop\jaicat_project\Tests\test_services.py
+C:\Users\josh_\Desktop\jaicat_project\Tests\test_utilities.py
+C:\Users\josh_\Desktop\jaicat_project\ui\JaicatUI.py
+C:\Users\josh_\Desktop\jaicat_project\ui\pyqt_utils.py
+C:\Users\josh_\Desktop\jaicat_project\utils\file_handling.py
+C:\Users\josh_\Desktop\jaicat_project\utils\image_processing.py
+C:\Users\josh_\Desktop\jaicat_project\utils\moving_image.py
+C:\Users\josh_\Desktop\jaicat_project\utils\sync_relationships.py
+C:\Users\josh_\Desktop\jaicat_project\utils\text_processing.py
+C:\Users\josh_\Desktop\jaicat_project\utils\UK_law.py
+
+❌ Missing or Broken Imports:
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\opencv_utils.py: import oneDrive → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\opencv_utils.py: from .oneDrive import OneDriveClient → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\computer_vision\yolov7-python\detection.py: import onnxruntime as ort → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\database\Nas.py: import smbclient → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\database\Nas.py: import pyudev → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\sexual_content.py: from azure.ai.contentsafety import ContentSafetyClient → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\sexual_content.py: from azure.ai.contentsafety.models import TextCategory → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\sexual_content.py: from azure.core.credentials import AzureKeyCredential → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\lib\nlp\sexual_content.py: from azure.core.exceptions import HttpResponseError → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\epub_parsing.py: import epub → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\sexual_content.py: from azure.ai.contentsafety import ContentSafetyClient → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\sexual_content.py: from azure.ai.contentsafety.models import TextCategory → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\sexual_content.py: from azure.core.credentials import AzureKeyCredential → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\sexual_content.py: from azure.core.exceptions import HttpResponseError → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\Social_media_monitor.py: import tweepy → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\Social_media_monitor.py: import instapy → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\Social_media_monitor.py: import tweepy → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\services\Social_media_monitor.py: import instapy → ❌ Not Found
+C:\Users\josh_\Desktop\jaicat_project\TESTING OPENAI\openai test.py: from openai import OpenAI → ❌ Not Found

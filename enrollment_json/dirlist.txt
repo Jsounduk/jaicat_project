@@ -1,0 +1,16 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\enrollment_json
+
+31/07/2025  18:24    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:24                 0 dirlist.txt
+10/10/2024  22:12               193 Jay.json
+10/10/2024  22:12               117 Samantha.json
+               4 File(s)            332 bytes
+
+     Total Files Listed:
+               4 File(s)            332 bytes
+               2 Dir(s)  12,526,374,912 bytes free

@@ -1,0 +1,40 @@
+generate code for <feature_name>
+
+write a function to <perform_task>
+
+analyze sentiment of <text>
+
+what's the sentiment of <text>
+
+what's the intent behind <text>
+
+extract entities from <text>
+
+speak <text>
+
+read aloud <text>
+
+listen and respond
+
+transcribe audio
+
+complete code for <function_name>
+
+suggest code for <task
+
+refactor code for <function_name>
+
+improve code quality for <file_name>
+
+what's the weather like in <location>
+
+get weather forecast for <location>
+
+schedule a meeting with <person> on <date>
+
+what's my schedule for <date>
+
+
+
+
+

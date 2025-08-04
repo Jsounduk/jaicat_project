@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<opencv_storage>
+  <haarcascade_frontalface_default type_id="opencv-haar-classifier">
+    <!-- This is a placeholder XML file for plate detection -->
+    <stageType>BOOST</stageType>
+    <featureType>HAAR</featureType>
+    <height>1</height>
+    <width>1</width>
+    <stageParams>
+      <maxWeakCount>0</maxWeakCount>
+    </stageParams>
+    <stages>
+    </stages>
+  </haarcascade_frontalface_default>
+</opencv_storage>

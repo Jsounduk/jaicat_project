@@ -1,0 +1,23 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\network
+
+31/07/2025  18:22    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:22                 0 dirlist.txt
+10/10/2024  22:12             1,345 socket_utils.py
+03/01/2025  23:55    <DIR>          __pycache__
+               3 File(s)          1,367 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\network\__pycache__
+
+03/01/2025  23:55    <DIR>          .
+31/07/2025  18:22    <DIR>          ..
+03/01/2025  23:55             2,320 socket_utils.cpython-312.pyc
+               1 File(s)          2,320 bytes
+
+     Total Files Listed:
+               4 File(s)          3,687 bytes
+               5 Dir(s)  12,526,604,288 bytes free
