@@ -1,0 +1,146 @@
+🟩 KEY PYTHON MODULES & WHAT THEY DO
+Tagging & Sorting System:
+
+unified_image_sorter.py
+Main app/UI – Launch this for the all-in-one smart image sorting, tagging, face detection, region tagging, and folder moving.
+Calls everything else below.
+
+tag_ai.py
+Generates tags from images using models like BLIP/CLIP (auto-captioning).
+
+tag_sorter_engine.py
+Trains and predicts which folder/tag matches best, based on past logs.
+Has methods to learn associations and suggest folders.
+
+tag_learning_helper.py
+Stores learned clusters of tags/images and logs user corrections/feedback for self-improvement over time.
+
+image_organizer_tag_sorter.py, image_organizer.py, image_sorter.py
+Older/partial versions of tag sorting and manual/auto organizing—deprecated if using unified_image_sorter.py.
+
+manual_tag_editor_ui.py, tag_ui.py
+UI scripts for manual tag editing and possibly legacy manual interfaces.
+
+auto_tagger.py
+Probably batch tagging for hands-off runs (may use in the background).
+
+duplicate_check.py
+Checks for duplicate images using hashes—helps avoid re-tagging/re-sorting dupes.
+
+media_search.py, find_similar_gui.py
+Search for images by tag or visual similarity.
+
+region_tagger.py
+Interactive panel (now in-app, not a popup!) for drawing and tagging boxes (regions) on images, e.g. “Becky’s bum”.
+
+region_clip_embedder.py
+Extracts CLIP/AI embeddings from tagged regions for fast region-based search.
+
+region_similarity_search.py
+Finds visually similar regions across the dataset using those embeddings.
+
+region_annotations.json, region_embeddings.json
+Stores region/box tags and their learned AI features.
+
+enroll_faces_from_folders.py
+Use this to scan a folder tree of named people and generate .npy face encoding files.
+Each subfolder = person name.
+
+face_loader.py
+Helper for loading all .npy face files and returning them as usable encodings for comparison.
+
+faces/ folder
+This is your actual “face memory” DB – every .npy file is one learned face encoding, named like “Amy_H_xxxxx.npy”.
+
+🟨 Other Files in Media Management
+
+tag_clusters.json, tag_db.json
+Store clustering/group info for tags and tag search.
+
+tag_learning_log.json
+History of tags/folder corrections—Jaicat learns from these over time.
+
+dirlist.txt, dir.bat
+Directory dump and batch util for structure review.
+
+post_idea_generator.py
+Utility for generating post ideas (not core to image sorting).
+
+🟦 How the Face Recognition Ties In
+
+All .npy files in the faces/ folder represent unique face encodings Jaicat can recognize.
+
+File naming:
+E.g. Becky (1)_xxxx.npy means “a face encoding for Becky (1)”.
+
+When sorting, Jaicat uses face_loader.py to read all .npy files, and if she sees a face in an image that matches, she can auto-tag that image with the correct name.
+
+You can delete the source images after enrollment; the .npy files are all that’s needed for fast recognition.
+
+🟧 How the Pipeline Works (Simplified Flow)
+
+You run unified_image_sorter.py.
+
+It loads all faces from /faces (auto).
+
+It loops through your camera/gallery images.
+
+For each image:
+
+Auto-tags using tag_ai.py (BLIP/CLIP).
+
+Recognizes faces (from .npy DB) and adds the names to tags if found.
+
+Suggests folder using tag_sorter_engine.py + learned log.
+
+You review, fix, add region tags, and confirm.
+
+Moves/copies the file to the destination folder.
+
+Logs your choices for learning.
+
+If you do region tagging, it calls region_tagger.py in the main window, then updates region embeddings for similarity search.
+
+🟨 How to Maintain/Expand
+
+To add more faces:
+
+Add images (locally) under /Pictures/PersonName/
+
+Run enroll_faces_from_folders.py again
+
+That will create more .npy files in /faces
+
+To reset learning, you can delete tag_learning_log.json, but you’ll lose history-based folder prediction.
+
+If you want Jaicat to “forget” a person, delete their .npy files from /faces (advanced: retrain after).
+
+To search by region or tag, use the similarity search GUIs or region search UI.
+
+🟧 Example: What Each Major File/Folder Does
+File/Folder	Purpose
+unified_image_sorter.py	Main interface & pipeline for tagging, sorting, learning, face recog
+region_tagger.py	Tag image regions (draw boxes) and assign names/labels
+region_clip_embedder.py	Extracts AI features from regions for similarity search
+region_similarity_search.py	Finds visually similar regions
+faces/	Saved face encodings (.npy) for all recognized people
+enroll_faces_from_folders.py	Scans photo tree, generates face encodings for each person
+face_loader.py	Loads face encodings into Jaicat’s memory
+tag_ai.py	AI/ML image tagger (BLIP/CLIP)
+tag_sorter_engine.py	Predicts folders from tags using learned history
+tag_learning_helper.py	Logs corrections & clusters for future self-improvement
+tag_learning_log.json	JSON file with all tag/folder history
+region_annotations.json	JSON: all region/box tags and coordinates
+region_embeddings.json	JSON: AI features for each region/box
+🟩 Your Current Faces DB
+
+Your /faces folder is fully loaded with .npy files for every recognized face/person.
+Example:
+
+Amy_H_6414490178700226302.npy = a face encoding for “AMY H”
+
+Becky (1)_607353430504991520.npy = a face encoding for “Becky (1)”
+
+(Repeat for each person)
+
+Jaicat will now recognize and auto-tag anyone she’s learned, wherever their face appears in any future photo!

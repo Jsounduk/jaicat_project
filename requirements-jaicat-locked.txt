@@ -1,0 +1,42 @@
+# ---- Hard pins to keep Windows + Py3.12 stable ----
+numpy==1.26.4
+
+# Core utils/UI
+pillow==10.4.0
+imagehash==4.3.1
+tqdm==4.66.4
+pandas==2.2.2
+scikit-learn==1.5.1
+python-dateutil==2.9.0
+
+# CV / Vision (OpenCV + ONNX)
+opencv-python==4.9.0.80
+opencv-contrib-python==4.9.0.80
+onnxruntime==1.18.0
+
+# ---- PyTorch CPU stack (compatible with Ultralytics) ----
+# Install these from the PyTorch CPU index (see commands below):
+# torch==2.3.1+cpu
+# torchvision==0.18.1+cpu
+# torchaudio==2.3.1+cpu
+
+# Ultralytics (YOLO11 support; fixes missing 'C3k2' errors seen on older builds)
+ultralytics==8.3.0
+
+# Face recognition (prebuilt dlib for Win + Py3.12)
+cmake==3.29.2
+dlib-bin==19.24.6
+face-recognition==1.3.0
+face-recognition-models==0.3.0
+
+# CLIP/Transformers (kept lean; no TF/Flax)
+open-clip-torch==2.24.0
+ftfy==6.2.0
+regex==2024.5.15
+transformers==4.41.2
+accelerate==0.30.1
+safetensors==0.4.2
+
+# NSFW / Safety (tag-only)
+nudenet==3.4.1
+scikit-image==0.24.0

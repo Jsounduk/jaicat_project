@@ -1,0 +1,15 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\security
+
+31/07/2025  18:21    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:21                 0 dirlist.txt
+10/10/2024  22:12                 0 encryption_utils.py
+               3 File(s)             22 bytes
+
+     Total Files Listed:
+               3 File(s)             22 bytes
+               2 Dir(s)  12,534,063,104 bytes free

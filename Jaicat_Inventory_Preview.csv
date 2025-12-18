@@ -1,0 +1,51 @@
+,path,module_area,purpose,duplication_notes,recommendation,size_bytes,ext
+64916,app\__pycache__,App Core,,,Review,,
+64917,app\__pycache__\bootstrap.cpython-312.pyc,App Core,,,Review,2181.0,.pyc
+64918,app\__pycache__\controller.cpython-312.pyc,App Core,,,Review,4183.0,.pyc
+64914,app\bootstrap.py,App Core,Build DI container & wire NLU/NLG/NLP + services + router,,Keep,1546.0,.py
+64915,app\controller.py,App Core,"Main orchestrator: ties UI, NLU/NLP/NLG, TTS, services; wake flow",,Keep,3541.0,.py
+64919,assets\bg_neutral.jpeg,Assets,,,Review,148241.0,.jpeg
+64920,assets\face_concerned.jpeg,Assets,,,Review,119153.0,.jpeg
+64921,assets\face_concerned.png,Assets,,,Review,1373010.0,.png
+64922,assets\face_flirty.jpeg,Assets,,,Review,117040.0,.jpeg
+64923,assets\face_flirty.png,Assets,,,Review,1231084.0,.png
+64924,assets\face_happy.png,Assets,,,Review,1926637.0,.png
+64925,assets\face_neutral.png,Assets,,,Review,1450224.0,.png
+64926,assets\face_sad.jpeg,Assets,,,Review,84262.0,.jpeg
+64927,assets\face_sad.png,Assets,,,Review,979057.0,.png
+64928,assets\jaicat_bg.jpg,Assets,,,Review,1926637.0,.jpg
+64935,command\__init__.py,Commands,,,Keep,45.0,.py
+64936,command\__pycache__,Commands,,,Review,,
+64929,command\builtin.py,Commands,Register user-facing commands (music/weather/calendar/vision/etc.),,Keep,4904.0,.py
+64930,command\dir.bat,Commands,,,Keep,22.0,.bat
+64931,command\dirlist.txt,Commands,,,Keep (docs),946.0,.txt
+64932,command\handler_table.py,Commands,Alternate intent→handler table (overlaps router),DUPLICATE: alternate registry; consolidate into router,Archive (prefer CommandRouter + builtin.py),1178.0,.py
+64933,command\processor.py,Commands,Naive command engine for CLI/testing (duplicates built-ins),DUPLICATE: overlaps with command/builtin.py and handler_table,Archive (prefer CommandRouter + builtin.py),1638.0,.py
+64934,command\registry.py,Commands,Decorator/registry helpers for router,,Keep,177.0,.py
+64968,computer_vision\__init__.py,Computer Vision,,,Keep,45.0,.py
+64969,computer_vision\__pycache__,Computer Vision,,,Review,,
+64999,computer_vision\__pycache__\__init__.cpython-312.pyc,Computer Vision,,,Review,162.0,.pyc
+64987,computer_vision\__pycache__\car_detection.cpython-312.pyc,Computer Vision,,,Review,1973.0,.pyc
+64988,computer_vision\__pycache__\car_model.cpython-312.pyc,Computer Vision,,,Review,11247.0,.pyc
+64989,computer_vision\__pycache__\car_part_recognition.cpython-312.pyc,Computer Vision,,,Review,2668.0,.pyc
+64990,computer_vision\__pycache__\contact_recognition.cpython-312.pyc,Computer Vision,,,Review,4253.0,.pyc
+64991,computer_vision\__pycache__\face_recognition.cpython-312.pyc,Computer Vision,,,Review,5299.0,.pyc
+64992,computer_vision\__pycache__\home_surveillance.cpython-312.pyc,Computer Vision,,,Review,3305.0,.pyc
+64993,computer_vision\__pycache__\license_plate_detection.cpython-312.pyc,Computer Vision,,,Review,1010.0,.pyc
+64994,computer_vision\__pycache__\motorbike_model.cpython-312.pyc,Computer Vision,,,Review,7187.0,.pyc
+64995,computer_vision\__pycache__\object_detection.cpython-312.pyc,Computer Vision,,,Review,8197.0,.pyc
+64996,computer_vision\__pycache__\oneDrive.cpython-312.pyc,Computer Vision,,,Review,21151.0,.pyc
+64997,computer_vision\__pycache__\uk_car_model_onnx.cpython-312.pyc,Computer Vision,,,Review,2933.0,.pyc
+64998,computer_vision\__pycache__\visualization.cpython-312.pyc,Computer Vision,,,Review,4322.0,.pyc
+64937,computer_vision\car_detection.py,Computer Vision,,,Keep,1123.0,.py
+64938,computer_vision\car_model.py,Computer Vision,,,Keep,6534.0,.py
+64939,computer_vision\car_part_recognition.py,Computer Vision,,,Keep,1512.0,.py
+64940,computer_vision\coco,Computer Vision,,,Review,,
+64941,computer_vision\coco.names,Computer Vision,,,Review,625.0,.names
+64942,computer_vision\coco.names.txt,Computer Vision,,,Keep,705.0,.txt
+64943,computer_vision\coco.yaml,Computer Vision,,,Keep,1425.0,.yaml
+64971,computer_vision\coco\__init__.py,Computer Vision,,,Keep,45.0,.py
+64970,computer_vision\coco\coco.names.txt.yaml,Computer Vision,,,Keep,1425.0,.yaml
+64944,computer_vision\contact_recognition.py,Computer Vision,,,Keep,2962.0,.py
+64945,computer_vision\detections.json,Computer Vision,,,Keep,2.0,.json
+64946,computer_vision\dir.bat,Computer Vision,,,Keep,22.0,.bat

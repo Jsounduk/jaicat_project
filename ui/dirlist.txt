@@ -1,0 +1,27 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\ui
+
+31/07/2025  18:20    <DIR>          .
+31/07/2025  17:50    <DIR>          ..
+23/07/2024  23:33         1,926,637 default_image.png
+10/10/2024  22:12                22 dir.bat
+31/07/2025  18:20                 0 dirlist.txt
+23/07/2024  23:33         1,926,637 face_happy.png
+04/01/2025  19:58            19,046 JaicatUI original.txt
+27/07/2025  16:15             5,602 JaicatUI.py
+10/10/2024  22:12                 0 pyqt_utils.py
+27/07/2025  16:15    <DIR>          __pycache__
+               7 File(s)      3,877,944 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\ui\__pycache__
+
+27/07/2025  16:15    <DIR>          .
+31/07/2025  18:20    <DIR>          ..
+27/07/2025  16:15             8,476 JaicatUI.cpython-312.pyc
+               1 File(s)          8,476 bytes
+
+     Total Files Listed:
+               8 File(s)      3,886,420 bytes
+               5 Dir(s)  12,534,910,976 bytes free

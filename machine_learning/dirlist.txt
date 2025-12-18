@@ -1,0 +1,32 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\machine_learning
+
+09/08/2025  08:40    <DIR>          .
+11/10/2025  14:51    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+11/10/2025  19:11                 0 dirlist.txt
+07/08/2025  19:47               270 entity_data.csv
+15/08/2025  19:00               565 intent_data.csv
+03/08/2025  08:17             3,510 Machine_Learning old.txt
+13/08/2025  11:31             6,617 Machine_Learning.py
+07/08/2025  19:45               731 response_data.csv
+13/08/2025  11:31               808 sklearn_utils.py
+13/08/2025  11:31             1,088 tensorflow_utils.py
+13/08/2025  11:31                45 __init__.py
+11/09/2025  16:13    <DIR>          __pycache__
+              10 File(s)         13,656 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\machine_learning\__pycache__
+
+11/09/2025  16:13    <DIR>          .
+09/08/2025  08:40    <DIR>          ..
+11/09/2025  16:13            10,751 Machine_Learning.cpython-312.pyc
+03/01/2025  23:55             1,579 tensorflow_utils.cpython-312.pyc
+11/09/2025  16:13               163 __init__.cpython-312.pyc
+               3 File(s)         12,493 bytes
+
+     Total Files Listed:
+              13 File(s)         26,149 bytes
+               5 Dir(s)   8,086,716,416 bytes free

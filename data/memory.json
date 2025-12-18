@@ -1,0 +1,13 @@
+{
+  "users": {
+    "Jay": {
+      "reminders": [],
+      "preferences": {
+        "name": "Jay",
+        "calls_user": ["boss", "sir", "babe"],
+        "wake_words": ["jaicat", "jay cat", "jaycat"]
+      },
+      "history": []
+    }
+  }
+}

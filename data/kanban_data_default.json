@@ -1,0 +1,220 @@
+{
+  "columns": [
+    {
+      "id": "planned",
+      "title": "Planned"
+    },
+    {
+      "id": "in_progress",
+      "title": "In Progress"
+    },
+    {
+      "id": "done",
+      "title": "Done"
+    }
+  ],
+  "cards": [
+    {
+      "id": "wakeword",
+      "title": "Wake Word Activation",
+      "status": "in_progress",
+      "desc": "Hotword accuracy tuning & routing"
+    },
+    {
+      "id": "nlu_stack",
+      "title": "NLU/NLP/NLG Stack",
+      "status": "in_progress",
+      "desc": "BART-MNLI + Ollama fallback + spaCy NER"
+    },
+    {
+      "id": "dialogue_mgr",
+      "title": "Dialogue Manager",
+      "status": "in_progress"
+    },
+    {
+      "id": "codegen_admin",
+      "title": "Code Generation (Admin)",
+      "status": "in_progress"
+    },
+    {
+      "id": "kb_graph",
+      "title": "Knowledge Base + Graph",
+      "status": "planned"
+    },
+    {
+      "id": "self_learn",
+      "title": "Self-Learning Upgrade System",
+      "status": "planned"
+    },
+    {
+      "id": "yolov7",
+      "title": "YOLOv7 ONNX Detection",
+      "status": "in_progress"
+    },
+    {
+      "id": "yolov8",
+      "title": "YOLOv8 Upgrade",
+      "status": "planned"
+    },
+    {
+      "id": "face_id",
+      "title": "Face Recognition",
+      "status": "planned"
+    },
+    {
+      "id": "plate_ocr",
+      "title": "Plate Detection & OCR",
+      "status": "in_progress"
+    },
+    {
+      "id": "car_model",
+      "title": "Car Model Recognition",
+      "status": "in_progress"
+    },
+    {
+      "id": "tagging",
+      "title": "BLIP/CLIP/LLaVA Tagging",
+      "status": "planned"
+    },
+    {
+      "id": "dupes",
+      "title": "Duplicate Image Detection",
+      "status": "planned"
+    },
+    {
+      "id": "cctv_dash",
+      "title": "CCTV Streaming Dashboard",
+      "status": "planned"
+    },
+    {
+      "id": "room_fit",
+      "title": "Object-in-Room Detection",
+      "status": "planned"
+    },
+    {
+      "id": "tk_gui",
+      "title": "Tkinter GUI Polish",
+      "status": "in_progress"
+    },
+    {
+      "id": "mood_engine",
+      "title": "Mood Engine",
+      "status": "in_progress"
+    },
+    {
+      "id": "multi_voice",
+      "title": "Multi-Voice Profiles",
+      "status": "planned"
+    },
+    {
+      "id": "voice_logs",
+      "title": "Voice Command Routing Logs",
+      "status": "planned"
+    },
+    {
+      "id": "enrollment",
+      "title": "First-Run Enrollment",
+      "status": "in_progress"
+    },
+    {
+      "id": "add_user",
+      "title": "Add User Flow",
+      "status": "planned"
+    },
+    {
+      "id": "isolation",
+      "title": "Per-User Data Isolation",
+      "status": "planned"
+    },
+    {
+      "id": "relationships",
+      "title": "Relationship Mapping",
+      "status": "planned"
+    },
+    {
+      "id": "spotify",
+      "title": "Spotify API",
+      "status": "in_progress"
+    },
+    {
+      "id": "weather",
+      "title": "Weather API",
+      "status": "in_progress"
+    },
+    {
+      "id": "calendar",
+      "title": "Calendar Sync",
+      "status": "planned"
+    },
+    {
+      "id": "soc_monitor",
+      "title": "Social Media Monitor",
+      "status": "planned"
+    },
+    {
+      "id": "soc_post",
+      "title": "Social Posting UI",
+      "status": "planned"
+    },
+    {
+      "id": "onedrive",
+      "title": "OneDrive Full Sync",
+      "status": "planned"
+    },
+    {
+      "id": "phone_sync",
+      "title": "Phone Data Import",
+      "status": "planned"
+    },
+    {
+      "id": "laws",
+      "title": "UK Law Knowledge",
+      "status": "planned"
+    },
+    {
+      "id": "eng",
+      "title": "Engineering Knowledge",
+      "status": "planned"
+    },
+    {
+      "id": "bike_repair",
+      "title": "Motorbike Repair Knowledge",
+      "status": "planned"
+    },
+    {
+      "id": "risk_news",
+      "title": "Medical & Crime Analysis",
+      "status": "planned"
+    },
+    {
+      "id": "travel",
+      "title": "Travel Planning",
+      "status": "planned"
+    },
+    {
+      "id": "finance",
+      "title": "Personal Finance",
+      "status": "planned"
+    },
+    {
+      "id": "smarthome",
+      "title": "Smart Home Control",
+      "status": "planned"
+    },
+    {
+      "id": "lazyload",
+      "title": "Lazy Loading",
+      "status": "planned"
+    },
+    {
+      "id": "gpu_accel",
+      "title": "GPU Acceleration (RTX 5070)",
+      "status": "planned"
+    },
+    {
+      "id": "ollama_persist",
+      "title": "Ollama Persistent Server",
+      "status": "planned"
+    }
+  ]
+}

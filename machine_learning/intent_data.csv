@@ -1,0 +1,20 @@
+input,intent
+turn on the light,light_on
+switch off the lights,light_off
+play some music,music_play
+what's the weather,weather_query
+what time is it,time_query
+set alarm for 7am,alarm_set
+open youtube,open_youtube
+shutdown the system,system_shutdown
+how are you,assistant_emotion
+what's your name,assistant_identity
+i'm home,arrival_detected
+i'm leaving,departure_detected
+show me the photos of erin,photo_query
+organize my images,image_sort
+who is in this photo,face_recognition
+add calendar event ,add event
+get_events_for_day
+remove_calendar_event
+get_next_event

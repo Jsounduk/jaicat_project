@@ -1,0 +1,30 @@
+2025-10-22 15:26:03  === Jaicat Refactor ===
+Root:          C:\Users\josh_\Desktop\jaicat_project
+Archive:       C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603
+Backups:       C:\Users\josh_\Desktop\jaicat_project\archive\RefactorBackups\20251022_152603
+DryRun:        True
+MigrateOneDrive: False
+
+This will:
+  - Archive deprecated files (controller/processor/handler_table/weather_api/calendar_api/google_calendar_api, utils duplicates)
+  - Optional: move computer_vision\oneDrive.py -> services\one_drive.py
+  - Rewrite imports in all .py files:
+      utils.encryption_utils  -> security.encryption_utils
+      utils.enrollment        -> services.user_enrollment
+      services.weather_api    -> services.weather_service
+      services.calendar_api   -> services.calendar_service
+      services.google_calendar_api -> services.calendar_service
+      Core.controller         -> app.controller
+      computer_vision.oneDrive -> services.one_drive (if -MigrateOneDrive)
+      command.processor / command.handler_table -> commented with TODO
+2025-10-22 15:26:03  Move: C:\Users\josh_\Desktop\jaicat_project\services\weather_api.py -> C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603\services\weather_api.py [DRY-RUN]
+2025-10-22 15:26:03  Move: C:\Users\josh_\Desktop\jaicat_project\services\calendar_api.py -> C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603\services\calendar_api.py [DRY-RUN]
+2025-10-22 15:26:03  Move: C:\Users\josh_\Desktop\jaicat_project\services\google_calendar_api.py -> C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603\services\google_calendar_api.py [DRY-RUN]
+2025-10-22 15:26:03  Move: C:\Users\josh_\Desktop\jaicat_project\utils\encryption_utils.py -> C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603\utils\encryption_utils.py [DRY-RUN]
+2025-10-22 15:26:03  Move: C:\Users\josh_\Desktop\jaicat_project\utils\enrollment.py -> C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603\utils\enrollment.py [DRY-RUN]
+2025-10-22 15:26:03  Move: C:\Users\josh_\Desktop\jaicat_project\services\spotify_integration 1.txt -> C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_152603\services\spotify_integration 1.txt [DRY-RUN]
+2025-10-22 15:26:34  Modify: services\media_management\auto_tagger.py [DRY-RUN]
+2025-10-22 15:26:34  Modify: services\media_management\media_search.py [DRY-RUN]
+2025-10-22 15:26:34  Python files modified: 2
+2025-10-22 15:26:34  Write ARCHIVE_NOTES.md [DRY-RUN]
+2025-10-22 15:26:34  Done.

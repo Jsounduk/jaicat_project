@@ -1,0 +1,24 @@
+2025-10-22 16:35:33  === Jaicat Refactor ===
+Root:          C:\Users\josh_\Desktop\jaicat_project
+Archive:       C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_163533
+Backups:       C:\Users\josh_\Desktop\jaicat_project\archive\RefactorBackups\20251022_163533
+DryRun:        False
+MigrateOneDrive: False
+
+This will:
+  - Archive deprecated files (controller/processor/handler_table/weather_api/calendar_api/google_calendar_api, utils duplicates)
+  - Optional: move computer_vision\oneDrive.py -> services\one_drive.py
+  - Rewrite imports in all .py files:
+      utils.encryption_utils  -> security.encryption_utils
+      utils.enrollment        -> services.user_enrollment
+      services.weather_api    -> services.weather_service
+      services.calendar_api   -> services.calendar_service
+      services.google_calendar_api -> services.calendar_service
+      Core.controller         -> app.controller
+      computer_vision.oneDrive -> services.one_drive (if -MigrateOneDrive)
+      command.processor / command.handler_table -> commented with TODO
+2025-10-22 16:36:09  Modified: services\media_management\auto_tagger.py (backup at C:\Users\josh_\Desktop\jaicat_project\archive\RefactorBackups\20251022_163533\services\media_management\auto_tagger.py)
+2025-10-22 16:36:09  Modified: services\media_management\media_search.py (backup at C:\Users\josh_\Desktop\jaicat_project\archive\RefactorBackups\20251022_163533\services\media_management\media_search.py)
+2025-10-22 16:36:09  Python files modified: 2
+2025-10-22 16:36:09  Wrote C:\Users\josh_\Desktop\jaicat_project\archive\Incubate\20251022_163533\ARCHIVE_NOTES.md
+2025-10-22 16:36:09  Done.

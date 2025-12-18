@@ -1,0 +1,17 @@
+python -m venv .venv
+.\.venv\Scripts\activate
+
+python -m pip install --upgrade pip
+
+pip install ^
+  Pillow PyPDF2 opencv-python ebooklib face-recognition ^
+  googletrans==3.1.0a0 gTTS instapy==0.6.16 msal nltk onnxruntime openai ^
+  pygame pyttsx3 pyudev scikit-learn SpeechRecognition spotipy ^
+  tensorflow torch transformers tweepy wikipedia epub ^
+  httpx==0.13.3 jsonschema==2.6.0
+
+
+
+pip install beautifulsoup4 bleak geocoder google-auth google-auth-oauthlib ^
+  google-api-python-client spacy numpy pandas psutil pyautogui pytesseract ^
+  youtube_dl youtube-transcript-api azure-ai-contentsafety azure-core

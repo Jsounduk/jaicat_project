@@ -1,0 +1,10 @@
+input,entities
+input,entity,entity_type
+set alarm for 7am,7am,time
+turn on the kitchen light,kitchen,location
+play rock music,rock,genre
+open youtube,youtube,app
+show me photos of erin,Erin,person
+message rose,Rose,person
+what’s the weather in london,London,location
+

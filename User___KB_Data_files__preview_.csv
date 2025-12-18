@@ -1,0 +1,51 @@
+,dir,name,size_bytes,rel_dir,path,path_l,purpose
+64919,C:\Users\josh_\Desktop\jaicat_project\assets,bg_neutral.jpeg,148241.0,assets,assets\bg_neutral.jpeg,assets\bg_neutral.jpeg,
+64920,C:\Users\josh_\Desktop\jaicat_project\assets,face_concerned.jpeg,119153.0,assets,assets\face_concerned.jpeg,assets\face_concerned.jpeg,
+64921,C:\Users\josh_\Desktop\jaicat_project\assets,face_concerned.png,1373010.0,assets,assets\face_concerned.png,assets\face_concerned.png,
+64922,C:\Users\josh_\Desktop\jaicat_project\assets,face_flirty.jpeg,117040.0,assets,assets\face_flirty.jpeg,assets\face_flirty.jpeg,
+64923,C:\Users\josh_\Desktop\jaicat_project\assets,face_flirty.png,1231084.0,assets,assets\face_flirty.png,assets\face_flirty.png,
+64924,C:\Users\josh_\Desktop\jaicat_project\assets,face_happy.png,1926637.0,assets,assets\face_happy.png,assets\face_happy.png,
+64925,C:\Users\josh_\Desktop\jaicat_project\assets,face_neutral.png,1450224.0,assets,assets\face_neutral.png,assets\face_neutral.png,
+64926,C:\Users\josh_\Desktop\jaicat_project\assets,face_sad.jpeg,84262.0,assets,assets\face_sad.jpeg,assets\face_sad.jpeg,
+64927,C:\Users\josh_\Desktop\jaicat_project\assets,face_sad.png,979057.0,assets,assets\face_sad.png,assets\face_sad.png,
+64928,C:\Users\josh_\Desktop\jaicat_project\assets,jaicat_bg.jpg,1926637.0,assets,assets\jaicat_bg.jpg,assets\jaicat_bg.jpg,
+65027,C:\Users\josh_\Desktop\jaicat_project\data,calendar_data.csv,97.0,data,data\calendar_data.csv,data\calendar_data.csv,Seed/working dataset
+65028,C:\Users\josh_\Desktop\jaicat_project\data,crime_data.csv,331.0,data,data\crime_data.csv,data\crime_data.csv,Seed/working dataset
+65029,C:\Users\josh_\Desktop\jaicat_project\data,dir.bat,22.0,data,data\dir.bat,data\dir.bat,
+65030,C:\Users\josh_\Desktop\jaicat_project\data,dirlist.txt,588.0,data,data\dirlist.txt,data\dirlist.txt,Documentation/report
+65031,C:\Users\josh_\Desktop\jaicat_project\data,kanban_data_default.json,4673.0,data,data\kanban_data_default.json,data\kanban_data_default.json,Settings/state/logs
+65032,C:\Users\josh_\Desktop\jaicat_project\data,kanban_data_Jay.json,4673.0,data,data\kanban_data_Jay.json,data\kanban_data_jay.json,Settings/state/logs
+65033,C:\Users\josh_\Desktop\jaicat_project\data,kb,,data,data\kb,data\kb,
+65034,C:\Users\josh_\Desktop\jaicat_project\data,memory.json,252.0,data,data\memory.json,data\memory.json,User memory store (prefs/history)
+65035,C:\Users\josh_\Desktop\jaicat_project\data,sndflsjfs,3478.0,data,data\sndflsjfs,data\sndflsjfs,
+65036,C:\Users\josh_\Desktop\jaicat_project\data,weather_data.csv,0.0,data,data\weather_data.csv,data\weather_data.csv,Seed/working dataset
+65037,C:\Users\josh_\Desktop\jaicat_project\data,__init__.py,45.0,data,data\__init__.py,data\__init__.py,
+65038,C:\Users\josh_\Desktop\jaicat_project\data\kb,docs,,data\kb,data\kb\docs,data\kb\docs,
+65039,C:\Users\josh_\Desktop\jaicat_project\data\kb,indexes,,data\kb,data\kb\indexes,data\kb\indexes,Knowledge base index/store
+65087,C:\Users\josh_\Desktop\jaicat_project\kb,folder_watch.py,1816.0,kb,kb\folder_watch.py,kb\folder_watch.py,
+65091,C:\Users\josh_\Desktop\jaicat_project\kb,rag,,kb,kb\rag,kb\rag,
+65092,C:\Users\josh_\Desktop\jaicat_project\kb,rag_tool.py,735.0,kb,kb\rag_tool.py,kb\rag_tool.py,
+65093,C:\Users\josh_\Desktop\jaicat_project\kb,store.py,1163.0,kb,kb\store.py,kb\store.py,Knowledge base index/store
+65095,C:\Users\josh_\Desktop\jaicat_project\kb,vectordb,,kb,kb\vectordb,kb\vectordb,
+65119,C:\Users\josh_\Desktop\jaicat_project\kb\rag,pipeline.py,1046.0,kb\rag,kb\rag\pipeline.py,kb\rag\pipeline.py,
+65120,C:\Users\josh_\Desktop\jaicat_project\kb\rag,__init__.py,0.0,kb\rag,kb\rag\__init__.py,kb\rag\__init__.py,
+65121,C:\Users\josh_\Desktop\jaicat_project\kb\rag,__pycache__,,kb\rag,kb\rag\__pycache__,kb\rag\__pycache__,
+65122,C:\Users\josh_\Desktop\jaicat_project\kb\rag\__pycache__,pipeline.cpython-312.pyc,2091.0,kb\rag\__pycache__,kb\rag\__pycache__\pipeline.cpython-312.pyc,kb\rag\__pycache__\pipeline.cpython-312.pyc,
+65123,C:\Users\josh_\Desktop\jaicat_project\kb\rag\__pycache__,__init__.cpython-312.pyc,153.0,kb\rag\__pycache__,kb\rag\__pycache__\__init__.cpython-312.pyc,kb\rag\__pycache__\__init__.cpython-312.pyc,
+65124,C:\Users\josh_\Desktop\jaicat_project\kb\vectordb,faiss_store.py,425.0,kb\vectordb,kb\vectordb\faiss_store.py,kb\vectordb\faiss_store.py,Knowledge base index/store
+65125,C:\Users\josh_\Desktop\jaicat_project\kb\vectordb,__init__.py,0.0,kb\vectordb,kb\vectordb\__init__.py,kb\vectordb\__init__.py,
+65126,C:\Users\josh_\Desktop\jaicat_project\kb\vectordb,__pycache__,,kb\vectordb,kb\vectordb\__pycache__,kb\vectordb\__pycache__,
+65127,C:\Users\josh_\Desktop\jaicat_project\kb\vectordb\__pycache__,faiss_store.cpython-312.pyc,3643.0,kb\vectordb\__pycache__,kb\vectordb\__pycache__\faiss_store.cpython-312.pyc,kb\vectordb\__pycache__\faiss_store.cpython-312.pyc,Knowledge base index/store
+65128,C:\Users\josh_\Desktop\jaicat_project\kb\vectordb\__pycache__,__init__.cpython-312.pyc,158.0,kb\vectordb\__pycache__,kb\vectordb\__pycache__\__init__.cpython-312.pyc,kb\vectordb\__pycache__\__init__.cpython-312.pyc,
+65131,C:\Users\josh_\Desktop\jaicat_project\kb\__pycache__,rag_tool.cpython-312.pyc,1687.0,kb\__pycache__,kb\__pycache__\rag_tool.cpython-312.pyc,kb\__pycache__\rag_tool.cpython-312.pyc,
+65132,C:\Users\josh_\Desktop\jaicat_project\kb\__pycache__,store.cpython-312.pyc,3001.0,kb\__pycache__,kb\__pycache__\store.cpython-312.pyc,kb\__pycache__\store.cpython-312.pyc,Knowledge base index/store
+65269,C:\Users\josh_\Desktop\jaicat_project\services\media_management,faces,,services\media_management,services\media_management\faces,services\media_management\faces,
+65271,C:\Users\josh_\Desktop\jaicat_project\services\media_management,feedback_logger.py,1180.0,services\media_management,services\media_management\feedback_logger.py,services\media_management\feedback_logger.py,
+65276,C:\Users\josh_\Desktop\jaicat_project\services\media_management,log_collect_yolo11.py,2074.0,services\media_management,services\media_management\log_collect_yolo11.py,services\media_management\log_collect_yolo11.py,
+65277,C:\Users\josh_\Desktop\jaicat_project\services\media_management,log_utils.py,810.0,services\media_management,services\media_management\log_utils.py,services\media_management\log_utils.py,
+65284,C:\Users\josh_\Desktop\jaicat_project\services\media_management,region_annotations.json,34021.0,services\media_management,services\media_management\region_annotations.json,services\media_management\region_annotations.json,Region annotations
+65286,C:\Users\josh_\Desktop\jaicat_project\services\media_management,region_embeddings.json,2.0,services\media_management,services\media_management\region_embeddings.json,services\media_management\region_embeddings.json,Vector embeddings
+65291,C:\Users\josh_\Desktop\jaicat_project\services\media_management,tag_clusters.json,67569.0,services\media_management,services\media_management\tag_clusters.json,services\media_management\tag_clusters.json,Settings/state/logs
+65292,C:\Users\josh_\Desktop\jaicat_project\services\media_management,tag_db.json,2.0,services\media_management,services\media_management\tag_db.json,services\media_management\tag_db.json,Settings/state/logs
+65293,C:\Users\josh_\Desktop\jaicat_project\services\media_management,tag_feedback_log.json,9002.0,services\media_management,services\media_management\tag_feedback_log.json,services\media_management\tag_feedback_log.json,Settings/state/logs
+65295,C:\Users\josh_\Desktop\jaicat_project\services\media_management,tag_learning_log.json,556347.0,services\media_management,services\media_management\tag_learning_log.json,services\media_management\tag_learning_log.json,Settings/state/logs

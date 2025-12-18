@@ -1,0 +1,55 @@
+ Volume in drive C has no label.
+ Volume Serial Number is F81A-3EB3
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\media_management\datasets
+
+11/10/2025  14:13    <DIR>          .
+11/10/2025  14:05    <DIR>          ..
+10/10/2024  22:12                22 dir.bat
+11/10/2025  14:13                 0 dirlist.txt
+11/10/2025  14:07    <DIR>          jaicat_vision
+11/10/2025  14:08    <DIR>          logs
+               2 File(s)             22 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\media_management\datasets\jaicat_vision
+
+11/10/2025  14:07    <DIR>          .
+11/10/2025  14:13    <DIR>          ..
+11/10/2025  14:07    <DIR>          detect
+11/10/2025  14:07    <DIR>          pose
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\media_management\datasets\jaicat_vision\detect
+
+11/10/2025  14:07    <DIR>          .
+11/10/2025  14:07    <DIR>          ..
+11/10/2025  14:06                 0 images
+11/10/2025  14:06                 0 jaicat_detect.yaml
+11/10/2025  14:06                 0 labels
+11/10/2025  14:07    <DIR>          segment
+               3 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\media_management\datasets\jaicat_vision\detect\segment
+
+11/10/2025  14:07    <DIR>          .
+11/10/2025  14:07    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\media_management\datasets\jaicat_vision\pose
+
+11/10/2025  14:07    <DIR>          .
+11/10/2025  14:07    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\josh_\Desktop\jaicat_project\services\media_management\datasets\logs
+
+11/10/2025  14:08    <DIR>          .
+11/10/2025  14:13    <DIR>          ..
+11/10/2025  14:07                 0 detections.jsonl
+11/10/2025  14:08                 0 poses.jsonl
+11/10/2025  14:08                 0 segments.jsonl
+               3 File(s)              0 bytes
+
+     Total Files Listed:
+               8 File(s)             22 bytes
+              17 Dir(s)     466,665,472 bytes free

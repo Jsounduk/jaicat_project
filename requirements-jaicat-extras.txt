@@ -1,0 +1,32 @@
+# NLP
+spacy==3.7.4
+nltk==3.9.1
+
+# Web / scraping
+requests==2.32.5
+beautifulsoup4==4.12.3
+lxml==5.3.0
+
+# OCR (wrapper only; system Tesseract must be installed separately)
+pytesseract==0.3.10
+
+# Embedding DB
+faiss-cpu==1.8.0.post1
+
+# Google APIs
+google-api-python-client==2.149.0
+google-auth-oauthlib==1.2.1
+
+# Media / audio (optional)
+pygame==2.6.1
+SpeechRecognition==3.10.4
+PyAudio==0.2.14  # On Windows: prefer prebuilt wheel
+
+# TTS (optional)
+pyttsx3==2.91
+gTTS==2.5.4
+
+# Social clients (optional—only if you actually use them)
+spotipy==2.24.0
+tweepy==4.14.0
+instapy==0.6.16

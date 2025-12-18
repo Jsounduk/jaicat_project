@@ -1,0 +1,492 @@
+import os
+import time
+import shutil
+import json
+import tkinter as tk
+from tkinter import ttk, messagebox, simpledialog, filedialog
+from PIL import Image, ImageTk
+import imagehash
+import face_recognition
+import numpy as np
+
+from tag_ai import generate_tags
+from tag_sorter_engine import TagSorter, log_to_machine_learning
+from tag_learning_helper import (
+    add_image_to_tag_cluster,
+    resolve_destination_from_tags,
+    get_tag_confidence_label,
+)
+from region_clip_embedder import update_embeddings_for_image, ensure_region_embeddings
+from region_similarity_search import find_similar_for_image, show_region_matches
+
+from clothing_and_pose_detector import detect_clothing, detect_pose
+from yolo_pose import run_yolo_pose
+from body_part_detector import detect_body_part
+from feedback_logger import log_feedback
+
+# --- CONFIG ---
+SOURCE_FOLDER = r"C:\Users\josh_\OneDrive\Pictures\Samsung Gallery\Dcim\Camera"
+PICTURES_ROOT = r"C:\Users\josh_\OneDrive\Pictures\Samsung Gallery\Pictures"
+UNSORTED_ROOT = os.path.join(PICTURES_ROOT, "SORT", "uncategorized")
+FACES_PATH = "services/media_management/faces"
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff", ".gif")
+
+STOPWORDS = {
+    "a", "in", "and", "the", "of", "on", "for", "at", "with", "is", "to", "as", "by", "an", "are", "it", "", "or", "this"
+}
+BAD_TAGS = {"linger"}
+
+def clean_tags(raw_tags):
+    tags = [t.strip(",. ").lower() for t in raw_tags if t.strip()]
+    tags = [t for t in tags if t not in STOPWORDS and t not in BAD_TAGS and len(t) > 1]
+    tags = ["lingerie" if t == "linger" else t for t in tags]
+    return list(dict.fromkeys(tags))  # Deduplicate, preserve order
+
+def load_known_faces(faces_path):
+    encodings = []
+    names = []
+    for fname in os.listdir(faces_path):
+        if fname.lower().endswith(".npy"):
+            path = os.path.join(faces_path, fname)
+            try:
+                arr = np.load(path)
+                if arr.shape == (128,):
+                    encodings.append(arr)
+                    name = fname.rsplit("_", 1)[0].replace("_", " ").replace("-", " ")
+                    names.append(name)
+                else:
+                    print(f"⚠️ Skipping corrupt or empty file: {fname}")
+            except Exception as e:
+                print(f"⚠️ Could not load {fname}: {e}")
+    print(f"✅ Loaded {len(encodings)} face encodings for {len(set(names))} people.")
+    return encodings, names
+
+def get_all_tags():
+    tag_set = set()
+    try:
+        with open("services/media_management/tag_learning_log.json", "r", encoding="utf-8") as f:
+            for entry in json.load(f):
+                tag_set.update(entry.get("tags", []))
+    except Exception: pass
+    try:
+        with open("services/media_management/tag_clusters.json", "r", encoding="utf-8") as f:
+            tag_set.update(json.load(f).keys())
+    except Exception: pass
+    try:
+        with open("services/media_management/region_annotations.json", "r", encoding="utf-8") as f:
+            for region in json.load(f):
+                label = region.get("label") or region.get("tag")
+                if label: tag_set.add(label)
+    except Exception: pass
+    tags = sorted(t for t in tag_set if t not in STOPWORDS and len(t) > 1)
+    if not tags:
+        tags = ["Rose", "Erin", "Becky", "Lace", "Smile"]
+    return tags
+
+# --- REGION TAGGER PANEL ---
+class RegionTaggerPanel(tk.Frame):
+    def __init__(self, parent, image_path, tag_suggestions=None, on_done=None):
+        super().__init__(parent, bg="white")
+        self.image_path = image_path
+        self._orig_img = Image.open(image_path)
+        self.tk_image = None
+        self.tag_suggestions = tag_suggestions or get_all_tags()
+        self.boxes = []
+        self.current_box = None
+        self.start_x = None
+        self.start_y = None
+        self.on_done = on_done
+
+        self.canvas = tk.Canvas(self, bg="white", highlightthickness=0)
+        self.canvas.pack(fill="both", expand=True, pady=10)
+        self.draw_image()
+        self.canvas.bind("<Configure>", self.redraw_image)
+        self.canvas.bind("<ButtonPress-1>", self.on_start_box)
+        self.canvas.bind("<B1-Motion>", self.on_draw_box)
+        self.canvas.bind("<ButtonRelease-1>", self.on_finish_box)
+
+        btn_frame = tk.Frame(self, bg="white")
+        btn_frame.pack(pady=8)
+        tk.Button(btn_frame, text="✅ Save & Return", command=self.save_and_return, bg="#4CAF50", fg="white").pack(side="left", padx=10)
+        tk.Button(btn_frame, text="⏭️ Cancel", command=self.cancel).pack(side="left", padx=10)
+
+    def draw_image(self):
+        if not self._orig_img:
+            return
+        w = self.canvas.winfo_width()
+        h = self.canvas.winfo_height()
+        if w < 100 or h < 100:
+            self.after(50, self.draw_image)
+            return
+        img = self._orig_img.copy()
+        if hasattr(Image, "Resampling"):
+            img.thumbnail((w, h), Image.Resampling.LANCZOS)
+        else:
+            img.thumbnail((w, h), Image.ANTIALIAS)
+        self.tk_image = ImageTk.PhotoImage(img)
+        self.canvas.delete("all")
+        self.canvas.create_image(w // 2, h // 2, anchor="center", image=self.tk_image)
+        for box in self.boxes:
+            x0, y0, x1, y1 = box["coords"]
+            self.canvas.create_rectangle(x0, y0, x1, y1, outline="red", width=2)
+
+    def redraw_image(self, event=None):
+        self.draw_image()
+
+    def on_start_box(self, event):
+        self.start_x = event.x
+        self.start_y = event.y
+        self.current_box = self.canvas.create_rectangle(self.start_x, self.start_y, event.x, event.y, outline="red", width=2)
+
+    def on_draw_box(self, event):
+        if self.current_box:
+            self.canvas.coords(self.current_box, self.start_x, self.start_y, event.x, event.y)
+
+    def on_finish_box(self, event):
+        x0, y0, x1, y1 = [int(v) for v in self.canvas.coords(self.current_box)]
+        self.prompt_tag_for_box(self.current_box, x0, y0, x1, y1)
+
+    def prompt_tag_for_box(self, box_id, x0, y0, x1, y1):
+        clothing_tags = []
+        try:
+            clothing = detect_clothing(self.image_path, region=(x0, y0, x1, y1))
+            if clothing:
+                clothing_tags = [c["label"] for c in clothing]
+        except Exception as e:
+            print(f"Clothing detection failed: {e}")
+
+        body_part = ""
+        try:
+            bp = detect_body_part(self.image_path, (x0, y0, x1, y1))
+            if bp and bp != "No body detected":
+                body_part = bp
+        except Exception as e:
+            print(f"Body part detection failed: {e}")
+
+        pose_keypoints = []
+        try:
+            pose_keypoints = detect_pose(self.image_path, region=(x0, y0, x1, y1))
+        except Exception as e:
+            print(f"Pose detection failed: {e}")
+
+        all_suggestions = clothing_tags.copy()
+        if body_part:
+            all_suggestions.append(body_part)
+        if pose_keypoints:
+            all_suggestions.append("pose points")
+        all_suggestions += self.tag_suggestions
+        all_suggestions = list(dict.fromkeys([t for t in all_suggestions if t and len(t) > 1]))
+
+        popup = tk.Toplevel(self)
+        popup.title("Assign Tag")
+        var = tk.StringVar()
+        cb = ttk.Combobox(popup, textvariable=var, values=all_suggestions, width=32)
+        cb.pack(padx=10, pady=10)
+        cb.set(all_suggestions[0] if all_suggestions else "")
+
+        def save_tag():
+            tag = var.get()
+            region = {
+                "box_id": box_id,
+                "coords": (x0, y0, x1, y1),
+                "tag": tag,
+            }
+            self.boxes.append(region)
+            add_image_to_tag_cluster(tag, self.image_path)
+            popup.destroy()
+            if tag not in self.tag_suggestions:
+                log_feedback(self.image_path, self.tag_suggestions, [tag], correction_type="region")
+
+        tk.Button(popup, text="OK", command=save_tag).pack(pady=5)
+
+    def save_and_return(self):
+        print(f"✅ Regions tagged for {self.image_path}")
+        update_embeddings_for_image(self.image_path)
+        if self.on_done:
+            self.on_done(self.boxes)
+        self.destroy()
+
+    def cancel(self):
+        print(f"⏭️ Region tagging cancelled: {self.image_path}")
+        self.destroy()
+
+# --- UNIFIED TAGGER UI ---
+class UnifiedTaggerUI:
+    def __init__(self, image_path, auto_tags, available_tags, resolve_destination_from_tags):
+        self.image_path = image_path
+        self.auto_tags = auto_tags
+        self.available_tags = get_all_tags()
+        self.resolve_destination_from_tags = resolve_destination_from_tags
+
+        self.root = tk.Tk()
+        self.root.title("Jaicat – Unified Smart Image Sorter")
+        self.root.geometry("950x900")
+        self.root.resizable(True, True)
+        self.root.configure(bg="#f9f9fb")
+
+        self.main_frame = tk.Frame(self.root, bg="#f9f9fb")
+        self.main_frame.pack(fill="both", expand=True, padx=18, pady=6)
+
+        self.img_canvas = tk.Canvas(self.main_frame, bg="#f9f9fb", highlightthickness=0)
+        self.img_canvas.pack(fill="both", expand=True, pady=10)
+        self.tk_img = None
+        self._orig_img = None
+        self.load_image()
+        self.img_canvas.bind("<Configure>", self.redraw_image)
+
+        tag_frame = tk.Frame(self.main_frame, bg="#f9f9fb")
+        tag_frame.pack(pady=6)
+        self.tags_entry = tk.Entry(tag_frame, width=62, font=("Segoe UI", 12))
+        self.tags_entry.pack(side="left", padx=5)
+        self.tags_entry.insert(0, ", ".join(self.auto_tags))
+        self.tags_entry.bind("<KeyRelease>", lambda e: self.update_destination_label())
+
+        self.tag_dropdown = ttk.Combobox(tag_frame, values=self.available_tags, width=23)
+        self.tag_dropdown.pack(side="left", padx=5)
+        self.tag_dropdown.bind("<Return>", self.add_suggested_tag)
+        add_tag_btn = tk.Button(tag_frame, text="+", command=self.add_suggested_tag, width=2)
+        add_tag_btn.pack(side="left")
+
+        suggestion_frame = tk.Frame(self.main_frame, bg="#f9f9fb")
+        suggestion_frame.pack(pady=3)
+        for tag in self.auto_tags[:10]:
+            tag_with_conf = f"{tag} {get_tag_confidence_label(tag)}"
+            b = tk.Button(suggestion_frame, text=tag_with_conf, command=lambda t=tag: self.add_tag(t), width=14, relief="flat", bg="#e6eaff")
+            b.pack(side="left", padx=2)
+
+        folder_choose_frame = tk.Frame(self.main_frame, bg="#f9f9fb")
+        folder_choose_frame.pack(pady=8)
+        self.chosen_folder = tk.StringVar(value="")
+        choose_btn = tk.Button(folder_choose_frame, text="Choose Destination Folder...", command=self.pick_folder, width=28, bg="#e6eaff")
+        choose_btn.pack(side="left")
+        self.chosen_folder_label = tk.Label(folder_choose_frame, text="", bg="#f9f9fb", fg="#3651a5", font=("Segoe UI", 9))
+        self.chosen_folder_label.pack(side="left", padx=6)
+
+        sub_frame = tk.Frame(self.main_frame, bg="#f9f9fb")
+        sub_frame.pack(pady=6)
+        tk.Label(sub_frame, text="Subfolder:", bg="#f9f9fb").pack(side="left")
+        self.sub_entry = tk.Entry(sub_frame, width=32, font=("Segoe UI", 11))
+        self.sub_entry.pack(side="left", padx=5)
+        self.sub_entry.insert(0, "")
+        self.sub_entry.bind("<KeyRelease>", lambda e: self.update_destination_label())
+
+        self.dest_label = tk.Label(self.main_frame, text="", fg="#3651a5", bg="#f9f9fb", font=("Segoe UI", 11, "bold"), wraplength=760)
+        self.dest_label.pack(pady=8)
+        self.update_destination_label()
+
+        btn_frame = tk.Frame(self.main_frame, bg="#f9f9fb")
+        btn_frame.pack(pady=14)
+        tk.Button(btn_frame, text="✅ Save & Next", command=self.confirm, width=14, bg="#baffba", font=("Segoe UI", 10, "bold")).pack(side="left", padx=8)
+        tk.Button(btn_frame, text="🟦 Tag Region", command=self.launch_region_tagger, width=14, bg="#c0e6ff", font=("Segoe UI", 10, "bold")).pack(side="left", padx=8)
+        tk.Button(btn_frame, text="🟩 Find Similar Region", command=self.find_similar_region, width=17, bg="#e6ffc0", font=("Segoe UI", 10, "bold")).pack(side="left", padx=8)
+        tk.Button(btn_frame, text="🗑️ Delete", command=self.delete_image, width=12, font=("Segoe UI", 10)).pack(side="left", padx=8)
+        tk.Button(btn_frame, text="🔁 Uncategorized", command=self.mark_uncategorized, width=15, font=("Segoe UI", 10)).pack(side="left", padx=8)
+        tk.Button(btn_frame, text="❌ Cancel", command=self.cancel, width=10, font=("Segoe UI", 10)).pack(side="left", padx=8)
+
+        self.result = None
+        self.region_panel = None
+
+        self.root.mainloop()
+
+    def load_image(self):
+        try:
+            self._orig_img = Image.open(self.image_path)
+        except Exception as e:
+            self._orig_img = None
+            self.img_canvas.delete("all")
+            self.img_canvas.create_text(
+                self.img_canvas.winfo_width() // 2, self.img_canvas.winfo_height() // 2,
+                text=f"⚠️ Failed to load image\n{e}",
+                fill="red", font=("Segoe UI", 14)
+            )
+
+    def redraw_image(self, event=None):
+        if not self._orig_img:
+            return
+        canvas_width = self.img_canvas.winfo_width()
+        canvas_height = self.img_canvas.winfo_height()
+        img = self._orig_img.copy()
+        if hasattr(Image, "Resampling"):
+            img.thumbnail((canvas_width, canvas_height), Image.Resampling.LANCZOS)
+        else:
+            img.thumbnail((canvas_width, canvas_height), Image.ANTIALIAS)
+        self.tk_img = ImageTk.PhotoImage(img)
+        self.img_canvas.delete("all")
+        self.img_canvas.create_image(
+            canvas_width // 2, canvas_height // 2, anchor="center", image=self.tk_img
+        )
+
+    def pick_folder(self):
+        folder = filedialog.askdirectory(title="Select Destination Folder")
+        if folder:
+            self.chosen_folder.set(folder)
+            self.chosen_folder_label.config(text=folder)
+        else:
+            self.chosen_folder.set("")
+            self.chosen_folder_label.config(text="")
+        self.update_destination_label()
+
+    def add_tag(self, tag):
+        tags = [t.strip() for t in self.tags_entry.get().split(",") if t.strip()]
+        if tag not in tags:
+            tags.append(tag)
+            self.tags_entry.delete(0, tk.END)
+            self.tags_entry.insert(0, ", ".join(tags))
+            self.update_destination_label()
+
+    def add_suggested_tag(self, _=None):
+        tag = self.tag_dropdown.get().strip()
+        if tag:
+            self.add_tag(tag)
+            self.tag_dropdown.set("")
+
+    def update_destination_label(self):
+        tags = [t.strip() for t in self.tags_entry.get().split(",") if t.strip()]
+        sub = self.sub_entry.get().strip()
+        if self.chosen_folder.get():
+            base = self.chosen_folder.get()
+        else:
+            base = self.resolve_destination_from_tags(tags)
+        full = os.path.join(base, sub) if sub else base
+        self.dest_label.config(text=f"Destination: {full}")
+
+    def confirm(self):
+        tags = [t.strip() for t in self.tags_entry.get().split(",") if t.strip()]
+        sub = self.sub_entry.get().strip()
+        folder = self.chosen_folder.get() if self.chosen_folder.get() else None
+        if set(tags) != set(self.auto_tags):
+            log_feedback(self.image_path, self.auto_tags, tags, correction_type="image")
+        self.result = {
+            "tags": tags,
+            "subfolder": sub,
+            "folder": folder
+        }
+        self.root.destroy()
+
+    def delete_image(self):
+        if messagebox.askyesno("Confirm Delete", "Really delete this image?"):
+            self.result = "DELETE_FILE"
+            self.root.destroy()
+
+    def mark_uncategorized(self):
+        self.result = "SORT_UNCATEGORIZED"
+        self.root.destroy()
+
+    def cancel(self):
+        self.result = None
+        self.root.destroy()
+
+    def launch_region_tagger(self):
+        self.img_canvas.pack_forget()
+        self.region_panel = RegionTaggerPanel(
+            self.main_frame,
+            self.image_path,
+            tag_suggestions=self.available_tags,
+            on_done=self.region_tagger_done
+        )
+        self.region_panel.pack(fill="both", expand=True, pady=10)
+
+    def region_tagger_done(self, regions):
+        update_embeddings_for_image(self.image_path)
+        self.region_panel.pack_forget()
+        self.img_canvas.pack(fill="both", expand=True, pady=10)
+        self.redraw_image()
+        messagebox.showinfo("Region Saved", "Region(s) added & embeddings updated for this image!")
+
+    def find_similar_region(self):
+        ensure_region_embeddings()
+        idx = simpledialog.askinteger("Region Index", "Enter region # (0 for first region in this image):", minvalue=0)
+        if idx is not None:
+            similar = find_similar_for_image(self.image_path, idx, top_n=5)
+            show_region_matches(self.image_path, idx, similar)
+
+#--- MAIN SORTER ---
+def process_image(image_path):
+    global known_encodings, known_names
+    try:
+        image = face_recognition.load_image_file(image_path)
+        encodings = face_recognition.face_encodings(image)
+        person = None
+        for encoding in encodings:
+            results = face_recognition.compare_faces(known_encodings, encoding, tolerance=0.5)
+            if True in results:
+                person = known_names[results.index(True)]
+                break
+    except Exception:
+        person = None
+
+    auto_tags = generate_tags(image_path)
+    auto_tags = clean_tags(auto_tags)
+    # DeepFashion clothing
+    try:
+        fashion_tags = [c["label"] for c in detect_clothing(image_path) or []]
+    except Exception:
+        fashion_tags = []
+    # YOLO pose
+    try:
+        yolo_result = run_yolo_pose(image_path)
+        pose_tags = [p for p in (yolo_result[0] if isinstance(yolo_result, tuple) else [])]
+    except Exception:
+        pose_tags = []
+    # Body part (MediaPipe)
+    try:
+        body_tags = [detect_body_part(image_path, None)]
+    except Exception:
+        body_tags = []
+
+    for tag in (fashion_tags or []):
+        if tag and tag not in auto_tags:
+            auto_tags.append(tag)
+    for tag in (pose_tags or []):
+        if tag and tag not in auto_tags:
+            auto_tags.append(tag)
+    for tag in (body_tags or []):
+        if tag and tag not in auto_tags:
+            auto_tags.append(tag)
+    if person and person not in auto_tags and person:
+        auto_tags.insert(0, person)
+
+    result = UnifiedTaggerUI(
+        image_path,
+        auto_tags,
+        get_all_tags(),
+        resolve_destination_from_tags
+    ).result
+
+    if isinstance(result, dict):
+        tags = result.get("tags", [])
+        subfolder = result.get("subfolder", "")
+        folder = result.get("folder")
+        if not folder:
+            folder = resolve_destination_from_tags(tags)
+        if subfolder:
+            folder = os.path.join(folder, subfolder)
+        log_to_machine_learning(image_path, tags, folder)
+        for tag in tags:
+            add_image_to_tag_cluster(tag, image_path)
+        os.makedirs(folder, exist_ok=True)
+        dest_path = os.path.join(folder, os.path.basename(image_path))
+        if os.path.abspath(image_path) != os.path.abspath(dest_path):
+            try:
+                shutil.move(image_path, dest_path)
+                print(f"✅ Moved {image_path} → {dest_path}")
+            except Exception as e:
+                print(f"❌ Failed to move file: {e}")
+
+def run():
+    if not os.path.isdir(SOURCE_FOLDER):
+        print(f"❌ SOURCE_FOLDER not found: {SOURCE_FOLDER}")
+        return
+    files = [f for f in os.listdir(SOURCE_FOLDER) if f.lower().endswith(IMAGE_EXTS)]
+    for file in files:
+        try:
+            process_image(os.path.join(SOURCE_FOLDER, file))
+        except Exception as e:
+            print(f"⚠️ Failed on {file}: {e}")
+
+if __name__ == "__main__":
+    global known_encodings, known_names
+    known_encodings, known_names = load_known_faces(FACES_PATH)
+    tag_sorter = TagSorter()
+    tag_sorter.train_from_log()
+    run()
